@@ -20,7 +20,6 @@ import { DashboardComponent } from './components/views/application/dashboard/das
 import { ContactComponent } from './components/views/main/contact/contact.component';
 import { AboutComponent } from './components/views/main/about/about.component';
 import { PageNotFoundComponent } from './components/views/page-not-found/page-not-found.component';
-import { SurveyComponent } from './components/views/application/survey/survey.component';
 
 @NgModule({
     declarations: [
@@ -39,8 +38,7 @@ import { SurveyComponent } from './components/views/application/survey/survey.co
         DashboardComponent,
         ContactComponent,
         AboutComponent,
-        PageNotFoundComponent,
-        SurveyComponent,
+        PageNotFoundComponent
     ],
     imports: [
         BrowserModule,
