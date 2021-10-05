@@ -1,0 +1,33 @@
+<nav aria-label="Main navigation" id="main-header" class="navbar navbar-expand-lg fixed-top navbar-light">
+    <div class="container">
+        <a class="navbar-brand" routerLink=""> <img class="img-fluid" src="/assets/img/logo.png" style="width:200px"></a>
+        <button aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
+                data-bs-target="#navbarCollapse" data-bs-toggle="collapse" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a aria-current="page" class="nav-link active" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Over ons</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
+                       id="dropdown01">Account</a>
+                    <ul aria-labelledby="dropdown01" class="dropdown-menu">
+                        <li><a class="dropdown-item" routerLink="/account/login">Inloggen</a></li>
+                        <li><a class="dropdown-item" routerLink="/account/register">Registreren</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
