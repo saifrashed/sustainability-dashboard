@@ -1,0 +1,48 @@
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {FormsModule} from '@angular/forms';
+import {AppRoutingModule} from './app-routing.module'; // CLI imports AppRoutingModule
+
+
+// layouts
+import { MainComponent } from './components/layouts/main/main.component';
+import { AuthenticationComponent } from './components/layouts/authentication/authentication.component';
+import { ApplicationComponent } from './components/layouts/application/application.component';
+
+// components
+import {AppComponent} from './app.component';
+import {HeaderComponent} from './components/elements/header/header.component';
+import {HomeComponent} from './components/views/main/home/home.component';
+import {FooterComponent} from './components/elements/footer/footer.component';
+import { LoginComponent } from './components/views/authentication/login/login.component';
+import { RegisterComponent } from './components/views/authentication/register/register.component';
+import { DashboardComponent } from './components/views/application/dashboard/dashboard.component';
+import { ContactComponent } from './components/views/main/contact/contact.component';
+
+@NgModule({
+    declarations: [
+        MainComponent,
+        AuthenticationComponent,
+        ApplicationComponent,
+        AppComponent,
+        HeaderComponent,
+        HomeComponent,
+        FooterComponent,
+        MainComponent,
+        AuthenticationComponent,
+        ApplicationComponent,
+        LoginComponent,
+        RegisterComponent,
+        DashboardComponent,
+        ContactComponent
+    ],
+    imports: [
+        BrowserModule,
+        FormsModule,
+        AppRoutingModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
+})
+export class AppModule {
+}
