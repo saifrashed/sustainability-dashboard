@@ -20,7 +20,6 @@ import { DashboardComponent } from './components/views/application/dashboard/das
 import { ContactComponent } from './components/views/main/contact/contact.component';
 import { AboutComponent } from './components/views/main/about/about.component';
 import { PageNotFoundComponent } from './components/views/page-not-found/page-not-found.component';
-import { CarouselComponent } from './components/elements/carousel/carousel.component';
 
 @NgModule({
     declarations: [
@@ -40,7 +39,6 @@ import { CarouselComponent } from './components/elements/carousel/carousel.compo
         ContactComponent,
         AboutComponent,
         PageNotFoundComponent,
-        CarouselComponent
     ],
     imports: [
         BrowserModule,
