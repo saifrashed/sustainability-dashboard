@@ -1,7 +1,3 @@
-.container-fluid {
-  background: url("/assets/img/background/amsterdam.png") no-repeat;
-  background-size: cover;
-  background-position: center;
-  padding: 0;
-  margin: 0;
+.container{
+  background: url("/assets/img/background/amsterdam.jpg") no-repeat;
 }
