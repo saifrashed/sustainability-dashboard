@@ -1,3 +1,5 @@
 .container{
-  background: url("/assets/img/background/amsterdam.jpg") no-repeat;
+  background: url("/assets/img/background/amsterdam.png") no-repeat;
+  background-size: cover;
+  background-position: center;
 }
