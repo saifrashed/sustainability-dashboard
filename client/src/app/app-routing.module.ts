@@ -11,7 +11,6 @@ import {DashboardComponent} from "./components/views/application/dashboard/dashb
 import {ContactComponent} from './components/views/main/contact/contact.component';
 import {AboutComponent} from "./components/views/main/about/about.component";
 import {PageNotFoundComponent} from "./components/views/page-not-found/page-not-found.component";
-import {CarouselComponent} from "./components/views/carousel/carousel.component";
 
 
 const routes: Routes = [
@@ -22,7 +21,6 @@ const routes: Routes = [
       {path: '', component: HomeComponent},
       {path: 'about', component: AboutComponent},
       {path: 'contact', component: ContactComponent},
-      {path: 'carousel', component: CarouselComponent}
     ]
   },
   {
