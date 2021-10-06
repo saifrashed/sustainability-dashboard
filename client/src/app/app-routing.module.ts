@@ -4,13 +4,13 @@ import {RouterModule, Routes} from '@angular/router';
 import {MainComponent} from './components/views/main/main-layout/main.component';
 import {AuthenticationComponent} from './components/views/authentication/authentication-layout/authentication.component';
 // components
-import {QuestionComponent} from './components/views/main/question/question.component';
 import {HomeComponent} from './components/views/main/home/home.component';
 import {LoginComponent} from './components/views/authentication/login/login.component';
 import {RegisterComponent} from './components/views/authentication/register/register.component';
 import {DashboardComponent} from "./components/views/application/dashboard/dashboard.component";
 import {ContactComponent} from './components/views/main/contact/contact.component';
 import {ApplicationComponent} from "./components/views/application/application-layout/application.component";
+import {SurveyComponent} from "./components/views/application/survey/survey.component";
 
 
 const routes: Routes = [
@@ -43,18 +43,10 @@ const routes: Routes = [
     component: ApplicationComponent,
     children: [
       {path: '', component: DashboardComponent},
-
+      {path: 'survey', component: SurveyComponent},
     ]
-  },
-  {
-    path: 'question',
-    component: QuestionComponent,
-    children: [
-      {path: '', component: QuestionComponent},
-
-    ]
-  }
-]; // sets up routes constant where you define your routes
+  }];
+// sets up routes constant where you define your routes
 
 // configures NgModule imports and exports
 @NgModule({
