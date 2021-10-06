@@ -1,16 +1,16 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 // layouts
-import {MainComponent} from './components/layouts/main/main.component';
-import {AuthenticationComponent} from './components/layouts/authentication/authentication.component';
+import {MainComponent} from './components/views/main/main-layout/main.component';
+import {AuthenticationComponent} from './components/views/authentication/authentication-layout/authentication.component';
 // components
+import {QuestionComponent} from './components/views/main/question/question.component';
 import {HomeComponent} from './components/views/main/home/home.component';
 import {LoginComponent} from './components/views/authentication/login/login.component';
 import {RegisterComponent} from './components/views/authentication/register/register.component';
 import {DashboardComponent} from "./components/views/application/dashboard/dashboard.component";
 import {ContactComponent} from './components/views/main/contact/contact.component';
-import {AboutComponent} from "./components/views/main/about/about.component";
-import {PageNotFoundComponent} from "./components/views/page-not-found/page-not-found.component";
+import {ApplicationComponent} from "./components/views/application/application-layout/application.component";
 
 
 const routes: Routes = [
@@ -18,9 +18,14 @@ const routes: Routes = [
     path: '',
     component: MainComponent,
     children: [
-      {path: '', component: HomeComponent},
-      {path: 'about', component: AboutComponent},
-      {path: 'contact', component: ContactComponent},
+      {path: '', component: HomeComponent}
+    ]
+  },
+  {
+    path: 'contact',
+    component: MainComponent,
+    children: [
+      {path: '', component: ContactComponent}
     ]
   },
   {
@@ -35,15 +40,19 @@ const routes: Routes = [
   },
   {
     path: 'dashboard',
-    component: AuthenticationComponent,
+    component: ApplicationComponent,
     children: [
       {path: '', component: DashboardComponent},
 
     ]
   },
   {
-    path: '**',
-    component: PageNotFoundComponent,
+    path: 'question',
+    component: QuestionComponent,
+    children: [
+      {path: '', component: QuestionComponent},
+
+    ]
   }
 ]; // sets up routes constant where you define your routes
 
