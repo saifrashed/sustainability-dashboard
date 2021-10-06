@@ -7,11 +7,9 @@
     border-bottom: 1px solid #dcdce4;
     margin-top: 4.5rem;
 }
-.bd-placeholder-img{
-  background: url("/assets/img/background/tree.jpg") no-repeat;
-  background-size: cover;
-  width: 200px;
-  height: 250px;
+
+.card{
+  margin: 1em;
 }
 
 .overlay {
