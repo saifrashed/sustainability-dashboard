@@ -20,7 +20,7 @@ import { DashboardComponent } from './components/views/application/dashboard/das
 import { ContactComponent } from './components/views/main/contact/contact.component';
 import { AboutComponent } from './components/views/main/about/about.component';
 import { PageNotFoundComponent } from './components/views/page-not-found/page-not-found.component';
-import {QuestionComponent} from "./components/views/main/question/question.component";
+import { SurveyComponent } from './components/views/application/survey/survey.component';
 
 @NgModule({
     declarations: [
@@ -40,7 +40,7 @@ import {QuestionComponent} from "./components/views/main/question/question.compo
         ContactComponent,
         AboutComponent,
         PageNotFoundComponent,
-        QuestionComponent,
+        SurveyComponent,
     ],
     imports: [
         BrowserModule,
