@@ -7,9 +7,11 @@
     border-bottom: 1px solid #dcdce4;
     margin-top: 4.5rem;
 }
-
-.card{
-  margin: 1em;
+.bd-placeholder-img{
+  background: url("/assets/img/background/sustainable.jpg") no-repeat;
+  background-size: cover;
+  width: 200px;
+  height: 250px;
 }
 
 .overlay {
