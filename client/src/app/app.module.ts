@@ -5,15 +5,15 @@ import {AppRoutingModule} from './app-routing.module'; // CLI imports AppRouting
 
 
 // layouts
-import { MainComponent } from './components/layouts/main/main.component';
-import { AuthenticationComponent } from './components/layouts/authentication/authentication.component';
-import { ApplicationComponent } from './components/layouts/application/application.component';
+import { MainComponent } from './components/views/main/main-layout/main.component';
+import { AuthenticationComponent } from './components/views/authentication/authentication-layout/authentication.component';
+import { ApplicationComponent } from './components/views/application/application-layout/application.component';
 
 // components
 import {AppComponent} from './app.component';
-import {HeaderComponent} from './components/elements/header/header.component';
+import {HeaderComponent} from './components/views/main/main-elements/header/header.component';
 import {HomeComponent} from './components/views/main/home/home.component';
-import {FooterComponent} from './components/elements/footer/footer.component';
+import {FooterComponent} from './components/views/main/main-elements/footer/footer.component';
 import { LoginComponent } from './components/views/authentication/login/login.component';
 import { RegisterComponent } from './components/views/authentication/register/register.component';
 import { DashboardComponent } from './components/views/application/dashboard/dashboard.component';
