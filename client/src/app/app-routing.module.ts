@@ -11,6 +11,7 @@ import {AdminComponent} from "./components/views/application/admin/admin.compone
 import { ContactComponent } from './components/views/main/contact/contact.component';
 import {ApplicationComponent} from "./components/views/application/application-layout/application.component";
 import { FacultyComponent } from './components/views/application/faculty/faculty.component';
+import {AuthGuard} from "./_helpers/auth.guard";
 
 
 const routes: Routes = [
@@ -44,8 +45,8 @@ const routes: Routes = [
         children: [
             {path: '', redirectTo: "faculty",         pathMatch: 'full'
             },
-            {path: 'admin', component: AdminComponent},
-            {path: 'faculty', component: FacultyComponent},
+            {path: 'admin', component: AdminComponent, canActivate: [AuthGuard]},
+            {path: 'faculty', component: FacultyComponent, canActivate: [AuthGuard]},
         ]
     }
 ]; // sets up routes constant where you define your routes
