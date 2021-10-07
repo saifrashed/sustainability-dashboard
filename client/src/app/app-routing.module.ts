@@ -7,9 +7,10 @@ import {AuthenticationComponent} from './components/views/authentication/authent
 import {HomeComponent} from './components/views/main/home/home.component';
 import {LoginComponent} from './components/views/authentication/login/login.component';
 import {RegisterComponent} from './components/views/authentication/register/register.component';
-import {DashboardComponent} from "./components/views/application/dashboard/dashboard.component";
+import {AdminComponent} from "./components/views/application/admin/admin.component";
 import { ContactComponent } from './components/views/main/contact/contact.component';
 import {ApplicationComponent} from "./components/views/application/application-layout/application.component";
+import { FacultyComponent } from './components/views/application/faculty/faculty.component';
 
 
 const routes: Routes = [
@@ -41,8 +42,10 @@ const routes: Routes = [
         path: 'dashboard',
         component: ApplicationComponent,
         children: [
-            {path: '', component: DashboardComponent},
-
+            {path: '', redirectTo: "faculty",         pathMatch: 'full'
+            },
+            {path: 'admin', component: AdminComponent},
+            {path: 'faculty', component: FacultyComponent},
         ]
     }
 ]; // sets up routes constant where you define your routes

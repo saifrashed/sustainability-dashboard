@@ -16,8 +16,9 @@ import {HomeComponent} from './components/views/main/home/home.component';
 import {FooterComponent} from './components/views/main/main-elements/footer/footer.component';
 import { LoginComponent } from './components/views/authentication/login/login.component';
 import { RegisterComponent } from './components/views/authentication/register/register.component';
-import { DashboardComponent } from './components/views/application/dashboard/dashboard.component';
+import { AdminComponent } from './components/views/application/admin/admin.component';
 import { ContactComponent } from './components/views/main/contact/contact.component';
+import { FacultyComponent } from './components/views/application/faculty/faculty.component';
 
 @NgModule({
     declarations: [
@@ -33,8 +34,9 @@ import { ContactComponent } from './components/views/main/contact/contact.compon
         ApplicationComponent,
         LoginComponent,
         RegisterComponent,
-        DashboardComponent,
-        ContactComponent
+        AdminComponent,
+        ContactComponent,
+        FacultyComponent
     ],
     imports: [
         BrowserModule,
