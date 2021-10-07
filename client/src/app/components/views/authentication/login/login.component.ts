@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthenticationService} from "../../../../_services";
 import {ActivatedRoute, Router} from "@angular/router";
-import {FormBuilder} from "@angular/forms";
+import { first } from 'rxjs/operators';
 
 @Component({
   selector: 'app-login',
@@ -10,11 +10,21 @@ import {FormBuilder} from "@angular/forms";
 })
 export class LoginComponent implements OnInit {
 
-  constructor(  private formBuilder: FormBuilder, private route: ActivatedRoute, private router: Router, private authenticationService: AuthenticationService) {
+  constructor( private route: ActivatedRoute, private router: Router, private authenticationService: AuthenticationService) {
 
   }
 
   ngOnInit(): void {
+
+    this.authenticationService.login("saif", "lars112")
+        .pipe(first())
+        .subscribe(
+            data => {
+              console.log(data);
+            },
+            error => {
+              console.log(error)
+            });
 
   }
 
