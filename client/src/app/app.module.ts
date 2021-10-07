@@ -3,6 +3,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {FormsModule} from '@angular/forms';
 import {AppRoutingModule} from './app-routing.module'; // CLI imports AppRoutingModule
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 // used to create fake backend
 import { fakeBackendProvider } from './_helpers/fake-backend';
@@ -45,7 +46,8 @@ import { FacultyComponent } from './components/views/application/faculty/faculty
         BrowserModule,
         FormsModule,
         AppRoutingModule,
-        HttpClientModule
+        HttpClientModule,
+        ReactiveFormsModule
     ],
     providers: [
         // provider used to create fake backend
