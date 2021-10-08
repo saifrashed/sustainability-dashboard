@@ -11,6 +11,7 @@ import {AdminComponent} from "./components/views/application/admin/admin.compone
 import { ContactComponent } from './components/views/main/contact/contact.component';
 import {ApplicationComponent} from "./components/views/application/application-layout/application.component";
 import { FacultyComponent } from './components/views/application/faculty/faculty.component';
+import {SurveyComponent} from "./components/views/application/survey/survey.component";
 
 
 const routes: Routes = [
@@ -46,6 +47,7 @@ const routes: Routes = [
             },
             {path: 'admin', component: AdminComponent},
             {path: 'faculty', component: FacultyComponent},
+            {path: 'faculty/survey', component: SurveyComponent},
         ]
     }
 ]; // sets up routes constant where you define your routes
