@@ -10,6 +10,7 @@ import {RegisterComponent} from './components/views/authentication/register/regi
 import {DashboardComponent} from "./components/views/application/dashboard/dashboard.component";
 import { ContactComponent } from './components/views/main/contact/contact.component';
 import {ApplicationComponent} from "./components/views/application/application-layout/application.component";
+import {AboutComponent} from "./components/views/main/about/about.component";
 
 
 const routes: Routes = [
@@ -27,6 +28,13 @@ const routes: Routes = [
             {path: '', component: ContactComponent}
         ]
     },
+  {
+    path: 'about',
+    component: MainComponent,
+    children: [
+      {path: '', component: AboutComponent}
+    ]
+  },
     {
         path: 'account',
         component: AuthenticationComponent,
