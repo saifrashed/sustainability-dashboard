@@ -7,51 +7,55 @@ import {AuthenticationComponent} from './components/views/authentication/authent
 import {HomeComponent} from './components/views/main/home/home.component';
 import {LoginComponent} from './components/views/authentication/login/login.component';
 import {RegisterComponent} from './components/views/authentication/register/register.component';
-import {DashboardComponent} from "./components/views/application/dashboard/dashboard.component";
-import {ContactComponent} from './components/views/main/contact/contact.component';
+import {AdminComponent} from "./components/views/application/admin/admin.component";
+import { ContactComponent } from './components/views/main/contact/contact.component';
 import {ApplicationComponent} from "./components/views/application/application-layout/application.component";
+import { FacultyComponent } from './components/views/application/faculty/faculty.component';
 import {SurveyComponent} from "./components/views/application/survey/survey.component";
 
 
 const routes: Routes = [
-  {
-    path: '',
-    component: MainComponent,
-    children: [
-      {path: '', component: HomeComponent}
-    ]
-  },
-  {
-    path: 'contact',
-    component: MainComponent,
-    children: [
-      {path: '', component: ContactComponent}
-    ]
-  },
-  {
-    path: 'account',
-    component: AuthenticationComponent,
-    children: [
-      {path: '', component: LoginComponent},
-      {path: 'login', component: LoginComponent},
-      {path: 'register', component: RegisterComponent}
+    {
+        path: '',
+        component: MainComponent,
+        children: [
+            {path: '', component: HomeComponent}
+        ]
+    },
+    {
+        path: 'contact',
+        component: MainComponent,
+        children: [
+            {path: '', component: ContactComponent}
+        ]
+    },
+    {
+        path: 'account',
+        component: AuthenticationComponent,
+        children: [
+            {path: '', component: LoginComponent},
+            {path: 'login', component: LoginComponent},
+            {path: 'register', component: RegisterComponent}
 
-    ]
-  },
-  {
-    path: 'dashboard',
-    component: ApplicationComponent,
-    children: [
-      {path: '', component: DashboardComponent},
-      {path: 'survey', component: SurveyComponent},
-    ]
-  }];
-// sets up routes constant where you define your routes
+        ]
+    },
+    {
+        path: 'dashboard',
+        component: ApplicationComponent,
+        children: [
+            {path: '', redirectTo: "faculty",         pathMatch: 'full'
+            },
+            {path: 'admin', component: AdminComponent},
+            {path: 'faculty', component: FacultyComponent},
+            {path: 'faculty/survey', component: SurveyComponent},
+        ]
+    }
+]; // sets up routes constant where you define your routes
 
 // configures NgModule imports and exports
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
 })
 export class AppRoutingModule {
 }
