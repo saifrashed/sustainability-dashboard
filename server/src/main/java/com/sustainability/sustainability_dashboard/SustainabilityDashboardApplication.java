@@ -1,4 +1,4 @@
-package com.sustainability.sustainabilitydashboard;
+package com.sustainability.sustainability_dashboard;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

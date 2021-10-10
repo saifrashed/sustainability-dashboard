@@ -1,4 +1,4 @@
-package com.sustainability.sustainabilitydashboard;
+package com.sustainability.sustainability_dashboard;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

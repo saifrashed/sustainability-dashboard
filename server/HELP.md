@@ -1,8 +1,3 @@
-# Read Me First
-The following was discovered as part of building this project:
-
-* The original package name 'com.sustainability.sustainability-dashboard' is invalid and this project uses 'com.sustainability.sustainabilitydashboard' instead.
-
 # Getting Started
 
 ### Reference Documentation

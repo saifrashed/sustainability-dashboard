@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.sustainability</groupId>
-	<artifactId>sustainability-dashboard</artifactId>
+	<artifactId>sustainability_dashboard</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>sustainability-dashboard</name>
-	<description>Sustainability-dashboard backend</description>
+	<name>sustainability_dashboard</name>
+	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
@@ -41,12 +41,7 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-        <dependency>
-            <groupId>xml-apis</groupId>
-            <artifactId>xml-apis</artifactId>
-            <version>1.3.04</version>
-        </dependency>
-    </dependencies>
+	</dependencies>
 
 	<build>
 		<plugins>
