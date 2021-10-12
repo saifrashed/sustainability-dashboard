@@ -1,26 +1,27 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {AppRoutingModule} from './app-routing.module'; // CLI imports AppRoutingModule
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
+// used to create fake backend
+import { fakeBackendProvider } from './_helpers/fake-backend';
 
 // layouts
-import { MainComponent } from './components/layouts/main/main.component';
-import { AuthenticationComponent } from './components/layouts/authentication/authentication.component';
-import { ApplicationComponent } from './components/layouts/application/application.component';
+import { MainComponent } from './components/views/main/main-layout/main.component';
+import { AuthenticationComponent } from './components/views/authentication/authentication-layout/authentication.component';
+import { ApplicationComponent } from './components/views/application/application-layout/application.component';
 
 // components
 import {AppComponent} from './app.component';
-import {HeaderComponent} from './components/elements/header/header.component';
+import {HeaderComponent} from './components/views/main/main-elements/header/header.component';
 import {HomeComponent} from './components/views/main/home/home.component';
-import {FooterComponent} from './components/elements/footer/footer.component';
+import {FooterComponent} from './components/views/main/main-elements/footer/footer.component';
 import { LoginComponent } from './components/views/authentication/login/login.component';
 import { RegisterComponent } from './components/views/authentication/register/register.component';
-import { DashboardComponent } from './components/views/application/dashboard/dashboard.component';
+import { AdminComponent } from './components/views/application/admin/admin.component';
 import { ContactComponent } from './components/views/main/contact/contact.component';
-import { AboutComponent } from './components/views/main/about/about.component';
-import { PageNotFoundComponent } from './components/views/page-not-found/page-not-found.component';
-import { SurveyComponent } from './components/views/application/survey/survey.component';
+import { FacultyComponent } from './components/views/application/faculty/faculty.component';
 
 @NgModule({
     declarations: [
@@ -36,18 +37,21 @@ import { SurveyComponent } from './components/views/application/survey/survey.co
         ApplicationComponent,
         LoginComponent,
         RegisterComponent,
-        DashboardComponent,
+        AdminComponent,
         ContactComponent,
-        AboutComponent,
-        PageNotFoundComponent,
-        SurveyComponent,
+        FacultyComponent
     ],
     imports: [
         BrowserModule,
         FormsModule,
-        AppRoutingModule
+        AppRoutingModule,
+        HttpClientModule,
+        ReactiveFormsModule
     ],
-    providers: [],
+    providers: [
+        // provider used to create fake backend
+        fakeBackendProvider
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {
