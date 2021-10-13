@@ -41,7 +41,7 @@ import {SurveyComponent} from "./components/views/application/survey/survey.comp
         AdminComponent,
         ContactComponent,
         FacultyComponent,
-        SurveyComponent
+        SurveyComponent,
     ],
     imports: [
         BrowserModule,
