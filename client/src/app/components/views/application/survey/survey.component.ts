@@ -12,4 +12,5 @@ export class SurveyComponent implements OnInit {
 
     ngOnInit(): void {
     }
+
 }
