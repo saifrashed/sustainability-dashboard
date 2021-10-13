@@ -13,10 +13,10 @@ public class Survey {
     private String name;
     private String pillar;
     private String faculty;
-    private String scoringDescription;
+    private String [] scoringDescription;
     private Date dateCreated;
 
-    public Survey(String id, String name, String pillar, String faculty, String scoringDescription, Date dateCreated) {
+    public Survey(String id, String name, String pillar, String faculty, String [] scoringDescription, Date dateCreated) {
         this.id = id;
         this.name = name;
         this.pillar = pillar;
@@ -65,11 +65,11 @@ public class Survey {
         this.faculty = faculty;
     }
 
-    public String getScoringDescription() {
+    public String [] getScoringDescription() {
         return scoringDescription;
     }
 
-    public void setScoringDescription(String scoringDescription) {
+    public void setScoringDescription(String [] scoringDescription) {
         this.scoringDescription = scoringDescription;
     }
 }
