@@ -22,6 +22,7 @@ import { RegisterComponent } from './components/views/authentication/register/re
 import { AdminComponent } from './components/views/application/admin/admin.component';
 import { ContactComponent } from './components/views/main/contact/contact.component';
 import { FacultyComponent } from './components/views/application/faculty/faculty.component';
+import {SurveyComponent} from "./components/views/application/survey/survey.component";
 
 @NgModule({
     declarations: [
@@ -39,7 +40,8 @@ import { FacultyComponent } from './components/views/application/faculty/faculty
         RegisterComponent,
         AdminComponent,
         ContactComponent,
-        FacultyComponent
+        FacultyComponent,
+        SurveyComponent
     ],
     imports: [
         BrowserModule,
