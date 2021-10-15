@@ -1,9 +1,7 @@
-package com.sustainability.sustainability_dashboard.model;
+package com.sustainability.models;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-
-import java.sql.Date;
 
 @Document("surveys")
 public class Survey {
@@ -14,9 +12,9 @@ public class Survey {
     private String pillar;
     private String [] scoringDescription;
 
-    public Survey(String id, String name, String pillar, String [] scoringDescription) {
+    public Survey(String id, String title, String pillar, String [] scoringDescription) {
         this.id = id;
-        this.title = name;
+        this.title = title;
         this.pillar = pillar;
         this.scoringDescription = scoringDescription;
     }

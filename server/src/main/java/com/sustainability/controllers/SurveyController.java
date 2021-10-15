@@ -1,7 +1,8 @@
-package com.sustainability.sustainability_dashboard.controller;
+package com.sustainability.controllers;
 
-import com.sustainability.sustainability_dashboard.model.Survey;
-import com.sustainability.sustainability_dashboard.repository.SurveyRepository;
+import com.sustainability.repository.SurveyRepository;
+import com.sustainability.models.Survey;
+import com.sustainability.repository.SurveyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,7 +12,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/public")
 public class SurveyController {
 
     @Autowired

@@ -1,10 +1,10 @@
-package com.sustainability.sustainability_dashboard;
+package com.sustainability;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SustainabilityDashboardApplicationTests {
+class SpringBootSecurityJwtMongodbApplicationTests {
 
 	@Test
 	void contextLoads() {
