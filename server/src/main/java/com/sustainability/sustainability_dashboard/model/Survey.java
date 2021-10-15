@@ -10,19 +10,15 @@ public class Survey {
 
     @Id
     private String id;
-    private String name;
+    private String title;
     private String pillar;
-    private String faculty;
     private String [] scoringDescription;
-    private Date dateCreated;
 
-    public Survey(String id, String name, String pillar, String faculty, String [] scoringDescription, Date dateCreated) {
+    public Survey(String id, String name, String pillar, String [] scoringDescription) {
         this.id = id;
-        this.name = name;
+        this.title = name;
         this.pillar = pillar;
-        this.faculty = faculty;
         this.scoringDescription = scoringDescription;
-        this.dateCreated = dateCreated;
     }
 
     public String getId() {
@@ -33,20 +29,12 @@ public class Survey {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Date getDateCreated() {
-        return dateCreated;
-    }
-
-    public void setDateCreated(Date dateCreated) {
-        this.dateCreated = dateCreated;
+    public void setTitle(String name) {
+        this.title = name;
     }
 
     public String getPillar() {
@@ -57,13 +45,6 @@ public class Survey {
         this.pillar = pillar;
     }
 
-    public String getFaculty() {
-        return faculty;
-    }
-
-    public void setFaculty(String faculty) {
-        this.faculty = faculty;
-    }
 
     public String [] getScoringDescription() {
         return scoringDescription;

@@ -41,7 +41,7 @@ public class SurveyController {
     @PostMapping("/survey")
     public ResponseEntity<Survey> createSurvey(@RequestBody Survey survey) {
 
-        Survey newSurvey = surveyRepo.save(new Survey(null, survey.getName(),survey.getPillar(),survey.getFaculty(),survey.getScoringDescription(), survey.getDateCreated()));
+        Survey newSurvey = surveyRepo.save(new Survey(null, survey.getTitle(), survey.getPillar(), survey.getScoringDescription()));
 
         return new ResponseEntity<>(newSurvey, HttpStatus.OK);
     }

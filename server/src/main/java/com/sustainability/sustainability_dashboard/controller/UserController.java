@@ -14,36 +14,23 @@ import java.util.Optional;
 @RequestMapping("/api")
 public class UserController {
 
-    @Autowired
-    UserRepository userRepo;
-
 
     @GetMapping("/user")
     public ResponseEntity<List<User>> getUsers() {
 
-        List<User> users = userRepo.findAll();
-
-        return new ResponseEntity<>(users, HttpStatus.OK);
+        return new ResponseEntity<>(null, HttpStatus.OK);
     }
 
     @GetMapping("/user/{id}")
     public ResponseEntity<User> getUsers(@PathVariable("id") String id) {
 
-        Optional<User> users = userRepo.findById(id);
-
-        if (users.isPresent()) {
-            return new ResponseEntity<>(users.get(), HttpStatus.OK);
-        } else {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
+        return new ResponseEntity<>(null, HttpStatus.OK);
     }
 
     @PostMapping("/user")
     public ResponseEntity<User> createUser(@RequestBody User user) {
 
-        User newUser = userRepo.save(new User(null, user.getEmail(), user.getPassword(), user.getFirstName(), user.getLastName(), user.getRole(), user.getToken()));
-
-        return new ResponseEntity<>(newUser, HttpStatus.OK);
+        return new ResponseEntity<>(null, HttpStatus.OK);
     }
 
 
