@@ -1,11 +1,11 @@
-import {Component, OnInit, OnChanges, SimpleChanges, Input} from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 
 @Component({
   selector: 'app-survey',
   templateUrl: './survey.component.html',
   styleUrls: ['./survey.component.css']
 })
-export class SurveyComponent implements OnInit, OnChanges {
+export class SurveyComponent implements OnInit{
 
   @Input() scoringValue: any[number] = {};
   @Input() scoringDescription: string[] = ["Adhoc", "Coherent", "Systemic", "Chain-oriented", "Example for others"];
@@ -14,11 +14,6 @@ export class SurveyComponent implements OnInit, OnChanges {
   }
 
   ngOnInit(): void {
-  }
-
-  ngOnChanges(): void {
-    this.scoringDescriptionString();
-    console.log(this.scoringDescription)
   }
 
   scoringDescriptionString() {
