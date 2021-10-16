@@ -1,37 +1,27 @@
-import {Component, OnInit, Input} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {SurveyService} from "../../../../_services";
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
-  selector: 'app-survey',
-  templateUrl: './survey.component.html',
-  styleUrls: ['./survey.component.css']
+    selector: 'app-survey',
+    templateUrl: './survey.component.html',
+    styleUrls: ['./survey.component.css']
 })
-export class SurveyComponent implements OnInit{
+export class SurveyComponent implements OnInit {
 
-  @Input() scoringValue: any[number] = {};
-  @Input() scoringDescription: string[] = ["Adhoc", "Coherent", "Systemic", "Chain-oriented", "Example for others"];
+    public scoringValue: any[number] = {};
+    public scoringDescription: any[] = [];
+    public survey: any = null;
 
-  constructor() {
-  }
 
-  ngOnInit(): void {
-  }
+    constructor(private surveyService: SurveyService, private route: ActivatedRoute, private router: Router,) {
+        surveyService.findById(<string>this.route.snapshot.paramMap.get('id')).subscribe(survey => {
+            this.survey = survey;
+            this.scoringDescription = this.survey.scoringDescription;
+        });
+    }
 
-  scoringDescriptionString() {
+    ngOnInit(): void {
+    }
 
-    if (this.scoringValue.value == 0) {
-      this.scoringDescription[0]
-    }
-    if (this.scoringValue.value == 1) {
-      this.scoringDescription[1]
-    }
-    if (this.scoringValue.value == 2) {
-      this.scoringDescription[2]
-    }
-    if (this.scoringValue == 3) {
-      this.scoringDescription[3]
-    }
-    if (this.scoringValue == 4) {
-      this.scoringDescription[4]
-    }
-  }
 }

@@ -1,8 +1,8 @@
 <div class="container">
   <div class="row mt-5 mb-5">
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-      <div id="custom-content" class="mb-4 text-md-center">
-        <h2>Education</h2>
+      <div id="custom-content" class="mb-4 text-center">
+        <h2>{{survey?.title}}</h2>
       </div>
       <!-- Card -->
       <div class="card">
@@ -12,19 +12,17 @@
                role="tabpanel"
                aria-labelledby="pills-custom-content-design-tab">
             <div class="list-group">
-              <div class="list-group-item list-group-item-action">
                 <div href="#" class="list-group-item list-group-item-action">
                   <div class="d-flex w-100 justify-content-between">
                     <h5 class="mb-1">Curriculum</h5>
                   </div>
                   <p class="mb-1">the hva integrates sustainability into all curricula</p>
-                  <div>{{scoringDescription[scoringValue[0]]}}</div>
                   <div class="tab-pane tab-example-design fade show active"
                        role="tabpanel"
                        aria-labelledby="pills-range-fourth-design-tab">
                     <input type="range" class="form-range" value="0" min="0" max="4" step="1"
-                           [(ngModel)]="scoringValue[0]" (ngModelChange)="scoringDescriptionString()">
-                    <div>{{scoringValue[0]}}</div>
+                           [(ngModel)]="scoringValue[0]">
+                    <div class="w-100 text-center">{{scoringDescription[scoringValue[0]]}}</div>
                   </div>
                 </div>
                 <div href="#" class="list-group-item list-group-item-action">
@@ -32,13 +30,12 @@
                     <h5 class="mb-1">Curriculum</h5>
                   </div>
                   <p class="mb-1">the hva integrates sustainability into all curricula</p>
-                  <div>{{scoringDescription[scoringValue[1]]}}</div>
                   <div class="tab-pane tab-example-design fade show active"
                        role="tabpanel"
                        aria-labelledby="pills-range-fourth-design-tab">
                     <input type="range" class="form-range" value="0" min="0" max="4" step="1"
-                           [(ngModel)]="scoringValue[1]" (ngModelChange)="scoringDescriptionString()">
-                    <div>{{scoringValue[1]}}</div>
+                           [(ngModel)]="scoringValue[1]">
+                    <div class="w-100 text-center">{{scoringDescription[scoringValue[1]]}}</div>
                   </div>
                 </div>
                 <div href="#" class="list-group-item list-group-item-action">
@@ -49,13 +46,12 @@
                     eget
                     risus varius
                     blandit.</p>
-                  <div>{{scoringDescription[scoringValue[2]]}}</div>
                   <div class="tab-pane tab-example-design fade show active"
                        role="tabpanel"
                        aria-labelledby="pills-range-fourth-design-tab">
                     <input type="range" class="form-range" value="0" min="0" max="4" step="1"
-                           [(ngModel)]="scoringValue[2]" (ngModelChange)="scoringDescriptionString()">
-                    <div>{{scoringValue[2]}}</div>
+                           [(ngModel)]="scoringValue[2]" >
+                    <div class="w-100 text-center">{{scoringDescription[scoringValue[2]]}}</div>
                   </div>
                 </div>
                 <div href="#" class="list-group-item list-group-item-action">
@@ -71,12 +67,11 @@
                        role="tabpanel"
                        aria-labelledby="pills-range-fourth-design-tab">
                     <input type="range" class="form-range" value="0" min="0" max="4" step="1"
-                           [(ngModel)]="scoringValue[3]" (ngModelChange)="scoringDescriptionString()">
-                    <div>{{scoringValue[3]}}</div>
+                           [(ngModel)]="scoringValue[3]">
+                    <div class="w-100 text-center">{{scoringDescription[scoringValue[3]]}}</div>
                   </div>
                 </div>
               </div>
-            </div>
           </div>
         </div>
       </div>

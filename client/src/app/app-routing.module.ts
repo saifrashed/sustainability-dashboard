@@ -20,15 +20,8 @@ const routes: Routes = [
         path: '',
         component: MainComponent,
         children: [
-            {path: '', component: HomeComponent}
-        ]
-    },
-
-    {
-        path: 'contact',
-        component: MainComponent,
-        children: [
-            {path: '', component: ContactComponent}
+            {path: '', component: HomeComponent},
+            {path: 'contact', component: ContactComponent},
         ]
     },
     {
@@ -48,7 +41,7 @@ const routes: Routes = [
             {path: '', redirectTo: "faculty", pathMatch: 'full'},
             {path: 'admin', component: AdminComponent, canActivate: [AuthGuard]},
             {path: 'faculty', component: FacultyComponent, canActivate: [AuthGuard]},
-            {path: 'faculty/survey', component: SurveyComponent, canActivate: [AuthGuard]},
+            {path: 'faculty/survey/:id', component: SurveyComponent, canActivate: [AuthGuard]},
         ]
     }
 ]; // sets up routes constant where you define your routes
