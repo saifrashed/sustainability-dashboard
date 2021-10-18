@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {SurveyService} from "../../../../_services";
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
     selector: 'app-survey',
@@ -7,11 +9,19 @@ import {Component, OnInit} from '@angular/core';
 })
 export class SurveyComponent implements OnInit {
 
-    scoringValue: any[number] = {};
+    public scoringValue: any[number] = {};
+    public scoringDescription: any[] = [];
+    public survey: any = null;
 
-    constructor() {
+
+    constructor(private surveyService: SurveyService, private route: ActivatedRoute, private router: Router,) {
+        surveyService.findById(<string>this.route.snapshot.paramMap.get('id')).subscribe(survey => {
+            this.survey = survey;
+            this.scoringDescription = this.survey.scoringDescription;
+        });
     }
 
     ngOnInit(): void {
     }
+
 }

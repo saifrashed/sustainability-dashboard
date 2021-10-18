@@ -1,8 +1,8 @@
 <div class="container">
   <div class="row mt-5 mb-5">
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-      <div id="custom-content" class="mb-4 text-md-center">
-        <h2>Education</h2>
+      <div id="custom-content" class="mb-4 text-center">
+        <h2>{{survey?.title}}</h2>
       </div>
       <!-- Card -->
       <div class="card">
@@ -12,69 +12,66 @@
                role="tabpanel"
                aria-labelledby="pills-custom-content-design-tab">
             <div class="list-group">
-              <div class="list-group-item list-group-item-action">
-                <div class="d-flex w-100 justify-content-between">
-                  <h5 class="mb-1">Vision and Strategy</h5>
+                <div href="#" class="list-group-item list-group-item-action">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Curriculum</h5>
+                  </div>
+                  <p class="mb-1">the hva integrates sustainability into all curricula</p>
+                  <div class="tab-pane tab-example-design fade show active"
+                       role="tabpanel"
+                       aria-labelledby="pills-range-fourth-design-tab">
+                    <input type="range" class="form-range" value="0" min="0" max="4" step="1"
+                           [(ngModel)]="scoringValue[0]">
+                    <div class="w-100 text-center">{{scoringDescription[scoringValue[0]]}}</div>
+                  </div>
                 </div>
-                <p class="mb-1">sustainability is leading in the educational vision and strategy of the
-                  programme</p>
-                <small class="text-success">example for others</small>
-                <div class="tab-pane tab-example-design fade show active" id="rangeitem"
-                     role="tabpanel"
-                     aria-labelledby="pills-range-fourth-design-tab">
-                  <input type="range" class="form-range" min="0" max="4" step="1" [(ngModel)]="scoringValue[1]"/>
-                  <div>{{scoringValue[1]}}</div>
+                <div href="#" class="list-group-item list-group-item-action">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Curriculum</h5>
+                  </div>
+                  <p class="mb-1">the hva integrates sustainability into all curricula</p>
+                  <div class="tab-pane tab-example-design fade show active"
+                       role="tabpanel"
+                       aria-labelledby="pills-range-fourth-design-tab">
+                    <input type="range" class="form-range" value="0" min="0" max="4" step="1"
+                           [(ngModel)]="scoringValue[1]">
+                    <div class="w-100 text-center">{{scoringDescription[scoringValue[1]]}}</div>
+                  </div>
                 </div>
-              </div>
-              <div href="#" class="list-group-item list-group-item-action">
-                <div class="d-flex w-100 justify-content-between">
-                  <h5 class="mb-1">Curriculum</h5>
+                <div href="#" class="list-group-item list-group-item-action">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Students</h5>
+                  </div>
+                  <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam
+                    eget
+                    risus varius
+                    blandit.</p>
+                  <div class="tab-pane tab-example-design fade show active"
+                       role="tabpanel"
+                       aria-labelledby="pills-range-fourth-design-tab">
+                    <input type="range" class="form-range" value="0" min="0" max="4" step="1"
+                           [(ngModel)]="scoringValue[2]" >
+                    <div class="w-100 text-center">{{scoringDescription[scoringValue[2]]}}</div>
+                  </div>
                 </div>
-                <p class="mb-1">the hva integrates sustainability into all curricula</p>
-                <small class="text-warning">consistent</small>
-                <div class="tab-pane tab-example-design fade show active"
-                     role="tabpanel"
-                     aria-labelledby="pills-range-fourth-design-tab">
-                  <input type="range" class="form-range" value="0" min="0" max="4" step="1"
-                         [(ngModel)]="scoringValue[2]">
-                  <div>{{scoringValue[2]}}</div>
-                </div>
-              </div>
-              <div href="#" class="list-group-item list-group-item-action">
-                <div class="d-flex w-100 justify-content-between">
-                  <h5 class="mb-1">Students</h5>
-                </div>
-                <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam
-                  eget
-                  risus varius
-                  blandit.</p>
-                <small class="text-danger">ad hoc</small>
-                <div class="tab-pane tab-example-design fade show active"
-                     role="tabpanel"
-                     aria-labelledby="pills-range-fourth-design-tab">
-                  <input type="range" class="form-range" value="0" min="0" max="4" step="1"
-                         [(ngModel)]="scoringValue[3]">
-                  <div>{{scoringValue[3]}}</div>
-                </div>
-              </div>
-              <div href="#" class="list-group-item list-group-item-action">
-                <div class="d-flex w-100 justify-content-between">
-                  <h5 class="mb-1">Staff</h5>
-                </div>
-                <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam
-                  eget
-                  risus varius
-                  blandit.</p>
-                <small class="text-dark-warning">Donec id elit non mi porta.</small>
-                <div class="tab-pane tab-example-design fade show active"
-                     role="tabpanel"
-                     aria-labelledby="pills-range-fourth-design-tab">
-                  <input type="range" class="form-range" value="0" min="0" max="4" step="1"
-                         [(ngModel)]="scoringValue[4]">
-                  <div>{{scoringValue[4]}}</div>
+                <div href="#" class="list-group-item list-group-item-action">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Staff</h5>
+                  </div>
+                  <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam
+                    eget
+                    risus varius
+                    blandit.</p>
+                  <div>{{scoringDescription[scoringValue[3]]}}</div>
+                  <div class="tab-pane tab-example-design fade show active"
+                       role="tabpanel"
+                       aria-labelledby="pills-range-fourth-design-tab">
+                    <input type="range" class="form-range" value="0" min="0" max="4" step="1"
+                           [(ngModel)]="scoringValue[3]">
+                    <div class="w-100 text-center">{{scoringDescription[scoringValue[3]]}}</div>
+                  </div>
                 </div>
               </div>
-            </div>
           </div>
         </div>
       </div>
