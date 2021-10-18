@@ -1,7 +1,9 @@
 <div class="header">
     <!-- navbar -->
     <nav class="navbar-classic navbar navbar-expand-lg">
-        <img class="img-fluid" src="/assets/img/logo.png" style="width:200px">
+        <a>
+            <img class="img-fluid" src="/assets/img/logo.png" routerLink="/account/login" style="width:200px">
+        </a>
         <!--Navbar nav -->
         <ul class="navbar-nav navbar-right-wrap ms-auto d-flex nav-top-wrap">
             <!--<li class="dropdown stopevent">-->
@@ -105,8 +107,8 @@
 
 
                         <div class="lh-1 ">
-                            <h5 class="mb-1"> {{firstName}} {{lastName}} #{{id}}</h5>
-                            <p class="text-inherit fs-6">{{faculty}}</p>
+                            <h5 class="mb-1"> {{email}} #{{id}}</h5>
+                            <p class="text-inherit fs-6">{{roles[0]}}</p>
                         </div>
                         <div class=" dropdown-divider mt-3 mb-2"></div>
                     </div>

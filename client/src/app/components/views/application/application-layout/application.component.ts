@@ -9,24 +9,17 @@ import {AuthenticationService} from "../../../../_services";
 })
 export class ApplicationComponent implements OnInit {
 
-    public id: number;
+    public id: string;
     public username: string;
-    public firstName: string;
-    public lastName: string;
-    public role: string;
-    public faculty: string;
-    public token: any;
-;
+    public email: string;
+    public roles: string[];
+
 
     constructor(private route: ActivatedRoute, private router: Router, private authenticationService: AuthenticationService) {
         this.id = this.authenticationService.currentUserValue.id;
         this.username = this.authenticationService.currentUserValue.username;
-        this.firstName = this.authenticationService.currentUserValue.firstName;
-        this.lastName = this.authenticationService.currentUserValue.lastName;
-        this.role = this.authenticationService.currentUserValue.role;
-        this.faculty = this.authenticationService.currentUserValue.faculty;
-        this.token = this.authenticationService.currentUserValue.token;
-
+        this.email = this.authenticationService.currentUserValue.email;
+        this.roles = this.authenticationService.currentUserValue.roles;
     }
 
     ngOnInit(): void {
@@ -34,6 +27,6 @@ export class ApplicationComponent implements OnInit {
 
     onLogout() {
         this.authenticationService.logout();
-        this.router.navigate(["/account/login"])
+        this.router.navigate([""])
     }
 }

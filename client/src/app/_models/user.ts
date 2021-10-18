@@ -1,22 +1,16 @@
- export class User {
-  id: number;
-   username: string;
-   password: string;
-   firstName: string;
-   lastName: string;
-   role: string;
-   faculty: string;
-   token?: string;
+export class User {
+    id: string;
+    username: string;
+    email: string;
+    password: string;
+    roles: string[];
 
 
-   constructor(id: number, username: string, password: string, firstName: string, lastName: string, role: string, faculty: string, token: string) {
-     this.id = id;
-     this.username = username;
-     this.password = password;
-     this.firstName = firstName;
-     this.lastName = lastName;
-     this.role = role;
-     this.faculty = faculty;
-     this.token = token;
-   }
- }
+    constructor(id: string, username: string, email: string, password: string, roles: string[]) {
+        this.id = id;
+        this.username = username;
+        this.email = email;
+        this.password = password;
+        this.roles = roles;
+    }
+}
