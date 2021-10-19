@@ -4,6 +4,7 @@ import com.sustainability.models.Survey;
 import com.sustainability.models.SurveyQuestion;
 import com.sustainability.repository.SurveyQuestionRepository;
 import com.sustainability.repository.SurveyRepository;
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -44,10 +45,9 @@ public class SurveyQuestionController {
     @ResponseBody
     public ResponseEntity<SurveyQuestion> createSurveyQuestion(@RequestBody SurveyQuestion surveyQuestion) {
 
-        SurveyQuestion newSurveyQuestion = surveyQuestionRepo.save(new SurveyQuestion(null, surveyQuestion.getSurveyId(), surveyQuestion.getDescription(), surveyQuestion.getWeight()));
+        SurveyQuestion newSurveyQuestion = surveyQuestionRepo.save(new SurveyQuestion(null, new ObjectId(String.valueOf(surveyQuestion.getSurveyId())), surveyQuestion.getDescription(), surveyQuestion.getWeight()));
 
         return new ResponseEntity<>(newSurveyQuestion, HttpStatus.OK);
     }
-
 
 }

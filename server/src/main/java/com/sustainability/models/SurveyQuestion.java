@@ -1,5 +1,6 @@
 package com.sustainability.models;
 
+import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -10,14 +11,14 @@ public class SurveyQuestion {
 
     @Id
     private String id;
-    private String surveyId;
+    private ObjectId surveyId;
     private String description;
     private int weight = 1;
 
     public SurveyQuestion() {
     }
 
-    public SurveyQuestion(String id,String surveyId, String description,int weight) {
+    public SurveyQuestion(String id,ObjectId surveyId, String description,int weight) {
         this.id = id;
         this.surveyId = surveyId;
         this.description = description;
@@ -33,11 +34,11 @@ public class SurveyQuestion {
         this.id = id;
     }
 
-    public String getSurveyId() {
+    public ObjectId getSurveyId() {
         return surveyId;
     }
 
-    public void setSurveyId(String surveyId) {
+    public void setSurveyId(ObjectId surveyId) {
         this.surveyId = surveyId;
     }
 
