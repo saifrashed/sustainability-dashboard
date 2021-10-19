@@ -1,0 +1,17 @@
+
+## initialising project
+
+1. Delete .IDEA
+2. Reload Maven projects
+3. rebuild project
+4. Select SDK
+4. Run Main
+
+
+## Adding a model
+
+1. Create a given model within the models package (DONT FORGET TO CREATE A EMPTY CONSTRUCTOR)
+2. Create an associating Repository that extends mongoRepository
+3. Add to an existing controller or create a new controller which autowires the newly made repository.
+
+NOTE: Change all types, paths and names to the newly model
