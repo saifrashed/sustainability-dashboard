@@ -2,7 +2,6 @@ package com.sustainability.controllers;
 
 import com.sustainability.repository.SurveyRepository;
 import com.sustainability.models.Survey;
-import com.sustainability.repository.SurveyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -40,6 +39,7 @@ public class SurveyController {
     }
 
     @PostMapping("/survey")
+    @ResponseBody
     public ResponseEntity<Survey> createSurvey(@RequestBody Survey survey) {
 
         Survey newSurvey = surveyRepo.save(new Survey(null, survey.getTitle(), survey.getPillar(), survey.getScoringDescription()));
