@@ -1,0 +1,35 @@
+<div class="list-group-item position-relative pb-10 pt-6">
+    <p class="text-center mb-3 survey-question">{{question.description}}</p>
+    <div class="tab-pane tab-example-design fade show active"
+         role="tabpanel"
+         aria-labelledby="pills-range-fourth-design-tab">
+
+        <div id="form-wrapper">
+            <form>
+                <div id="question-answering">
+                    <input type="radio" name="debt-amount" (click)="addOrUpdateScoring($event)" id="{{question.id}}-1"
+                           value="0" required>
+                    <label for="{{question.id}}-1" [attr.data-value]="scoringDescription[0]"></label>
+
+                    <input type="radio" name="debt-amount" (click)="addOrUpdateScoring($event)" id="{{question.id}}-2"
+                           value="1" required>
+                    <label for="{{question.id}}-2" [attr.data-value]="scoringDescription[1]"></label>
+
+                    <input type="radio" name="debt-amount" (click)="addOrUpdateScoring($event)" id="{{question.id}}-3"
+                           value="2" required>
+                    <label for="{{question.id}}-3" [attr.data-value]="scoringDescription[2]"></label>
+
+                    <input type="radio" name="debt-amount" (click)="addOrUpdateScoring($event)" id="{{question.id}}-4"
+                           value="3" required>
+                    <label for="{{question.id}}-4" [attr.data-value]="scoringDescription[3]"></label>
+
+                    <input type="radio" name="debt-amount" (click)="addOrUpdateScoring($event)" id="{{question.id}}-5"
+                           value="4" required>
+                    <label for="{{question.id}}-5" [attr.data-value]="scoringDescription[4]"></label>
+
+                    <div id="question-answering-pos"></div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

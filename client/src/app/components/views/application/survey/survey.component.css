@@ -1,69 +1,60 @@
-.container{
-  max-width: 900px;
+.container {
+    max-width: 900px;
 }
 
 #pillar-badge {
-  font-size: 1.25em;
+    font-size: 1.25em;
 }
 
-.filler-0 {
-  position: absolute;
-  top:0;
-  bottom:0;
-  left:0;
-  width:0%;
-  background-color: #1a1e21;
-  opacity: 0.5;
-  transition: 1s all ease-in-out;
-  z-index: -1;
+button {
+    display: block;
+    position: relative;
+    margin: 56px auto 0;
+    padding: 10px 20px;
+    transition: all 0.15s ease-in-out;
+    font-family: inherit;
+    font-size: 24px;
+    font-weight: 600;
+    background: #fff;
+    border: 2px solid #000;
+    border-radius: 8px;
+    outline: 0;
+    cursor: pointer;
 }
 
-.filler-1 {
-  position: absolute;
-  top:0;
-  bottom:0;
-  left:0;
-  width:40%;
-  background-color: #0c4128;
-  opacity: 0.5;
-  transition: 1s all ease-in-out;
-  z-index: -1;
-
+button:hover {
+    background: #000;
+    color: #fff;
 }
 
-.filler-2 {
-  position: absolute;
-  top:0;
-  bottom:0;
-  left:0;
-  width:60%;
-  background-color: #3b2d99;
-  opacity: 0.5;
-  transition: 1s all ease-in-out;
-  z-index: -1;
-
+button:hover:active {
+    transform: scale(0.9);
 }
 
-.filler-3 {
-  position: absolute;
-  top:0;
-  bottom:0;
-  left:0;
-  width:80%;
-  background-color: #d0c9ff;
-  opacity: 0.5;
-  transition: 1s all ease-in-out;
-  z-index: -1;
+button:focus {
+    background: #4caf50;
+    border-color: #4caf50;
+    color: #fff;
 }
 
-.filler-4 {
-  position: absolute;
-  top:0;
-  bottom:0;
-  left:0;
-  width:100%;
-  background-color: #e1e5e6;
-  opacity: 0.5;
-  transition: 1s all ease-in-out;
-  z-index: -1;
+button:focus::before {
+    animation: spin 1s linear infinite;
 }
+
+button::before {
+    display: inline-block;
+    width: 0;
+    opacity: 0;
+    content: "\f3f4";
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
+    margin-right: 0;
+    transform: rotate(0deg);
+}
+
+
+form:invalid + button {
+pointer-events: none;
+opacity: 0.25;
+}
+

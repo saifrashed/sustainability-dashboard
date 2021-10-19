@@ -17,6 +17,7 @@ import { AdminComponent } from './components/views/application/admin/admin.compo
 import { ContactComponent } from './components/views/main/contact/contact.component';
 import { FacultyComponent } from './components/views/application/faculty/faculty.component';
 import {SurveyComponent} from "./components/views/application/survey/survey.component";
+import { SurveyQuestionComponent } from './components/views/application/survey-question/survey-question.component';
 
 @NgModule({
     declarations: [
@@ -34,6 +35,7 @@ import {SurveyComponent} from "./components/views/application/survey/survey.comp
         ContactComponent,
         FacultyComponent,
         SurveyComponent,
+        SurveyQuestionComponent,
     ],
     imports: [
         BrowserModule,
