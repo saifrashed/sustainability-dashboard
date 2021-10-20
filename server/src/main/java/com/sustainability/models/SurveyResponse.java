@@ -1,55 +1,65 @@
 package com.sustainability.models;
 
+import org.bson.types.ObjectId;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
+import org.springframework.data.mongodb.core.mapping.DBRef;
+
 import java.time.LocalDate;
 
 public class SurveyResponse {
+
+    @Id
     private String id;
-    private String title;
-    private String pillar;
-    private LocalDate publishedDate = LocalDate.now();
-    private String[] scoringDescription;
 
-    public SurveyResponse(String id, String title, String pillar, String[] scoringDescription, LocalDate publishedDate) {
-        this.id = id;
-        this.title = title;
-        this.pillar = pillar;
-        this.scoringDescription = scoringDescription;
-        this.publishedDate = publishedDate;
+    @Indexed
+    private ObjectId userId;
+
+    @Indexed
+    private ObjectId surveyId;
+
+    private LocalDate responseDate = LocalDate.now();
+    private Object[] scoring;
+
+    public SurveyResponse() {
     }
 
-    public LocalDate getPublishedDate() { return publishedDate; }
-
-    public void setPublishedDate(LocalDate publishedDate) { this.publishedDate = publishedDate; }
-
-    public String getId() {
-        return id;
+    public SurveyResponse(ObjectId userId, ObjectId surveyId, LocalDate responseDate, Object[] scoring) {
+        this.userId = userId;
+        this.surveyId = surveyId;
+        this.responseDate = responseDate;
+        this.scoring = scoring;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public ObjectId getUserId() {
+        return userId;
     }
 
-    public String getTitle() {
-        return title;
+    public void setUserId(ObjectId userId) {
+        this.userId = userId;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public ObjectId getSurveyId() {
+        return surveyId;
     }
 
-    public String getPillar() {
-        return pillar;
+    public void setSurveyId(ObjectId surveyId) {
+        this.surveyId = surveyId;
     }
 
-    public void setPillar(String pillar) {
-        this.pillar = pillar;
+    public LocalDate getresponseDateDate() {
+        return responseDate;
     }
 
-    public String[] getScoringDescription() {
-        return scoringDescription;
+    public void setresponseDateDate(LocalDate responseDate) {
+        this.responseDate = responseDate;
     }
 
-    public void setScoringDescription(String[] scoringDescription) {
-        this.scoringDescription = scoringDescription;
+    public Object[] getScoring() {
+        return scoring;
+    }
+
+    public void setScoring(Object[] scoring) {
+        this.scoring = scoring;
     }
 }
