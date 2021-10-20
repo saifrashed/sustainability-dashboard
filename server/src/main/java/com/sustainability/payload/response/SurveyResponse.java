@@ -1,17 +1,25 @@
 package com.sustainability.payload.response;
 
+import java.time.LocalDate;
+
 public class SurveyResponse {
     private String id;
     private String title;
     private String pillar;
-    private String [] scoringDescription;
+    private LocalDate publishedDate = LocalDate.now();
+    private String[] scoringDescription;
 
-    public SurveyResponse(String id, String title, String pillar, String [] scoringDescription) {
+    public SurveyResponse(String id, String title, String pillar, String[] scoringDescription, LocalDate publishedDate) {
         this.id = id;
         this.title = title;
         this.pillar = pillar;
         this.scoringDescription = scoringDescription;
+        this.publishedDate = publishedDate;
     }
+
+    public LocalDate getPublishedDate() { return publishedDate; }
+
+    public void setPublishedDate(LocalDate publishedDate) { this.publishedDate = publishedDate; }
 
     public String getId() {
         return id;
