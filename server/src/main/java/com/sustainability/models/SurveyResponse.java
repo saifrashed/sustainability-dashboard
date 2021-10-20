@@ -1,4 +1,4 @@
-package com.sustainability.payload.response;
+package com.sustainability.models;
 
 import java.time.LocalDate;
 
