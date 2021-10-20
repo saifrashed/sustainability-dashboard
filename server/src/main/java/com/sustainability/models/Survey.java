@@ -3,6 +3,8 @@ package com.sustainability.models;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.beans.ConstructorProperties;
+
 @Document("surveys")
 public class Survey {
 
@@ -11,6 +13,10 @@ public class Survey {
     private String title;
     private String pillar;
     private String [] scoringDescription;
+
+
+    public Survey() {
+    }
 
     public Survey(String id, String title, String pillar, String [] scoringDescription) {
         this.id = id;

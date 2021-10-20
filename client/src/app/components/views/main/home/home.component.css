@@ -1,14 +1,14 @@
 .jumbotron {
     position: relative;
     height: 30rem;
-    background: url("/assets/img/background/home.png") no-repeat;
+    background: url("/assets/images/background/home.png") no-repeat;
     background-size: cover;
     background-position: center;
     border-bottom: 1px solid #dcdce4;
     margin-top: 4.5rem;
 }
 .bd-placeholder-img{
-  background: url("/assets/img/background/tree.jpg") no-repeat;
+  background: url("/assets/images/background/tree.jpg") no-repeat;
   background-size: cover;
   width: 200px;
   height: 250px;
@@ -16,7 +16,7 @@
 
 .overlay {
     content: '';
-    background: url("/assets/img/overlay/overlay-2.svg") no-repeat;
+    background: url("/assets/images/overlay/overlay-2.svg") no-repeat;
     background-position: top right;
     background-size: auto 100%;
     position: absolute;

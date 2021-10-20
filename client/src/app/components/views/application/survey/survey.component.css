@@ -1,3 +1,60 @@
-.container{
-  max-width: 900px;
+.container {
+    max-width: 900px;
 }
+
+#pillar-badge {
+    font-size: 1.25em;
+}
+
+button {
+    display: block;
+    position: relative;
+    margin: 56px auto 0;
+    padding: 10px 20px;
+    transition: all 0.15s ease-in-out;
+    font-family: inherit;
+    font-size: 24px;
+    font-weight: 600;
+    background: #fff;
+    border: 2px solid #000;
+    border-radius: 8px;
+    outline: 0;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #000;
+    color: #fff;
+}
+
+button:hover:active {
+    transform: scale(0.9);
+}
+
+button:focus {
+    background: #4caf50;
+    border-color: #4caf50;
+    color: #fff;
+}
+
+button:focus::before {
+    animation: spin 1s linear infinite;
+}
+
+button::before {
+    display: inline-block;
+    width: 0;
+    opacity: 0;
+    content: "\f3f4";
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
+    margin-right: 0;
+    transform: rotate(0deg);
+}
+
+
+form:invalid + button {
+pointer-events: none;
+opacity: 0.25;
+}
+

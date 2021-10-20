@@ -18,4 +18,8 @@ export class SurveyService {
     findById(id: string) {
         return this.http.get('http://localhost:8080/api/public/survey/' + id);
     }
+
+    findAllQuestions(id: string) {
+        return this.http.get('http://localhost:8080/api/public/survey/questions/' + id);
+    }
 }
