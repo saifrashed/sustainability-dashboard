@@ -1,11 +1,11 @@
 export class Survey {
-    id: string;
+    id: any;
     title: string;
     pillar: string;
     scoringDescription: string[];
 
 
-    constructor(id: string, title: string, pillar: string, scoringDescription: string[]) {
+    constructor(id: any, title: string, pillar: string, scoringDescription: string[]) {
         this.id = id;
         this.title = title;
         this.pillar = pillar;

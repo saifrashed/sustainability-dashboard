@@ -22,4 +22,10 @@ export class SurveyService {
     findAllQuestions(id: string) {
         return this.http.get('http://localhost:8080/api/public/survey/questions/' + id);
     }
+
+    create(survey: Survey) {
+        return this.http.post('http://localhost:8080/api/public/survey', survey);
+    }
+
+
 }

@@ -31,6 +31,14 @@ public class SurveyResponse {
         this.scoring = scoring;
     }
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
     public ObjectId getUserId() {
         return userId;
     }
@@ -47,11 +55,11 @@ public class SurveyResponse {
         this.surveyId = surveyId;
     }
 
-    public LocalDate getresponseDateDate() {
+    public LocalDate getResponseDate() {
         return responseDate;
     }
 
-    public void setresponseDateDate(LocalDate responseDate) {
+    public void setResponseDate(LocalDate responseDate) {
         this.responseDate = responseDate;
     }
 

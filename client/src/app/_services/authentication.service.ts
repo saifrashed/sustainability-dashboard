@@ -39,4 +39,17 @@ export class AuthenticationService {
     localStorage.removeItem('currentUser');
     this.currentUserSubject.next(null as any);
   }
+
+  findAll() {
+    return this.http.get('http://localhost:8080/api/auth/users')
+  }
+
+  deleteById(id: any) {
+    return this.http.delete('http://localhost:8080/api/auth/users/'+id);
+  }
+
+  create(user: User) {
+    return this.http.post('http://localhost:8080/api/auth/signup', user);
+  }
+
 }

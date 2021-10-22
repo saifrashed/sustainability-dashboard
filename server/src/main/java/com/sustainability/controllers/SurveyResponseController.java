@@ -81,7 +81,10 @@ public class SurveyResponseController {
                 .valueOf("$scoring.value").multiplyBy("$scoring.weight");
 
         // group the documents by pillars
-        GroupOperation groupByPillar = group("survey.pillar").sum(multiplyOp).as("numerator").sum("scoring.weight").as("denominator");
+        GroupOperation groupByPillar = group("survey.pillar")
+                .sum(multiplyOp).as("numerator")
+                .sum("scoring.weight")
+                .as("denominator");
 
         // calculate average by dividing sum value by sum weights
         ArithmeticOperators.Divide divideOp = ArithmeticOperators.valueOf("$numerator")
@@ -177,6 +180,35 @@ public class SurveyResponseController {
         SurveyResponse newSurveyQuestion = surveyResponseRepo.save(surveyResponse);
 
         return new ResponseEntity<>(newSurveyQuestion, HttpStatus.OK);
+    }
+
+    @GetMapping("/survey-response/status/{userId}/{surveyId}")
+    @ResponseBody
+    public ResponseEntity<?> createSurveyQuestion(@PathVariable("userId") String userId, @PathVariable("surveyId") String surveyId) {
+
+//        SurveyResponse newSurveyQuestion = surveyResponseRepo.save(surveyResponse);
+
+        // match the faculty
+        MatchOperation matchUser = Aggregation.match(Criteria.where("userId")
+                .is(new ObjectId(userId)));
+
+        // match the faculty
+        MatchOperation matchSurvey = Aggregation.match(Criteria.where("surveyId")
+                .is(new ObjectId(surveyId)));
+
+        // prepare aggregation
+        Aggregation aggregation = Aggregation.newAggregation(
+                matchUser,
+                matchSurvey
+        );
+
+        // initialise aggregation
+        AggregationResults<Document> surveyResponse = mongoTemplate.aggregate(aggregation, "surveyResponse", Document.class);;
+
+        // map results
+        int result = surveyResponse.getMappedResults().size();
+
+        return new ResponseEntity<>(result, HttpStatus.OK);
     }
 
 }
