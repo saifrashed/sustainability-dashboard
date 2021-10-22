@@ -15,15 +15,15 @@
                     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
                         <!-- Username -->
                         <div class="mb-3">
-                            <label for="email" class="form-label">Username or email</label>
-                            <input type="email" id="email" formControlName="username" class="form-control" name="email"
-                                   placeholder="Email address here" required="">
+                            <label for="username" class="form-label">Username</label>
+                            <input type="text" id="username" formControlName="username" class="form-control"
+                                   name="username" placeholder="Username" required>
                         </div>
                         <!-- Password -->
                         <div class="mb-3">
                             <label for="password" class="form-label">Password</label>
                             <input type="password" id="password" formControlName="password" class="form-control"
-                                   name="password" placeholder="**************" required="">
+                                   name="password" placeholder="**************" required>
                         </div>
                         <div>
                             <!-- Button -->

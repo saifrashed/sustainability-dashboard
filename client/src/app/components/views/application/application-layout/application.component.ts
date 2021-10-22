@@ -12,6 +12,7 @@ export class ApplicationComponent implements OnInit {
     public id: string;
     public username: string;
     public email: string;
+    public faculty: string;
     public roles: string[];
 
 
@@ -19,6 +20,7 @@ export class ApplicationComponent implements OnInit {
         this.id = this.authenticationService.currentUserValue.id;
         this.username = this.authenticationService.currentUserValue.username;
         this.email = this.authenticationService.currentUserValue.email;
+        this.faculty = this.authenticationService.currentUserValue?.faculty;
         this.roles = this.authenticationService.currentUserValue.roles;
     }
 

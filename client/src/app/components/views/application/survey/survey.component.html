@@ -23,7 +23,7 @@
                                                  [scoringDescription]="scoringDescription"
                                                  (newScoringValue)="addOrUpdateScoringArray($event)"></app-survey-question>
 
-                            <button (click)="onSubmit()">Submit</button>
+                            <button *ngIf="questions?.length == scoringResponse.length" (click)="onSubmit()" >Submit</button>
                         </div>
 
 

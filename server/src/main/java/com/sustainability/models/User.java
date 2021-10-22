@@ -25,6 +25,9 @@ public class User {
   @Email
   private String email;
 
+  @Size(max = 50)
+  private String faculty = "";
+
   @NotBlank
   @Size(max = 120)
   private String password;
@@ -35,10 +38,11 @@ public class User {
   public User() {
   }
 
-  public User(String username, String email, String password) {
+  public User(String username, String email, String faculty, String password) {
     this.username = username;
     this.email = email;
     this.password = password;
+    this.faculty = faculty;
   }
 
   public String getId() {
@@ -63,6 +67,14 @@ public class User {
 
   public void setEmail(String email) {
     this.email = email;
+  }
+
+  public String getFaculty() {
+    return faculty;
+  }
+
+  public void setFaculty(String faculty) {
+    this.faculty = faculty;
   }
 
   public String getPassword() {
