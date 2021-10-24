@@ -14,6 +14,10 @@ export class SurveyResponseService {
         return this.http.get('http://localhost:8080/api/public/survey-response')
     }
 
+    findAllFaculties() {
+        return this.http.get('http://localhost:8080/api/public/survey-response/faculties')
+    }
+
     getSurveyResponseStatisticsGlobals() {
         return this.http.get('http://localhost:8080/api/public/survey-response/statistics/global')
     }

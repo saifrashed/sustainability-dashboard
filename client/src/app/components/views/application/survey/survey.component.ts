@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {SurveyService} from "../../../../_services";
+import {AuthenticationService, SurveyResponseService, SurveyService} from "../../../../_services";
 import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
@@ -16,7 +16,7 @@ export class SurveyComponent implements OnInit {
     public questions: any;
 
 
-    constructor(private surveyService: SurveyService, private route: ActivatedRoute, private router: Router,) {
+    constructor(private surveyService: SurveyService, private authenticationService: AuthenticationService, private route: ActivatedRoute, private router: Router, private surveyResponse: SurveyResponseService) {
         surveyService.findById(<string>this.route.snapshot.paramMap.get('id')).subscribe(survey => {
             this.survey = survey;
             this.scoringDescription = this.survey.scoringDescription;
@@ -48,7 +48,19 @@ export class SurveyComponent implements OnInit {
     }
 
     onSubmit() {
-        console.log(this.scoringResponse)
+        let surveyResponseObject = {
+            id: null,
+            userId: this.authenticationService.currentUserValue.id,
+            surveyId: <string>this.route.snapshot.paramMap.get('id'),
+            scoring: this.scoringResponse
+        };
+
+        this.surveyResponse.create(surveyResponseObject).subscribe(message => {
+            console.log(message);
+
+            this.router.navigate(["dashboard"])
+        })
+
     }
 
 }

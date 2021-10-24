@@ -56,17 +56,20 @@
                                 <span class="badge  bg-light-primary">{{survey.pillar}}</span>
                             </td>
                             <td class="align-middle text-dark">
-                                <span *ngIf="survey.status == 'Not Completed'" class="badge bg-dark">{{survey.status}}</span>
-                                <span *ngIf="survey.status == 'Completed'" class="badge bg-light-primary">{{survey.status}}</span>
+                                <span *ngIf="survey.status == 'Not Completed'"
+                                      class="badge bg-dark">{{survey.status}}</span>
+                                <span *ngIf="survey.status == 'Completed'"
+                                      class="badge bg-light-primary">{{survey.status}}</span>
 
                             </td>
                             <td class="text-center">
-                                <a  *ngIf="survey.status == 'Not Completed'" class="btn btn-white" routerLink="/dashboard/faculty/survey/{{survey.id}}">Start survey</a>
-                                <a  *ngIf="survey.status == 'Completed'" class="btn btn-success bg-light-primary disabled">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
-                                        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-                                    </svg>
-                                </a>
+                                <a *ngIf="survey.status == 'Not Completed'" class="btn btn-white"
+                                   routerLink="/dashboard/faculty/survey/{{survey.id}}">Start survey</a>
+
+                                <svg *ngIf="survey.status == 'Completed'" xmlns="http://www.w3.org/2000/svg" width="40"
+                                     height="40" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                                    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                                </svg>
 
                             </td>
                         </tr>

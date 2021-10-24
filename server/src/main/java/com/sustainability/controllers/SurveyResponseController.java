@@ -3,6 +3,7 @@ package com.sustainability.controllers;
 import com.sustainability.models.SurveyQuestion;
 import com.sustainability.models.SurveyResponse;
 import com.sustainability.repository.SurveyResponseRepository;
+import com.sustainability.repository.UserRepository;
 import org.bson.Document;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +26,9 @@ public class SurveyResponseController {
 
     @Autowired
     SurveyResponseRepository surveyResponseRepo;
+
+    @Autowired
+    UserRepository userRepo;
 
     @Autowired
     MongoTemplate mongoTemplate;
@@ -210,5 +214,29 @@ public class SurveyResponseController {
 
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
+
+
+    @GetMapping("/survey-response/faculties")
+    @ResponseBody
+    public ResponseEntity<?> getFaculties() {
+
+
+        // group the documents by pillars
+        GroupOperation groupByFaculty = group("faculty");
+
+        // prepare aggregation
+        Aggregation aggregation = Aggregation.newAggregation(
+                groupByFaculty
+        );
+
+        // initialise aggregation
+        AggregationResults<Document> faculty = mongoTemplate.aggregate(aggregation, "users", Document.class);;
+
+        // map results
+        List<Document> result = faculty.getMappedResults();
+
+        return new ResponseEntity<>(result, HttpStatus.OK);
+    }
+
 
 }
