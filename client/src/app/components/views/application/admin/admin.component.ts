@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
 import {AuthenticationService, SurveyResponseService, SurveyService} from "../../../../_services";
 import {Survey} from "../../../../_models/survey";
+import {NotifierService} from "angular-notifier";
 
 @Component({
     selector: 'app-dashboard-admin',
@@ -49,7 +50,12 @@ export class AdminComponent implements OnInit {
     public globalStatistics: any;
     public facultyStatistics: any;
 
-    constructor(private surveyService: SurveyService, private authenticationService: AuthenticationService, private surveyResponse: SurveyResponseService) {
+    constructor(
+        private surveyService: SurveyService,
+        private authenticationService: AuthenticationService,
+        private surveyResponse: SurveyResponseService,
+        private notifierService: NotifierService
+    ) {
         this.surveyService.findAll().subscribe(surveyList => {
             this.surveyList = surveyList;
             this.getCompletedSurveys();
@@ -93,6 +99,9 @@ export class AdminComponent implements OnInit {
         })
     }
 
+    responsesFilledError() {
+        this.notifierService.notify("error", "Cannot edit questions because of filled responses", 'SURVEY_RESPONSE_ERROR')
+    }
 
     // Survey CRUD
     getSurveys() {
@@ -101,13 +110,13 @@ export class AdminComponent implements OnInit {
         });
     }
 
-     getCompletedSurveys() {
-         for(let index in this.surveyList) {
-             this.surveyResponse.getCompletedSurveys(this.surveyList[index].id).subscribe(result => {
-                 this.surveyList[index].completed = result;
-             });
-         }
-     }
+    getCompletedSurveys() {
+        for (let index in this.surveyList) {
+            this.surveyResponse.getCompletedSurveys(this.surveyList[index].id).subscribe(result => {
+                this.surveyList[index].completed = result;
+            });
+        }
+    }
 
     getSurveyQuestions(id: string) {
         this.surveyService.findAllQuestions(id).subscribe(surveyQuestions => {
@@ -179,7 +188,7 @@ export class AdminComponent implements OnInit {
     }
 
     getGlobalAverage(pillar: string): number {
-        if(this.globalStatistics) {
+        if (this.globalStatistics) {
             let object = this.globalStatistics.find((x: any) => x._id == pillar);
 
             if (object == undefined) {
@@ -193,7 +202,7 @@ export class AdminComponent implements OnInit {
     }
 
     getFacultyAverage(pillar: string): number {
-        if(this.facultyStatistics) {
+        if (this.facultyStatistics) {
             let object = this.facultyStatistics.find((x: any) => x._id == pillar);
 
             if (object == undefined) {

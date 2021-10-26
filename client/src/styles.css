@@ -1,4 +1,10 @@
 /**
+Notification styling
+ */
+@import "~angular-notifier/styles";
+
+
+/**
 General styling
  */
 body {
