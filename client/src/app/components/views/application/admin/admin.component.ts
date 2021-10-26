@@ -82,8 +82,6 @@ export class AdminComponent implements OnInit {
     this.notifierService.notify("success", "Welcome to the Dashboard " + this.authenticationService.currentUserValue.username, "WELCOME_MESSAGE")
   }
 
-
-  // User CRUD
   getUsers() {
     this.authenticationService.findAll().subscribe(userList => {
       this.userList = userList;
@@ -91,13 +89,12 @@ export class AdminComponent implements OnInit {
   }
 
   deleteUser(id: string) {
-    if (confirm("Are you sure?") == true) {
-      this.notifierService.notify("success", "Welcome to the Dashboard " + this.authenticationService.currentUserValue.username, "WELCOME_MESSAGE")
+    if (confirm("Are you sure?")){
       this.authenticationService.deleteById(id).subscribe(message => {
         this.getUsers();
         this.notifierService.notify("success", "User successfully deleted. ", "SUCCESS_USERDELETE")
       })
-    } else {
+    }else {
       this.notifierService.notify("error", "User not deleted. ", "FAIL_USERDELETE")
     }
   }
@@ -132,6 +129,7 @@ export class AdminComponent implements OnInit {
       });
     }
   }
+
 
   getSurveyQuestions(id: string) {
     this.surveyService.findAllQuestions(id).subscribe(surveyQuestions => {
