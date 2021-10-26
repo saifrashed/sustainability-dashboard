@@ -56,12 +56,13 @@ export class AdminComponent implements OnInit {
     private surveyResponse: SurveyResponseService,
     private notifierService: NotifierService
   ) {
-    this.notifierService.notify("success", "Welcome to the Dashboard " + authenticationService.currentUserValue.username, "WELCOME_MESSAGE")
 
     this.surveyService.findAll().subscribe(surveyList => {
       this.surveyList = surveyList;
       this.getCompletedSurveys();
-      this.notifierService.notify("success", "All surveys have been loaded", "GET_SURVEY_SUCCESS")
+
+        //
+        this.notifierService.notify("success", "All surveys have been loaded", "GET_SURVEY_SUCCESS")
     });
 
     this.authenticationService.findAll().subscribe(userList => {
@@ -78,6 +79,7 @@ export class AdminComponent implements OnInit {
   }
 
   ngOnInit(): void {
+      this.notifierService.notify("success", "Welcome to the Dashboard " + this.authenticationService.currentUserValue.username, "WELCOME_MESSAGE")
   }
 
 
