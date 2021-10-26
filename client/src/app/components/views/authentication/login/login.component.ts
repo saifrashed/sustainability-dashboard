@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
 
 
     constructor(private route: ActivatedRoute, private router: Router, private authenticationService: AuthenticationService) {
-        if(this.authenticationService.isLoggedIn()) {
+        if (this.authenticationService.isLoggedIn()) {
             this.router.navigate(["dashboard"])
         }
     }

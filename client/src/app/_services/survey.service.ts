@@ -1,7 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Survey} from "../_models/survey";
 import {HttpClient} from '@angular/common/http';
-import {Observable} from "rxjs";
 import {SurveyQuestion} from "../_models/surveyQuestion";
 
 @Injectable({
@@ -13,7 +12,7 @@ export class SurveyService {
     }
 
     findAll() {
-       return this.http.get('http://localhost:8080/api/public/survey')
+        return this.http.get('http://localhost:8080/api/public/survey')
     }
 
     findById(id: string) {

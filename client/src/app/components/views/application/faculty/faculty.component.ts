@@ -38,13 +38,13 @@ export class FacultyComponent implements OnInit {
                 this.surveyList.push(list[ndx]);
 
                 this.surveyList.sort(((a: any, b: any) => {
-                  if ( new Date(parseInt(a.id.substring(0, 8), 16) * 1000) < new Date(parseInt(b.id.substring(0, 8), 16) * 1000) ){
-                    return -1;
-                  }
-                    if ( new Date(parseInt(a.id.substring(0, 8), 16) * 1000) > new Date(parseInt(b.id.substring(0, 8), 16) * 1000) ){
-                    return 1;
-                  }
-                  return 0;
+                    if (new Date(parseInt(a.id.substring(0, 8), 16) * 1000) < new Date(parseInt(b.id.substring(0, 8), 16) * 1000)) {
+                        return -1;
+                    }
+                    if (new Date(parseInt(a.id.substring(0, 8), 16) * 1000) > new Date(parseInt(b.id.substring(0, 8), 16) * 1000)) {
+                        return 1;
+                    }
+                    return 0;
                 }))
 
             })

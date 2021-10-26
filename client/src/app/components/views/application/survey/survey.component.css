@@ -54,7 +54,7 @@ button::before {
 
 
 form:invalid + button {
-pointer-events: none;
-opacity: 0.25;
+    pointer-events: none;
+    opacity: 0.25;
 }
 

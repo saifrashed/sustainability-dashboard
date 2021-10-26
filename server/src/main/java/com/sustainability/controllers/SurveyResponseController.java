@@ -216,13 +216,37 @@ public class SurveyResponseController {
     }
 
 
+    @GetMapping("/survey-response/completed/{surveyId}")
+    @ResponseBody
+    public ResponseEntity<?> completedSurveys(@PathVariable("surveyId") String surveyId) {
+
+
+        // match the faculty
+        MatchOperation matchSurvey = Aggregation.match(Criteria.where("surveyId")
+                .is(new ObjectId(surveyId)));
+
+        // prepare aggregation
+        Aggregation aggregation = Aggregation.newAggregation(
+                matchSurvey
+        );
+
+        // initialise aggregation
+        AggregationResults<Document> surveyResponse = mongoTemplate.aggregate(aggregation, "surveyResponse", Document.class);;
+
+        // map results
+        int result = surveyResponse.getMappedResults().size();
+
+        return new ResponseEntity<>(result, HttpStatus.OK);
+    }
+
+
     @GetMapping("/survey-response/faculties")
     @ResponseBody
     public ResponseEntity<?> getFaculties() {
 
 
         // group the documents by pillars
-        GroupOperation groupByFaculty = group("faculty");
+        GroupOperation groupByFaculty = group("faculty").addToSet("$username").as("username");
 
         // prepare aggregation
         Aggregation aggregation = Aggregation.newAggregation(

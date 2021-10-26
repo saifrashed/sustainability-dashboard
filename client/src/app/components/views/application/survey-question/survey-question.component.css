@@ -10,10 +10,12 @@
     flex-direction: column;
     align-items: center;
 }
+
 form {
     width: 100%;
     max-width: 800px;
 }
+
 form #question-answering {
     display: flex;
     flex-direction: row;
@@ -23,6 +25,7 @@ form #question-answering {
     height: 50px;
     user-select: none;
 }
+
 :host form #question-answering::before {
     content: " ";
     position: absolute;
@@ -34,12 +37,14 @@ form #question-answering {
     transform: translate(-50%, -50%);
     background: #000;
 }
+
 :host form #question-answering input, form #question-answering label {
     box-sizing: border-box;
     flex: 1;
     user-select: none;
     cursor: pointer;
 }
+
 :host form #question-answering label {
     display: inline-block;
     position: relative;
@@ -47,6 +52,7 @@ form #question-answering {
     height: 100%;
     user-select: none;
 }
+
 :host form #question-answering label::before {
     content: attr(data-value);
     position: absolute;
@@ -60,6 +66,7 @@ form #question-answering {
     opacity: 0.85;
     transition: all 0.15s ease-in-out;
 }
+
 :host form #question-answering label::after {
     content: " ";
     position: absolute;
@@ -77,38 +84,49 @@ form #question-answering {
     cursor: pointer;
     transition: all 0.15s ease-in-out;
 }
+
 :host form #question-answering label:hover::after {
     transform: translate(-50%, -50%) scale(1.25);
 }
+
 :host form #question-answering input {
     display: none;
 }
+
 :host form #question-answering input:checked + label::before {
     font-weight: 800;
     opacity: 1;
 }
+
 :host form #question-answering input:checked + label::after {
     border-width: 4px;
     transform: translate(-50%, -50%) scale(0.75);
 }
+
 :host form #question-answering input:checked ~ #question-answering-pos {
     opacity: 1;
 }
+
 :host form #question-answering input:checked:nth-child(1) ~ #question-answering-pos {
     left: 10%;
 }
+
 :host form #question-answering input:checked:nth-child(3) ~ #question-answering-pos {
     left: 30%;
 }
+
 :host form #question-answering input:checked:nth-child(5) ~ #question-answering-pos {
     left: 50%;
 }
+
 :host form #question-answering input:checked:nth-child(7) ~ #question-answering-pos {
     left: 70%;
 }
+
 :host form #question-answering input:checked:nth-child(9) ~ #question-answering-pos {
     left: 90%;
 }
+
 :host form #question-answering #question-answering-pos {
     display: block;
     position: absolute;
@@ -123,10 +141,12 @@ form #question-answering {
     opacity: 0;
     z-index: 2;
 }
+
 :host form:valid #question-answering input + label::before {
     transform: translate(-50%, 45px) scale(0.9);
     transition: all 0.15s linear;
 }
+
 :host form:valid #question-answering input:checked + label::before {
     transform: translate(-50%, 45px) scale(1.1);
     transition: all 0.15s linear;

@@ -2,7 +2,7 @@
     <!-- navbar -->
     <nav class="navbar-classic navbar navbar-expand-lg">
         <a>
-            <img class="img-fluid" src="/assets/images/brand/logo.png" routerLink="/account/login" style="width:200px">
+            <img class="img-fluid" routerLink="/account/login" src="/assets/images/brand/logo.png" style="width:200px">
         </a>
         <!--Navbar nav -->
         <ul class="navbar-nav navbar-right-wrap ms-auto d-flex nav-top-wrap">
@@ -94,15 +94,15 @@
             <!--</li>-->
             <!-- List -->
             <li class="dropdown ms-2">
-                <a class="rounded-circle" href="#" role="button" id="dropdownUser"
-                   data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a aria-expanded="false" aria-haspopup="true" class="rounded-circle" data-bs-toggle="dropdown"
+                   href="#" id="dropdownUser" role="button">
                     <div class="avatar avatar-md avatar-indicators avatar-online">
-                        <img alt="avatar" src="/assets/images/avatar/avatar.jpg"
-                             class="rounded-circle"/>
+                        <img alt="avatar" class="rounded-circle"
+                             src="/assets/images/avatar/avatar.jpg"/>
                     </div>
                 </a>
-                <div class="dropdown-menu dropdown-menu-end"
-                     aria-labelledby="dropdownUser">
+                <div aria-labelledby="dropdownUser"
+                     class="dropdown-menu dropdown-menu-end">
                     <div class="px-4 pb-0 pt-2">
 
 
@@ -117,7 +117,7 @@
 
                     <ul class="list-unstyled">
                         <li>
-                            <a class="dropdown-item" (click)="onLogout()">
+                            <a (click)="onLogout()" class="dropdown-item">
                                 <i class="me-2 icon-xxs dropdown-item-icon"
                                    data-feather="power"></i>Sign Out
                             </a>

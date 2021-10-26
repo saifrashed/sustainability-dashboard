@@ -26,6 +26,10 @@ export class SurveyResponseService {
         return this.http.get('http://localhost:8080/api/public/survey-response/statistics/' + faculty);
     }
 
+    getCompletedSurveys(surveyId: string) {
+        return this.http.get('http://localhost:8080/api/public/survey-response/completed/' + surveyId);
+    }
+
     create(surveyResponse: SurveyResponse) {
         return this.http.post('http://localhost:8080/api/public/survey-response', surveyResponse);
     }

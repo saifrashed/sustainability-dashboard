@@ -36,7 +36,7 @@ export class SurveyComponent implements OnInit {
 
         let index = this.scoringResponse.findIndex(x => x.question.id === newItem.question.id);
 
-        if(index != -1) {
+        if (index != -1) {
             this.scoringResponse[index] = newItem
         } else {
             this.scoringResponse.push(newItem);

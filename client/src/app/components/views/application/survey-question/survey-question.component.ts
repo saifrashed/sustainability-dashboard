@@ -1,30 +1,31 @@
-import { Component, OnInit, Input, Output, EventEmitter  } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
-  selector: 'app-survey-question',
-  templateUrl: './survey-question.component.html',
-  styleUrls: ['./survey-question.component.css']
+    selector: 'app-survey-question',
+    templateUrl: './survey-question.component.html',
+    styleUrls: ['./survey-question.component.css']
 })
 export class SurveyQuestionComponent implements OnInit {
 
-  @Input() scoringDescription: any[] = [];
-  @Input() question: any;
+    @Input() scoringDescription: any[] = [];
+    @Input() question: any;
 
-  @Output() newScoringValue =  new EventEmitter<any>();
+    @Output() newScoringValue = new EventEmitter<any>();
 
-  constructor() { }
+    constructor() {
+    }
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+    }
 
-  addOrUpdateScoring(value: any) {
-    let scoringObject = {
-      question: this.question,
-      value: parseInt(value.target.value),
-      weight: this.question.weight
-    };
+    addOrUpdateScoring(value: any) {
+        let scoringObject = {
+            question: this.question,
+            value: parseInt(value.target.value),
+            weight: this.question.weight
+        };
 
-    this.newScoringValue.emit(scoringObject);
-  }
+        this.newScoringValue.emit(scoringObject);
+    }
 
 }
