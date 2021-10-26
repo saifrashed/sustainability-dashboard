@@ -92,6 +92,13 @@ export class AdminComponent implements OnInit {
   }
 
   deleteUser(id: string) {
+      var x;
+      if (confirm("Are you sure?") == true) {
+        x = "You pressed OK!";
+      } else {
+        x = "You pressed Cancel!";
+      }
+      console.log(x)
     this.authenticationService.deleteById(id).subscribe(message => {
       this.getUsers();
     });
