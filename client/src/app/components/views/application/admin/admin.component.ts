@@ -56,7 +56,6 @@ export class AdminComponent implements OnInit {
     private surveyResponse: SurveyResponseService,
     private notifierService: NotifierService
   ) {
-    this.notifierService.notify("success", "Welcome to the Dashboard " + authenticationService.currentUserValue.username, "WELCOME_MESSAGE")
 
     this.surveyService.findAll().subscribe(surveyList => {
       this.surveyList = surveyList;
@@ -78,8 +77,8 @@ export class AdminComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.notifierService.notify("success", "Welcome to the Dashboard " + this.authenticationService.currentUserValue.username, "WELCOME_MESSAGE")
   }
-
 
 
   // User CRUD
@@ -99,6 +98,10 @@ export class AdminComponent implements OnInit {
     this.authenticationService.create(this.newUserForm.getRawValue()).subscribe(message => {
       this.getUsers();
       this.newUserForm.reset();
+    }, error => {
+      for (let i = 0; i < error.error.errors.length; i++) {
+        this.notifierService.notify('error', error.error.errors[i].field + ": " + error.error.errors[i].defaultMessage, 'LOGIN_ERROR');
+      }
     })
   }
 
@@ -144,8 +147,6 @@ export class AdminComponent implements OnInit {
         this.newSurveyForm.controls["optionFive"].value
       ]
     };
-
-
     this.surveyService.create(surveyObject).subscribe(message => {
       this.getSurveys();
       this.newSurveyForm.reset();
@@ -170,6 +171,7 @@ export class AdminComponent implements OnInit {
       this.getSurveyQuestions(this.selectedSurveyId);
       this.newQuestionForm.reset();
       this.newQuestionForm.controls["weight"].setValue(1)
+      this.notifierService.notify("success", "Question has been added to the survey", "ADD_SURVEY_QUESTION")
     })
   }
 
