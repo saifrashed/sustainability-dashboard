@@ -61,8 +61,8 @@ export class AdminComponent implements OnInit {
       this.surveyList = surveyList;
       this.getCompletedSurveys();
 
-        //
-        this.notifierService.notify("success", "All surveys have been loaded", "GET_SURVEY_SUCCESS")
+      //
+      this.notifierService.notify("success", "All surveys have been loaded", "GET_SURVEY_SUCCESS")
     });
 
     this.authenticationService.findAll().subscribe(userList => {
@@ -79,9 +79,8 @@ export class AdminComponent implements OnInit {
   }
 
   ngOnInit(): void {
-      this.notifierService.notify("success", "Welcome to the Dashboard " + this.authenticationService.currentUserValue.username, "WELCOME_MESSAGE")
+    this.notifierService.notify("success", "Welcome to the Dashboard " + this.authenticationService.currentUserValue.username, "WELCOME_MESSAGE")
   }
-
 
 
   // User CRUD
@@ -92,26 +91,24 @@ export class AdminComponent implements OnInit {
   }
 
   deleteUser(id: string) {
-      var x;
-      if (confirm("Are you sure?") == true) {
-        x = "You pressed OK!";
-      } else {
-        x = "You pressed Cancel!";
-      }
-      console.log(x)
-    this.authenticationService.deleteById(id).subscribe(message => {
-      this.getUsers();
-    });
+    if (confirm("Are you sure?") == true) {
+      this.notifierService.notify("success", "Welcome to the Dashboard " + this.authenticationService.currentUserValue.username, "WELCOME_MESSAGE")
+      this.authenticationService.deleteById(id).subscribe(message => {
+        this.getUsers();
+      })
+    } else {
+      this.notifierService.notify("error", "User not deleted. ", "FAIL_USERDELETE")
+    }
   }
 
   addUser() {
     this.authenticationService.create(this.newUserForm.getRawValue()).subscribe(message => {
       this.getUsers();
       this.newUserForm.reset();
-    } , error => {
-        for (let i = 0; i < error.error.errors.length; i++) {
-            this.notifierService.notify('error', error.error.errors[i].field + ": " + error.error.errors[i].defaultMessage, 'LOGIN_ERROR');
-        }
+    }, error => {
+      for (let i = 0; i < error.error.errors.length; i++) {
+        this.notifierService.notify('error', error.error.errors[i].field + ": " + error.error.errors[i].defaultMessage, 'LOGIN_ERROR');
+      }
     })
   }
 
@@ -183,7 +180,7 @@ export class AdminComponent implements OnInit {
       this.getSurveyQuestions(this.selectedSurveyId);
       this.newQuestionForm.reset();
       this.newQuestionForm.controls["weight"].setValue(1);
-        this.notifierService.notify("success", "Question has been added to the survey", "ADD_SURVEY_QUESTION")
+      this.notifierService.notify("success", "Question has been added to the survey", "ADD_SURVEY_QUESTION")
     })
   }
 
