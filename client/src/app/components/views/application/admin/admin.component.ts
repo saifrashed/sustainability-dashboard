@@ -95,6 +95,7 @@ export class AdminComponent implements OnInit {
       this.notifierService.notify("success", "Welcome to the Dashboard " + this.authenticationService.currentUserValue.username, "WELCOME_MESSAGE")
       this.authenticationService.deleteById(id).subscribe(message => {
         this.getUsers();
+        this.notifierService.notify("success", "User successfully deleted. ", "SUCCESS_USERDELETE")
       })
     } else {
       this.notifierService.notify("error", "User not deleted. ", "FAIL_USERDELETE")
