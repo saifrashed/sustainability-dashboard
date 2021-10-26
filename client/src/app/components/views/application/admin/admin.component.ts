@@ -101,6 +101,10 @@ export class AdminComponent implements OnInit {
     this.authenticationService.create(this.newUserForm.getRawValue()).subscribe(message => {
       this.getUsers();
       this.newUserForm.reset();
+    } , error => {
+        for (let i = 0; i < error.error.errors.length; i++) {
+            this.notifierService.notify('error', error.error.errors[i].field + ": " + error.error.errors[i].defaultMessage, 'LOGIN_ERROR');
+        }
     })
   }
 
@@ -171,7 +175,8 @@ export class AdminComponent implements OnInit {
     this.surveyService.createQuestion(questionObject).subscribe(message => {
       this.getSurveyQuestions(this.selectedSurveyId);
       this.newQuestionForm.reset();
-      this.newQuestionForm.controls["weight"].setValue(1)
+      this.newQuestionForm.controls["weight"].setValue(1);
+        this.notifierService.notify("success", "Question has been added to the survey", "ADD_SURVEY_QUESTION")
     })
   }
 
