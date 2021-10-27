@@ -278,7 +278,7 @@
                         <div class="accordion" id="accordionExample">
 
                             <div *ngFor="let faculty of facultyList">
-                                <div *ngIf="faculty._id != ''">
+                                <div *ngIf="faculty._id != undefined">
 
 
                                     <div class="accordion-item">
@@ -361,8 +361,7 @@
                                 <td class="align-middle">{{user.faculty}}</td>
 
                                 <td class="align-middle">
-                                    <a *ngIf="user.username != 'admin'" class="btn btn-danger"
-                                       (click)="deleteUser(user.id)">
+                                    <a *ngIf="user.username != 'admin'" class="btn btn-danger" (click)="deleteUser(user.id)">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                              fill="currentColor"
                                              class="bi bi-x-lg" viewBox="0 0 16 16">
