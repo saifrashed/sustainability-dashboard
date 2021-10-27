@@ -40,7 +40,6 @@ target
 secrets.yml
 .gradletasknamecache
 .sts4-cache
-application.properties
 
 # System Files
 .DS_Store
@@ -50,6 +49,7 @@ Thumbs.db
 /.idea
 .project
 .classpath
+application.properties
 .c9/
 *.launch
 .settings/
