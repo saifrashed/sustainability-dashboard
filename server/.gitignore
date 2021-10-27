@@ -44,12 +44,12 @@ secrets.yml
 # System Files
 .DS_Store
 Thumbs.db
+.application.properties
 
 # IDEs and editors
 /.idea
 .project
 .classpath
-.application.properties
 .c9/
 *.launch
 .settings/
