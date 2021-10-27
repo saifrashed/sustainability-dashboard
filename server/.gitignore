@@ -49,7 +49,7 @@ Thumbs.db
 /.idea
 .project
 .classpath
-application.properties
+.application.properties
 .c9/
 *.launch
 .settings/
