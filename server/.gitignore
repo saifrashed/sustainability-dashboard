@@ -41,10 +41,10 @@ secrets.yml
 .gradletasknamecache
 .sts4-cache
 
+
 # System Files
 .DS_Store
 Thumbs.db
-.application.properties
 
 # IDEs and editors
 /.idea

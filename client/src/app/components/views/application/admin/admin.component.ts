@@ -89,7 +89,7 @@ export class AdminComponent implements OnInit {
   }
 
   deleteUser(id: string) {
-    if (document.getElementById("userDeleteModal")){
+    if (confirm("Are you sure?")){
       this.authenticationService.deleteById(id).subscribe(message => {
         this.getUsers();
         this.notifierService.notify("success", "User successfully deleted. ", "SUCCESS_USERDELETE")
