@@ -1,5 +1,21 @@
 <!-- Container fluid -->
-<div class="bg-primary pt-10 pb-21"></div>
+<div id="banner" class="bg-primary pt-10 pb-21 position-relative">
+    <div class="area">
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</div>
+
 <div class="container-fluid mt-n22 px-6">
     <div class="row">
         <div class="col-lg-12 col-md-12 col-12">
@@ -162,7 +178,8 @@
                                     </svg>
                                 </a>
 
-                                <a *ngIf="survey.completed !== 0" class="btn btn-secondary disabled" (mouseenter)="responsesFilledError()">
+                                <a *ngIf="survey.completed !== 0" class="btn btn-secondary disabled"
+                                   (mouseenter)="responsesFilledError()">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                          class="bi bi-view-list" viewBox="0 0 16 16">
                                         <path d="M3 4.5h10a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1H3zM1 2a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 2zm0 12a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 14z"/>
@@ -361,7 +378,8 @@
                                 <td class="align-middle">{{user.faculty}}</td>
 
                                 <td class="align-middle">
-                                    <a *ngIf="user.username != 'admin'" class="btn btn-danger" (click)="deleteUser(user.id)">
+                                    <a *ngIf="user.username != 'admin'" class="btn btn-danger"
+                                       (click)="deleteUser(user.id)">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                              fill="currentColor"
                                              class="bi bi-x-lg" viewBox="0 0 16 16">
