@@ -26,7 +26,7 @@ export class FacultyComponent implements OnInit {
   getAverageByFaculty(faculty: any): number {
     for (let i = 0; i < this.surveyAverage?.length; i++) {
       if (faculty == this.surveyAverage[i]._id){
-        return (this.surveyAverage[i].average * 2) * 10
+        return (parseInt(this.surveyAverage[i].average) * 2) * 10
       }
     }
     return 0

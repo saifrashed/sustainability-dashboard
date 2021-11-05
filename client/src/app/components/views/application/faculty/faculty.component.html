@@ -38,22 +38,22 @@
         <!-- card body  -->
         <div class="card-body">
           <!-- chart  -->
-          <div><h5 class="mt-2">Education</h5></div>
+          <div><h5 class="mt-2">Education ({{getAverageByFaculty("Education")}}%)</h5></div>
           <div class="progress mb-1">
             <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar"
                  [style.width]="getAverageByFaculty('Education')+'%'"></div>
           </div>
-          <div><h5 class="mt-2">Research</h5></div>
+          <div><h5 class="mt-2">Research ({{getAverageByFaculty("Research")}}%)</h5></div>
           <div class="progress mb-1">
             <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" role="progressbar"
                  [style.width]="getAverageByFaculty('Research')+'%'"></div>
           </div>
-          <div><h5 class="mt-2">Business operations/Facilities</h5></div>
+          <div><h5 class="mt-2">Business operations/Facilities ({{getAverageByFaculty("Business operations/Facilities")}}%)</h5></div>
           <div class="progress mb-1">
             <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar"
                  [style.width]="getAverageByFaculty('Business operations/Facilities')+'%'"></div>
           </div>
-          <div><h5 class="mt-2">Organisation</h5></div>
+          <div><h5 class="mt-2">Organisation ({{getAverageByFaculty("Organisation")}}%)</h5></div>
           <div class="progress mb-1">
             <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar"
                  [style.width]="getAverageByFaculty('Organisation')+'%'"></div>
