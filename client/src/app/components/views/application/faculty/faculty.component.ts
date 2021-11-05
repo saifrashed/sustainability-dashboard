@@ -23,6 +23,7 @@ export class FacultyComponent implements OnInit {
     })
   }
 
+  // calculates average for each faculty
   getAverageByFaculty(faculty: any): number {
     for (let i = 0; i < this.surveyAverage?.length; i++) {
       if (faculty == this.surveyAverage[i]._id){
