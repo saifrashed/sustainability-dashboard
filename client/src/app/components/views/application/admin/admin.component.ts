@@ -141,11 +141,6 @@ export class AdminComponent implements OnInit {
 
     addSurvey() {
 
-        if (!this.newSurveyForm.controls["title"].value || !this.newSurveyForm.controls["pillar"].value || this.newSurveyForm.controls["optionOne"].value || this.newSurveyForm.controls["optionTwo"].value || this.newSurveyForm.controls["optionThree"].value || this.newSurveyForm.controls["optionFour"].value || this.newSurveyForm.controls["optionFive"].value) {
-            this.notifierService.notify("error", "Fill in all fields", 'SURVEY_ADD_ERROR');
-            return;
-        }
-
         let surveyObject: Survey = {
             id: null,
             title: this.newSurveyForm.controls["title"].value,
