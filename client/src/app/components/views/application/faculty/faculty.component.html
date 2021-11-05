@@ -1,101 +1,133 @@
 <!-- Container fluid -->
 <div id="banner" class="bg-primary pt-10 pb-21 position-relative">
-    <div class="area">
-        <ul class="circles">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-    </div>
+  <div class="area">
+    <ul class="circles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
 </div>
 
 <div class="container-fluid mt-n22 px-6">
-    <div class="row">
-        <div class="col-lg-12 col-md-12 col-12">
-            <!-- Page header -->
-            <div>
-                <div class="d-flex justify-content-between align-items-center">
-                    <div class="mb-2 mb-lg-0">
-                        <h3 class="mb-0 fw-bold text-white">Surveys</h3>
+  <div class="row">
+
+    <div class="col-lg-12 col-md-12 col-12">
+      <!-- Page header -->
+      <div>
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="mb-2 mb-lg-0">
+            <h3 class=" fw-bold text-white">Surveys</h3>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=" mt-1 row align-content-start g-0">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-12">
+      <!-- card  -->
+      <div class="card h-100 w-lg-100">
+        <!-- card body  -->
+        <div class="card-body">
+          <!-- chart  -->
+          <div><h5 class="mt-2">Education</h5></div>
+          <div class="progress mb-1">
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar"
+                 [style.width]="getAverageByFaculty('Education')+'%'"></div>
+          </div>
+          <div><h5 class="mt-2">Research</h5></div>
+          <div class="progress mb-1">
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" role="progressbar"
+                 [style.width]="getAverageByFaculty('Research')+'%'"></div>
+          </div>
+          <div><h5 class="mt-2">Business operations/Facilities</h5></div>
+          <div class="progress mb-1">
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar"
+                 [style.width]="getAverageByFaculty('Business operations/Facilities')+'%'"></div>
+          </div>
+          <div><h5 class="mt-2">Organisation</h5></div>
+          <div class="progress mb-1">
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar"
+                 [style.width]="getAverageByFaculty('Organisation')+'%'"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- row  -->
+  <div class="row mt-6 mb-6">
+    <div class="col-md-12 col-12">
+      <!-- card  -->
+      <div class="card">
+        <!-- card header  -->
+        <div class="card-header bg-white border-bottom-0 py-4">
+          <h4 class="mb-0">Active Surveys</h4>
+        </div>
+        <!-- table  -->
+        <div class="table-responsive">
+          <table class="table text-nowrap mb-0">
+            <thead class="table-light">
+            <tr>
+              <th>Survey</th>
+              <th class="text-center">Pillar</th>
+              <th class="text-center">Action</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            <tr *ngFor="let survey of surveyList">
+              <td class="align-middle">
+                <div class="d-flex align-items-center">
+                  <div>
+                    <div class="icon-shape icon-md border p-4 rounded-1">
+                      <img src="assets/images/svg/faculty-list.svg">
                     </div>
-
+                  </div>
+                  <div class="ms-3 lh-1">
+                    <h5 class="fw-bold mb-1">
+                      <a href="#" class="text-inherit">
+                        {{survey.title}}
+                      </a></h5>
+                  </div>
                 </div>
-            </div>
+              </td>
+              <td class="text-center text-dark">
+                <span *ngIf="survey.pillar == 'Education'"
+                      class="badge bg-success">{{survey.pillar}}</span>
+                <span *ngIf="survey.pillar == 'Research'"
+                      class="badge bg-info">{{survey.pillar}}</span>
+                <span *ngIf="survey.pillar == 'Business operations/Facilities'"
+                      class="badge bg-warning">{{survey.pillar}}</span>
+                <span *ngIf="survey.pillar == 'Organisation'"
+                      class="badge bg-danger">{{survey.pillar}}</span>
+              </td>
+              <td class="text-center">
+                <a *ngIf="survey.status == 'Not Completed'" class="btn btn-white"
+                   routerLink="/dashboard/faculty/survey/{{survey.id}}">Start survey</a>
+
+                <svg *ngIf="survey.status == 'Completed'" xmlns="http://www.w3.org/2000/svg" width="40"
+                     height="40" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                  <path
+                    d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                </svg>
+
+              </td>
+            </tr>
+
+            </tbody>
+          </table>
         </div>
+      </div>
     </div>
-    <!-- row  -->
-    <div class="row mt-6 mb-6">
-        <div class="col-md-12 col-12">
-            <!-- card  -->
-            <div class="card">
-                <!-- card header  -->
-                <div class="card-header bg-white border-bottom-0 py-4">
-                    <h4 class="mb-0">Active Surveys</h4>
-                </div>
-                <!-- table  -->
-                <div class="table-responsive">
-                    <table class="table text-nowrap mb-0">
-                        <thead class="table-light">
-                        <tr>
-                            <th>Survey</th>
-                            <th>Pillar</th>
-                            <th>Progress</th>
-                            <th class="text-center">Action</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-
-                        <tr *ngFor="let survey of surveyList">
-                            <td class="align-middle">
-                                <div class="d-flex align-items-center">
-                                    <div>
-                                        <div class="icon-shape icon-md border p-4 rounded-1">
-                                            <img src="assets/images/svg/faculty-list.svg">
-                                        </div>
-                                    </div>
-                                    <div class="ms-3 lh-1">
-                                        <h5 class="fw-bold mb-1">
-                                            <a href="#" class="text-inherit">
-                                                {{survey.title}}
-                                            </a></h5>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="align-middle">
-                                <span class="badge  bg-light-primary">{{survey.pillar}}</span>
-                            </td>
-                            <td class="align-middle text-dark">
-                                <span *ngIf="survey.status == 'Not Completed'"
-                                      class="badge bg-dark">{{survey.status}}</span>
-                                <span *ngIf="survey.status == 'Completed'"
-                                      class="badge bg-light-primary">{{survey.status}}</span>
-
-                            </td>
-                            <td class="text-center">
-                                <a *ngIf="survey.status == 'Not Completed'" class="btn btn-white"
-                                   routerLink="/dashboard/faculty/survey/{{survey.id}}">Start survey</a>
-
-                                <svg *ngIf="survey.status == 'Completed'" xmlns="http://www.w3.org/2000/svg" width="40"
-                                     height="40" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
-                                    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-                                </svg>
-
-                            </td>
-                        </tr>
-
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- row  -->
+  </div>
+  <!-- row  -->
 
 </div>
