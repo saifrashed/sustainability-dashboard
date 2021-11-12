@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
-import {AuthenticationService, SurveyResponseService, SurveyService} from "../../../../_services";
-import {Survey} from "../../../../_models/survey";
+import {AuthenticationService, SurveyResponseService, SurveyService} from "../../../../../_services";
+import {Survey} from "../../../../../_models/survey";
 import {NotifierService} from "angular-notifier";
 
 @Component({
@@ -110,8 +110,8 @@ export class AdminComponent implements OnInit {
         })
     }
 
-    responsesFilledError() {
-        this.notifierService.notify("error", "Cannot edit questions because of filled responses", 'SURVEY_RESPONSE_ERROR')
+    responsesReopenMessage() {
+        this.notifierService.notify("warning", "Do you want to reopen te survey?", 'SURVEY_RESPONSE_ERROR')
     }
 
     // Survey CRUD

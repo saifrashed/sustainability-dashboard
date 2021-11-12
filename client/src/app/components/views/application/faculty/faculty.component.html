@@ -79,7 +79,7 @@
 
                             </td>
                             <td class="text-center">
-                                <a *ngIf="survey.status == 'Not Completed'" class="btn btn-white"
+                                <a *ngIf="survey.status == 'Not Completed'" class="btn btn-outline-dark"
                                    routerLink="/dashboard/faculty/survey/{{survey.id}}">Start survey</a>
 
                                 <svg *ngIf="survey.status == 'Completed'" xmlns="http://www.w3.org/2000/svg" width="40"

@@ -1,0 +1,131 @@
+
+<div class="row my-6">
+    <!-- card  -->
+    <div class="col-xl-12 col-lg-12 col-md-12 col-12">
+        <div class="card h-100">
+            <!-- card header  -->
+            <div class="card-header bg-white border-bottom-0 py-4">
+                <h4 class="mb-0">Profiles ({{userList?.length}}) </h4>
+            </div>
+            <!-- table  -->
+            <div class="table-responsive">
+                <table class="table text-nowrap">
+                    <thead class="table-light">
+                    <tr>
+                        <th>Name</th>
+                        <th>Faculty</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let user of userList">
+                        <td class="align-middle">
+                            <div class="d-flex align-items-center">
+                                <div>
+                                    <img src="assets/images/avatar/avatar-admin.png"
+                                         alt="" class="avatar-md avatar rounded-circle">
+                                </div>
+                                <div class="ms-3 lh-1">
+                                    <h5 class="fw-bold mb-1">{{user.username}}</h5>
+                                    <p class="mb-0">{{user.email}}</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="align-middle">{{user.faculty}}</td>
+
+                        <td class="align-middle">
+                            <a *ngIf="user.username != 'admin'" class="btn btn-light-danger"
+                               (click)="deleteUser(user.id)">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                     fill="currentColor"
+                                     class="bi bi-x-lg" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                          d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+                                    <path fill-rule="evenodd"
+                                          d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+                                </svg>
+                            </a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card-footer bg-white text-center">
+                <a href="#" class="btn btn-white" data-bs-toggle="modal" data-bs-target="#addUserModal">
+                    Add New profile
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Add user modal -->
+    <div class="modal fade" id="addUserModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Create Profile</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form [formGroup]="newUserForm">
+                        <div class="form-group mb-3">
+                            <label>Username</label>
+                            <input formControlName="username" type="text" class="form-control">
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label>Email</label>
+                            <input formControlName="email" type="email" class="form-control">
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label>Faculty</label>
+                            <select formControlName="faculty" class="form-control">
+                                <option></option>
+                                <option value="FACULTY OF APPLIED SOCIAL SCIENCES AND LAW">
+                                    FACULTY OF APPLIED SOCIAL SCIENCES AND LAW
+                                </option>
+                                <option value="FACULTY OF BUSINESS AND ECONOMICS">
+                                    FACULTY OF BUSINESS AND ECONOMICS
+                                </option>
+                                <option value="FACULTY OF DIGITAL MEDIA AND CREATIVE INDUSTRIES">
+                                    FACULTY OF DIGITAL MEDIA AND CREATIVE INDUSTRIES
+                                </option>
+                                <option value="FACULTY OF EDUCATION">
+                                    FACULTY OF EDUCATION
+                                </option>
+                                <option value="FACULTY OF HEALTH">
+                                    FACULTY OF HEALTH
+                                </option>
+                                <option value="FACULTY OF SPORTS AND NUTRITION">
+                                    FACULTY OF SPORTS AND NUTRITION
+                                </option>
+                                <option value="FACULTY OF TECHNOLOGY">
+                                    FACULTY OF TECHNOLOGY
+                                </option>
+                            </select>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label>Password</label>
+                            <input formControlName="password" type="password" class="form-control">
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label>Role</label>
+                            <input type="text" readonly value="ROLE_FACULTY" class="form-control">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" (click)="addUser()">Create</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End user modal -->
+</div>
+<notifier-container></notifier-container>
