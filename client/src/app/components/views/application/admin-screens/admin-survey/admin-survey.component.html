@@ -3,7 +3,7 @@
         <!-- card  -->
         <div class="card">
             <!-- card header  -->
-            <div class="card-header bg-white border-bottom-0 py-4">
+            <div class="card-header bg-white border-bottom-0 py-4 ">
                 <h4 class="mb-0">Surveys ({{surveyList?.length}})</h4>
             </div>
             <!-- table  -->
@@ -50,7 +50,7 @@
                             </a>
 
                             <a *ngIf="survey.completed !== 0" class="btn btn-outline-dark"
-                               (mouseenter)="responsesReopenMessage()"> Reopen
+                               (click)="reopenSurvey()"> Reopen
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                      fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd"
@@ -63,6 +63,12 @@
 
                     </tbody>
                 </table>
+            </div>
+
+            <div class="card-footer bg-white text-center">
+                <a  class="btn btn-white" data-bs-toggle="modal" data-bs-target="#addSurveyModal">
+                    Create New Survey
+                </a>
             </div>
         </div>
 

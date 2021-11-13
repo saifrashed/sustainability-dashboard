@@ -60,9 +60,6 @@ export class AdminComponent implements OnInit {
         this.surveyService.findAll().subscribe(surveyList => {
             this.surveyList = surveyList;
             this.getCompletedSurveys();
-
-            //
-            this.notifierService.notify("success", "All surveys have been loaded", "GET_SURVEY_SUCCESS")
         });
 
         this.authenticationService.findAll().subscribe(userList => {
@@ -79,7 +76,7 @@ export class AdminComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.notifierService.notify("success", "Welcome to the Dashboard " + this.authenticationService.currentUserValue.username, "WELCOME_MESSAGE")
+
     }
 
     getUsers() {
@@ -110,7 +107,7 @@ export class AdminComponent implements OnInit {
         })
     }
 
-    responsesReopenMessage() {
+    reopenSurvey() {
         this.notifierService.notify("warning", "Do you want to reopen te survey?", 'SURVEY_RESPONSE_ERROR')
     }
 
@@ -118,7 +115,6 @@ export class AdminComponent implements OnInit {
     getSurveys() {
         this.surveyService.findAll().subscribe(surveyList => {
             this.surveyList = surveyList;
-            this.notifierService.notify("success", "All surveys have been loaded", "GET_SURVEY_SUCCESS")
         });
     }
 
