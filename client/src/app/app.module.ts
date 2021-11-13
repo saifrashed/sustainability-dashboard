@@ -3,7 +3,9 @@ import {BrowserModule} from '@angular/platform-browser';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {AppRoutingModule} from './app-routing.module'; // CLI imports AppRoutingModule
 import {HttpClientModule} from '@angular/common/http';
-import { NotifierModule, NotifierOptions } from 'angular-notifier';
+import {NotifierModule, NotifierOptions} from 'angular-notifier';
+import {NgxEchartsModule} from 'ngx-echarts';
+
 
 // layouts
 import {MainComponent} from './components/views/main/main-layout/main.component';
@@ -21,79 +23,81 @@ import {SurveyComponent} from "./components/views/application/survey/survey.comp
 import {SurveyQuestionComponent} from './components/views/application/survey-question/survey-question.component';
 
 
-
 /**
  * Custom angular notifier options
  */
 const customNotifierOptions: NotifierOptions = {
-    position: {
-        horizontal: {
-            position: 'right',
-            distance: 12
-        },
-        vertical: {
-            position: 'bottom',
-            distance: 12,
-            gap: 10
-        }
+  position: {
+    horizontal: {
+      position: 'right',
+      distance: 12
     },
-    theme: 'material',
-    behaviour: {
-        autoHide: 5000,
-        onClick: 'hide',
-        onMouseover: 'pauseAutoHide',
-        showDismissButton: true,
-        stacking: 4
-    },
-    animations: {
-        enabled: true,
-        show: {
-            preset: 'slide',
-            speed: 300,
-            easing: 'ease'
-        },
-        hide: {
-            preset: 'fade',
-            speed: 300,
-            easing: 'ease',
-            offset: 50
-        },
-        shift: {
-            speed: 300,
-            easing: 'ease'
-        },
-        overlap: 150
+    vertical: {
+      position: 'bottom',
+      distance: 12,
+      gap: 10
     }
+  },
+  theme: 'material',
+  behaviour: {
+    autoHide: 5000,
+    onClick: 'hide',
+    onMouseover: 'pauseAutoHide',
+    showDismissButton: true,
+    stacking: 4
+  },
+  animations: {
+    enabled: true,
+    show: {
+      preset: 'slide',
+      speed: 300,
+      easing: 'ease'
+    },
+    hide: {
+      preset: 'fade',
+      speed: 300,
+      easing: 'ease',
+      offset: 50
+    },
+    shift: {
+      speed: 300,
+      easing: 'ease'
+    },
+    overlap: 150
+  }
 };
 
 @NgModule({
-    declarations: [
-        MainComponent,
-        AuthenticationComponent,
-        ApplicationComponent,
-        AppComponent,
-        HomeComponent,
-        MainComponent,
-        AuthenticationComponent,
-        ApplicationComponent,
-        LoginComponent,
-        RegisterComponent,
-        AdminComponent,
-        ContactComponent,
-        FacultyComponent,
-        SurveyComponent,
-        SurveyQuestionComponent,
-    ],
-    imports: [
-        BrowserModule,
-        FormsModule,
-        AppRoutingModule,
-        HttpClientModule,
-        ReactiveFormsModule,
-        NotifierModule.withConfig(customNotifierOptions)
-    ],
-    providers: [],
-    bootstrap: [AppComponent]
+  declarations: [
+    MainComponent,
+    AuthenticationComponent,
+    ApplicationComponent,
+    AppComponent,
+    HomeComponent,
+    MainComponent,
+    AuthenticationComponent,
+    ApplicationComponent,
+    LoginComponent,
+    RegisterComponent,
+    AdminComponent,
+    ContactComponent,
+    FacultyComponent,
+    SurveyComponent,
+    SurveyQuestionComponent,
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    NotifierModule.withConfig(customNotifierOptions),
+    NgxEchartsModule.forRoot({
+      echarts: () => import('echarts')
+    })
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
 export class AppModule {
 }

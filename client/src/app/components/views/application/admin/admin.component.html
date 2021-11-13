@@ -1,545 +1,551 @@
 <!-- Container fluid -->
 <div id="banner" class="bg-primary pt-10 pb-21 position-relative">
-    <div class="area">
-        <ul class="circles">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-    </div>
+  <div class="area">
+    <ul class="circles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
 </div>
 
 <div class="container-fluid mt-n22 px-6">
-    <div class="row">
-        <div class="col-lg-12 col-md-12 col-12">
-            <!-- Page header -->
-            <div>
-                <div class="d-flex justify-content-between align-items-center">
-                    <div class="mb-2 mb-lg-0">
-                        <h3 class="mb-0 fw-bold text-white">Dashboard</h3>
-                    </div>
-                    <div>
-                        <a href="#" class="btn btn-white" data-bs-toggle="modal" data-bs-target="#addSurveyModal">
-                            Create New Survey
-                        </a>
-                    </div>
-                </div>
-            </div>
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-12">
+      <!-- Page header -->
+      <div>
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="mb-2 mb-lg-0">
+            <h3 class="mb-0 fw-bold text-white">Dashboard</h3>
+          </div>
+          <div>
+            <a href="#" class="btn btn-white" data-bs-toggle="modal" data-bs-target="#addSurveyModal">
+              Create New Survey
+            </a>
+          </div>
         </div>
-        <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
-            <!-- card -->
-            <div class="card rounded-3">
-                <!-- card body -->
-                <div class="card-body">
-                    <!-- heading -->
-                    <div class="d-flex justify-content-between align-items-center mb-3">
-                        <div>
-                            <h4 class="mb-0">Education</h4>
-                        </div>
-                        <div class="icon-shape icon-md bg-light-primary text-primary rounded-1">
-                            <i class="bi bi-briefcase fs-4"></i>
-                        </div>
-                    </div>
-                    <!-- project number -->
-                    <div>
-                        <h1 class="fw-bold">{{getGlobalAverage("Education")}}</h1>
-                        <p class="mb-0">Global average</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
-            <!-- card -->
-            <div class="card rounded-3">
-                <!-- card body -->
-                <div class="card-body">
-                    <!-- heading -->
-                    <div class="d-flex justify-content-between align-items-center mb-3">
-                        <div>
-                            <h4 class="mb-0">Research</h4>
-                        </div>
-                        <div class="icon-shape icon-md bg-light-primary text-primary rounded-1">
-                            <i class="bi bi-list-task fs-4"></i>
-                        </div>
-                    </div>
-                    <!-- project number -->
-                    <div>
-                        <h1 class="fw-bold">{{getGlobalAverage("Research")}}</h1>
-                        <p class="mb-0">Global average</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
-            <!-- card -->
-            <div class="card rounded-3">
-                <!-- card body -->
-                <div class="card-body">
-                    <!-- heading -->
-                    <div class="d-flex justify-content-between align-items-center
-                    mb-3">
-                        <div>
-                            <h4 class="mb-0">Business operations/Facilities</h4>
-                        </div>
-                        <div class="icon-shape icon-md bg-light-primary text-primary
-                      rounded-1">
-                            <i class="bi bi-people fs-4"></i>
-                        </div>
-                    </div>
-                    <!-- project number -->
-                    <div>
-                        <h1 class="fw-bold">{{getGlobalAverage("Business operations/Facilities")}}</h1>
-                        <p class="mb-0">Global average</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
-            <!-- card -->
-            <div class="card rounded-3">
-                <!-- card body -->
-                <div class="card-body">
-                    <!-- heading -->
-                    <div class="d-flex justify-content-between align-items-center
-                    mb-3">
-                        <div>
-                            <h4 class="mb-0">Organisation</h4>
-                        </div>
-                        <div class="icon-shape icon-md bg-light-primary text-primary
-                      rounded-1">
-                            <i class="bi bi-bullseye fs-4"></i>
-                        </div>
-                    </div>
-                    <!-- project number -->
-                    <div>
-                        <h1 class="fw-bold">{{getGlobalAverage("Organisation")}}</h1>
-                        <p class="mb-0">Global average</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
-    <!-- row  -->
-    <div class="row mt-6">
-        <div class="col-md-12 col-12">
-            <!-- card  -->
-            <div class="card">
-                <!-- card header  -->
-                <div class="card-header bg-white border-bottom-0 py-4">
-                    <h4 class="mb-0">Surveys ({{surveyList?.length}})</h4>
-                </div>
-                <!-- table  -->
-                <div class="table-responsive">
-                    <table class="table text-nowrap mb-0">
-                        <thead class="table-light">
-                        <tr>
-                            <th>Survey</th>
-                            <th>Completed amount</th>
-                            <th>Pillar</th>
-                            <th class="text-center">Actions</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr *ngFor="let survey of surveyList">
-                            <td class="align-middle">
-                                <div class="d-flex align-items-center">
-                                    <div>
-                                        <div class="icon-shape icon-md border p-4 rounded-1">
-                                            <img src="assets/images/svg/faculty-list.svg">
-                                        </div>
-                                    </div>
-                                    <div class="ms-3 lh-1">
-                                        <h5 class="fw-bold mb-1">
-                                            <a href="#" class="text-inherit">
-                                                {{survey.title}}
-                                            </a></h5>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="align-middle">{{survey.completed}}</td>
-                            <td class="align-middle">
-                                <span class="badge bg-light-primary">{{survey.pillar}}</span>
-                            </td>
-                            <td class="text-center">
-                                <a *ngIf="survey.completed == 0" class="btn btn-secondary" data-bs-toggle="modal"
-                                   data-bs-target="#addQuestionModal"
-                                   (click)="getSurveyQuestions(survey.id)">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                         class="bi bi-view-list" viewBox="0 0 16 16">
-                                        <path d="M3 4.5h10a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1H3zM1 2a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 2zm0 12a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 14z"/>
-                                    </svg>
-                                </a>
-
-                                <a *ngIf="survey.completed !== 0" class="btn btn-secondary disabled"
-                                   (mouseenter)="responsesFilledError()">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                         class="bi bi-view-list" viewBox="0 0 16 16">
-                                        <path d="M3 4.5h10a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1H3zM1 2a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 2zm0 12a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 14z"/>
-                                    </svg>
-                                </a>
-                            </td>
-                        </tr>
-
-                        </tbody>
-                    </table>
-                </div>
+    <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
+      <!-- card -->
+      <div class="card rounded-3">
+        <!-- card body -->
+        <div class="card-body">
+          <!-- heading -->
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <div>
+              <h4 class="mb-0">Education</h4>
             </div>
-
+            <div class="icon-shape icon-md bg-light-primary text-primary rounded-1">
+              <i class="bi bi-briefcase fs-4"></i>
+            </div>
+          </div>
+          <!-- project number -->
+          <div>
+            <h1 class="fw-bold">{{getGlobalAverage("Education")}}</h1>
+            <p class="mb-0">Global average</p>
+          </div>
         </div>
+      </div>
+    </div>
+    <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
+      <!-- card -->
+      <div class="card rounded-3">
+        <!-- card body -->
+        <div class="card-body">
+          <!-- heading -->
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <div>
+              <h4 class="mb-0">Research</h4>
+            </div>
+            <div class="icon-shape icon-md bg-light-primary text-primary rounded-1">
+              <i class="bi bi-list-task fs-4"></i>
+            </div>
+          </div>
+          <!-- project number -->
+          <div>
+            <h1 class="fw-bold">{{getGlobalAverage("Research")}}</h1>
+            <p class="mb-0">Global average</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
+      <!-- card -->
+      <div class="card rounded-3">
+        <!-- card body -->
+        <div class="card-body">
+          <!-- heading -->
+          <div class="d-flex justify-content-between align-items-center
+                    mb-3">
+            <div>
+              <h4 class="mb-0">Business operations/Facilities</h4>
+            </div>
+            <div class="icon-shape icon-md bg-light-primary text-primary
+                      rounded-1">
+              <i class="bi bi-people fs-4"></i>
+            </div>
+          </div>
+          <!-- project number -->
+          <div>
+            <h1 class="fw-bold">{{getGlobalAverage("Business operations/Facilities")}}</h1>
+            <p class="mb-0">Global average</p>
+          </div>
+        </div>
+      </div>
 
+    </div>
+    <div class="col-xl-3 col-lg-6 col-md-12 col-12 mt-6">
+      <!-- card -->
+      <div class="card rounded-3">
+        <!-- card body -->
+        <div class="card-body">
+          <!-- heading -->
+          <div class="d-flex justify-content-between align-items-center
+                    mb-3">
+            <div>
+              <h4 class="mb-0">Organisation</h4>
+            </div>
+            <div class="icon-shape icon-md bg-light-primary text-primary
+                      rounded-1">
+              <i class="bi bi-bullseye fs-4"></i>
+            </div>
+          </div>
+          <!-- project number -->
+          <div>
+            <h1 class="fw-bold">{{getGlobalAverage("Organisation")}}</h1>
+            <p class="mb-0">Global average</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- row  -->
+  <div class="card mt-4 mb-2">
+      <div echarts [options]="chartOption" class="demo-chart"></div>
+  </div>
 
-        <!-- Add survey modal -->
-        <div class="modal fade" id="addQuestionModal" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Add Questions</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  <div class="row mt-6">
+    <div class="col-md-12 col-12">
+      <!-- card  -->
+      <div class="card">
+        <!-- card header  -->
+        <div class="card-header bg-white border-bottom-0 py-4">
+          <h4 class="mb-0">Surveys ({{surveyList?.length}})</h4>
+        </div>
+        <!-- table  -->
+        <div class="table-responsive">
+          <table class="table text-nowrap mb-0">
+            <thead class="table-light">
+            <tr>
+              <th>Survey</th>
+              <th>Completed amount</th>
+              <th>Pillar</th>
+              <th class="text-center">Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let survey of surveyList">
+              <td class="align-middle">
+                <div class="d-flex align-items-center">
+                  <div>
+                    <div class="icon-shape icon-md border p-4 rounded-1">
+                      <img src="assets/images/svg/faculty-list.svg">
                     </div>
-                    <div class="modal-body">
-                        <div class="list-group">
+                  </div>
+                  <div class="ms-3 lh-1">
+                    <h5 class="fw-bold mb-1">
+                      <a href="#" class="text-inherit">
+                        {{survey.title}}
+                      </a></h5>
+                  </div>
+                </div>
+              </td>
+              <td class="align-middle">{{survey.completed}}</td>
+              <td class="align-middle">
+                <span class="badge bg-light-primary">{{survey.pillar}}</span>
+              </td>
+              <td class="text-center">
+                <a *ngIf="survey.completed == 0" class="btn btn-secondary" data-bs-toggle="modal"
+                   data-bs-target="#addQuestionModal"
+                   (click)="getSurveyQuestions(survey.id)">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                       class="bi bi-view-list" viewBox="0 0 16 16">
+                    <path
+                      d="M3 4.5h10a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1H3zM1 2a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 2zm0 12a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 14z"/>
+                  </svg>
+                </a>
 
-                            <a *ngFor="let question of selectedSurveyQuestions"
-                               class="list-group-item list-group-item-action">
-                                <div class="d-flex w-100 justify-content-between">
-                                    <h5 class="mb-1">Question #{{selectedSurveyQuestions.indexOf(question)}}</h5>
-                                </div>
-                                <p class="mb-1">{{question.description}}</p>
-                                <small class="text-muted"><b>Weight:</b> {{question.weight}}</small>
-                            </a>
+                <a *ngIf="survey.completed !== 0" class="btn btn-secondary disabled"
+                   (mouseenter)="responsesFilledError()">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                       class="bi bi-view-list" viewBox="0 0 16 16">
+                    <path
+                      d="M3 4.5h10a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1H3zM1 2a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 2zm0 12a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 14z"/>
+                  </svg>
+                </a>
+              </td>
+            </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
 
 
-                            <a class="list-group-item ">
-                                <div class="d-flex w-100 justify-content-between">
-                                    <h5 class="mb-1">Add question</h5>
-                                </div>
+    <!-- Add survey modal -->
+    <div class="modal fade" id="addQuestionModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Add Questions</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="list-group">
 
-                                <form [formGroup]="newQuestionForm">
+              <a *ngFor="let question of selectedSurveyQuestions"
+                 class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1">Question #{{selectedSurveyQuestions.indexOf(question)}}</h5>
+                </div>
+                <p class="mb-1">{{question.description}}</p>
+                <small class="text-muted"><b>Weight:</b> {{question.weight}}</small>
+              </a>
 
-                                    <div class="mb-3">
+
+              <a class="list-group-item ">
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1">Add question</h5>
+                </div>
+
+                <form [formGroup]="newQuestionForm">
+
+                  <div class="mb-3">
                                         <textarea formControlName="description" placeholder="Your question..."
                                                   class="form-control" id="exampleFormControlTextarea1"
                                                   rows="3"></textarea>
-                                    </div>
+                  </div>
 
-                                    <div class="input-group flex-nowrap mb-3">
-                                        <span class="input-group-text" id="addon-wrapping">Weight</span>
-                                        <input formControlName="weight" type="number" class="form-control" value="1"
-                                               aria-label="Username" aria-describedby="addon-wrapping">
-                                    </div>
+                  <div class="input-group flex-nowrap mb-3">
+                    <span class="input-group-text" id="addon-wrapping">Weight</span>
+                    <input formControlName="weight" type="number" class="form-control" value="1"
+                           aria-label="Username" aria-describedby="addon-wrapping">
+                  </div>
 
-                                    <button type="button" (click)="addSurveyQuestion()"
-                                            class="btn btn-primary float-end">
-                                        Add
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                             fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
-                                            <path fill-rule="evenodd"
-                                                  d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
-                                        </svg>
-                                    </button>
-                                </form>
-                                <small class="text-muted"></small>
-                            </a>
+                  <button type="button" (click)="addSurveyQuestion()"
+                          class="btn btn-primary float-end">
+                    Add
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                         fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd"
+                            d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+                    </svg>
+                  </button>
+                </form>
+                <small class="text-muted"></small>
+              </a>
 
 
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div>
-                </div>
             </div>
-            <!-- end survey modal -->
-
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
         </div>
-        <!-- row  -->
-        <div class="row my-6">
-            <div class="col-xl-4 col-lg-12 col-md-12 col-12 mb-6 mb-xl-0">
-                <!-- card  -->
-                <div class="card h-100">
-                    <!-- card body  -->
-                    <div class="card-body">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <div>
-                                <h4 class="mb-0">Faculty averages </h4>
-                            </div>
-                            <!-- dropdown  -->
-                            <div class="dropdown dropstart">
-                                <a class="text-muted text-primary-hover" href="#"
-                                   role="button" id="dropdownTask" data-bs-toggle="dropdown"
-                                   aria-haspopup="true" aria-expanded="false">
-                                    <i class="icon-xxs" data-feather="more-vertical"></i>
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="dropdownTask">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- chart  -->
-                        <div class="mb-8">
-                            <div id="perfomanceChart"></div>
-                        </div>
+      </div>
+      <!-- end survey modal -->
 
-
-                        <!-- icon with content  -->
-                        <div class="accordion" id="accordionExample">
-
-                            <div *ngFor="let faculty of facultyList">
-                                <div *ngIf="faculty._id != undefined">
-
-
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header" id="headingOne">
-                                            <button class="accordion-button" type="button"
-                                                    (click)="getFacultyAverages(faculty._id)" data-bs-toggle="collapse"
-                                                    [attr.data-bs-target]=" '#'+ faculty.username[0]">
-                                                {{faculty._id}}
-                                            </button>
-                                        </h2>
-                                        <div id="{{faculty.username[0]}}" class="accordion-collapse collapse"
-                                             aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                            <div class="accordion-body">
-                                                <div class="d-flex align-items-center justify-content-around">
-                                                    <div class="text-center">
-                                                        <i class="icon-sm text-success"
-                                                           data-feather="check-circle"></i>
-                                                        <h1 class="mt-3 fw-bold mb-1">{{getFacultyAverage("Education")}}</h1>
-                                                        <p>Education</p>
-                                                    </div>
-                                                    <div class="text-center">
-                                                        <i class="icon-sm text-warning"
-                                                           data-feather="trending-up"></i>
-                                                        <h1 class="mt-3 fw-bold mb-1">{{getFacultyAverage("Research")}}</h1>
-                                                        <p>Research</p>
-                                                    </div>
-                                                    <div class="text-center">
-                                                        <i class="icon-sm text-danger"
-                                                           data-feather="trending-down"></i>
-                                                        <h1 class="mt-3 fw-bold mb-1">{{getFacultyAverage("Business operations/Facilities")}}</h1>
-                                                        <p>B.O.F</p>
-                                                    </div>
-                                                    <div class="text-center">
-                                                        <i class="icon-sm text-danger"
-                                                           data-feather="trending-down"></i>
-                                                        <h1 class="mt-3 fw-bold mb-1">{{getFacultyAverage("Organisation")}}</h1>
-                                                        <p>Organisation</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- card  -->
-            <div class="col-xl-8 col-lg-12 col-md-12 col-12">
-                <div class="card h-100">
-                    <!-- card header  -->
-                    <div class="card-header bg-white border-bottom-0 py-4">
-                        <h4 class="mb-0">Profiles ({{userList?.length}}) </h4>
-                    </div>
-                    <!-- table  -->
-                    <div class="table-responsive">
-                        <table class="table text-nowrap">
-                            <thead class="table-light">
-                            <tr>
-                                <th>Name</th>
-                                <th>Faculty</th>
-                                <th>Actions</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr *ngFor="let user of userList">
-                                <td class="align-middle">
-                                    <div class="d-flex align-items-center">
-                                        <div>
-                                            <img src="assets/images/avatar/avatar-admin.png"
-                                                 alt="" class="avatar-md avatar rounded-circle">
-                                        </div>
-                                        <div class="ms-3 lh-1">
-                                            <h5 class="fw-bold mb-1">{{user.username}}</h5>
-                                            <p class="mb-0">{{user.email}}</p>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="align-middle">{{user.faculty}}</td>
-
-                                <td class="align-middle">
-                                    <a *ngIf="user.username != 'admin'" class="btn btn-danger"
-                                       (click)="deleteUser(user.id)">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                             fill="currentColor"
-                                             class="bi bi-x-lg" viewBox="0 0 16 16">
-                                            <path fill-rule="evenodd"
-                                                  d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
-                                            <path fill-rule="evenodd"
-                                                  d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
-                                        </svg>
-                                    </a>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <div class="card-footer bg-white text-center">
-                        <a href="#" class="btn btn-white" data-bs-toggle="modal" data-bs-target="#addUserModal">
-                            Add New profile
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- Add user modal -->
-            <div class="modal fade" id="addUserModal" tabindex="-1" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Create Profile</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <form [formGroup]="newUserForm">
-                                <div class="form-group mb-3">
-                                    <label>Username</label>
-                                    <input formControlName="username" type="text" class="form-control">
-                                </div>
-
-                                <div class="form-group mb-3">
-                                    <label>Email</label>
-                                    <input formControlName="email" type="email" class="form-control">
-                                </div>
-
-                                <div class="form-group mb-3">
-                                    <label>Faculty</label>
-                                    <select formControlName="faculty" class="form-control">
-                                        <option></option>
-                                        <option value="FACULTY OF APPLIED SOCIAL SCIENCES AND LAW">
-                                            FACULTY OF APPLIED SOCIAL SCIENCES AND LAW
-                                        </option>
-                                        <option value="FACULTY OF BUSINESS AND ECONOMICS">
-                                            FACULTY OF BUSINESS AND ECONOMICS
-                                        </option>
-                                        <option value="FACULTY OF DIGITAL MEDIA AND CREATIVE INDUSTRIES">
-                                            FACULTY OF DIGITAL MEDIA AND CREATIVE INDUSTRIES
-                                        </option>
-                                        <option value="FACULTY OF EDUCATION">
-                                            FACULTY OF EDUCATION
-                                        </option>
-                                        <option value="FACULTY OF HEALTH">
-                                            FACULTY OF HEALTH
-                                        </option>
-                                        <option value="FACULTY OF SPORTS AND NUTRITION">
-                                            FACULTY OF SPORTS AND NUTRITION
-                                        </option>
-                                        <option value="FACULTY OF TECHNOLOGY">
-                                            FACULTY OF TECHNOLOGY
-                                        </option>
-                                    </select>
-                                </div>
-
-                                <div class="form-group mb-3">
-                                    <label>Password</label>
-                                    <input formControlName="password" type="password" class="form-control">
-                                </div>
-
-                                <div class="form-group mb-3">
-                                    <label>Role</label>
-                                    <input type="text" readonly value="ROLE_FACULTY" class="form-control">
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary" (click)="addUser()">Create</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End user modal -->
-
-
-        </div>
-
-
-        <!-- Add survey modal -->
-        <div class="modal fade" id="addSurveyModal" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Create Survey</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form [formGroup]="newSurveyForm">
-                            <div class="form-group mb-3">
-                                <label>Title</label>
-                                <input formControlName="title" type="text" class="form-control">
-                            </div>
-                            <div class="form-group mb-3">
-                                <label>Associated pillar</label>
-                                <select formControlName="pillar" class="form-control">
-                                    <option></option>
-                                    <option value="Education">Education</option>
-                                    <option value="Research">Research</option>
-                                    <option value="Business operations/Facilities">Business operations/Facilities
-                                    </option>
-                                    <option value="Organisation">Organisation</option>
-                                </select>
-                            </div>
-
-                            <label>Scoring descriptions (lowest to highest grading)</label>
-
-                            <div class="input-group mb-3">
-                                <span class="input-group-text">Option 1</span>
-                                <input formControlName="optionOne" type="text" class="form-control">
-                            </div>
-
-                            <div class="input-group mb-3">
-                                <span class="input-group-text">Option 2</span>
-                                <input formControlName="optionTwo" type="text" class="form-control">
-                            </div>
-
-                            <div class="input-group mb-3">
-                                <span class="input-group-text">Option 3</span>
-                                <input formControlName="optionThree" type="text" class="form-control">
-                            </div>
-
-                            <div class="input-group mb-3">
-                                <span class="input-group-text">Option 4</span>
-                                <input formControlName="optionFour" type="text" class="form-control">
-                            </div>
-
-                            <div class="input-group mb-3">
-                                <span class="input-group-text">Option 5</span>
-                                <input formControlName="optionFive" type="text" class="form-control">
-                            </div>
-
-
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary" (click)="addSurvey()">Create</button>
-                    </div>
-                </div>
-            </div>
-            <!-- end survey modal -->
-        </div>
     </div>
-    <notifier-container></notifier-container>
+    <!-- row  -->
+    <div class="row my-6">
+      <div class="col-xl-4 col-lg-12 col-md-12 col-12 mb-6 mb-xl-0">
+        <!-- card  -->
+        <div class="card h-100">
+          <!-- card body  -->
+          <div class="card-body">
+            <div class="d-flex align-items-center justify-content-between">
+              <div>
+                <h4 class="mb-0">Faculty averages </h4>
+              </div>
+              <!-- dropdown  -->
+              <div class="dropdown dropstart">
+                <a class="text-muted text-primary-hover" href="#"
+                   role="button" id="dropdownTask" data-bs-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                  <i class="icon-xxs" data-feather="more-vertical"></i>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownTask">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </div>
+            </div>
+            <!-- chart  -->
+            <div class="mb-8">
+              <div id="perfomanceChart"></div>
+            </div>
+
+
+            <!-- icon with content  -->
+            <div class="accordion" id="accordionExample">
+
+              <div *ngFor="let faculty of facultyList">
+                <div *ngIf="faculty._id != undefined">
+
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                      <button class="accordion-button" type="button"
+                              (click)="getFacultyAverages(faculty._id)" data-bs-toggle="collapse"
+                              [attr.data-bs-target]=" '#'+ faculty.username[0]">
+                        {{faculty._id}}
+                      </button>
+                    </h2>
+                    <div id="{{faculty.username[0]}}" class="accordion-collapse collapse"
+                         aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <div class="d-flex align-items-center justify-content-around">
+                          <div class="text-center">
+                            <i class="icon-sm text-success"
+                               data-feather="check-circle"></i>
+                            <h1 class="mt-3 fw-bold mb-1">{{getFacultyAverage("Education")}}</h1>
+                            <p>Education</p>
+                          </div>
+                          <div class="text-center">
+                            <i class="icon-sm text-warning"
+                               data-feather="trending-up"></i>
+                            <h1 class="mt-3 fw-bold mb-1">{{getFacultyAverage("Research")}}</h1>
+                            <p>Research</p>
+                          </div>
+                          <div class="text-center">
+                            <i class="icon-sm text-danger"
+                               data-feather="trending-down"></i>
+                            <h1 class="mt-3 fw-bold mb-1">{{getFacultyAverage("Business operations/Facilities")}}</h1>
+                            <p>B.O.F</p>
+                          </div>
+                          <div class="text-center">
+                            <i class="icon-sm text-danger"
+                               data-feather="trending-down"></i>
+                            <h1 class="mt-3 fw-bold mb-1">{{getFacultyAverage("Organisation")}}</h1>
+                            <p>Organisation</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- card  -->
+      <div class="col-xl-8 col-lg-12 col-md-12 col-12">
+        <div class="card h-100">
+          <!-- card header  -->
+          <div class="card-header bg-white border-bottom-0 py-4">
+            <h4 class="mb-0">Profiles ({{userList?.length}}) </h4>
+          </div>
+          <!-- table  -->
+          <div class="table-responsive">
+            <table class="table text-nowrap">
+              <thead class="table-light">
+              <tr>
+                <th>Name</th>
+                <th>Faculty</th>
+                <th>Actions</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let user of userList">
+                <td class="align-middle">
+                  <div class="d-flex align-items-center">
+                    <div>
+                      <img src="assets/images/avatar/avatar-admin.png"
+                           alt="" class="avatar-md avatar rounded-circle">
+                    </div>
+                    <div class="ms-3 lh-1">
+                      <h5 class="fw-bold mb-1">{{user.username}}</h5>
+                      <p class="mb-0">{{user.email}}</p>
+                    </div>
+                  </div>
+                </td>
+                <td class="align-middle">{{user.faculty}}</td>
+
+                <td class="align-middle">
+                  <a *ngIf="user.username != 'admin'" class="btn btn-danger"
+                     (click)="deleteUser(user.id)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                         fill="currentColor"
+                         class="bi bi-x-lg" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd"
+                            d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+                      <path fill-rule="evenodd"
+                            d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+                    </svg>
+                  </a>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="card-footer bg-white text-center">
+            <a href="#" class="btn btn-white" data-bs-toggle="modal" data-bs-target="#addUserModal">
+              Add New profile
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Add user modal -->
+      <div class="modal fade" id="addUserModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Create Profile</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form [formGroup]="newUserForm">
+                <div class="form-group mb-3">
+                  <label>Username</label>
+                  <input formControlName="username" type="text" class="form-control">
+                </div>
+
+                <div class="form-group mb-3">
+                  <label>Email</label>
+                  <input formControlName="email" type="email" class="form-control">
+                </div>
+
+                <div class="form-group mb-3">
+                  <label>Faculty</label>
+                  <select formControlName="faculty" class="form-control">
+                    <option></option>
+                    <option value="FACULTY OF APPLIED SOCIAL SCIENCES AND LAW">
+                      FACULTY OF APPLIED SOCIAL SCIENCES AND LAW
+                    </option>
+                    <option value="FACULTY OF BUSINESS AND ECONOMICS">
+                      FACULTY OF BUSINESS AND ECONOMICS
+                    </option>
+                    <option value="FACULTY OF DIGITAL MEDIA AND CREATIVE INDUSTRIES">
+                      FACULTY OF DIGITAL MEDIA AND CREATIVE INDUSTRIES
+                    </option>
+                    <option value="FACULTY OF EDUCATION">
+                      FACULTY OF EDUCATION
+                    </option>
+                    <option value="FACULTY OF HEALTH">
+                      FACULTY OF HEALTH
+                    </option>
+                    <option value="FACULTY OF SPORTS AND NUTRITION">
+                      FACULTY OF SPORTS AND NUTRITION
+                    </option>
+                    <option value="FACULTY OF TECHNOLOGY">
+                      FACULTY OF TECHNOLOGY
+                    </option>
+                  </select>
+                </div>
+
+                <div class="form-group mb-3">
+                  <label>Password</label>
+                  <input formControlName="password" type="password" class="form-control">
+                </div>
+
+                <div class="form-group mb-3">
+                  <label>Role</label>
+                  <input type="text" readonly value="ROLE_FACULTY" class="form-control">
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" (click)="addUser()">Create</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End user modal -->
+
+
+    </div>
+
+
+    <!-- Add survey modal -->
+    <div class="modal fade" id="addSurveyModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Create Survey</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form [formGroup]="newSurveyForm">
+              <div class="form-group mb-3">
+                <label>Title</label>
+                <input formControlName="title" type="text" class="form-control">
+              </div>
+              <div class="form-group mb-3">
+                <label>Associated pillar</label>
+                <select formControlName="pillar" class="form-control">
+                  <option></option>
+                  <option value="Education">Education</option>
+                  <option value="Research">Research</option>
+                  <option value="Business operations/Facilities">Business operations/Facilities
+                  </option>
+                  <option value="Organisation">Organisation</option>
+                </select>
+              </div>
+
+              <label>Scoring descriptions (lowest to highest grading)</label>
+
+              <div class="input-group mb-3">
+                <span class="input-group-text">Option 1</span>
+                <input formControlName="optionOne" type="text" class="form-control">
+              </div>
+
+              <div class="input-group mb-3">
+                <span class="input-group-text">Option 2</span>
+                <input formControlName="optionTwo" type="text" class="form-control">
+              </div>
+
+              <div class="input-group mb-3">
+                <span class="input-group-text">Option 3</span>
+                <input formControlName="optionThree" type="text" class="form-control">
+              </div>
+
+              <div class="input-group mb-3">
+                <span class="input-group-text">Option 4</span>
+                <input formControlName="optionFour" type="text" class="form-control">
+              </div>
+
+              <div class="input-group mb-3">
+                <span class="input-group-text">Option 5</span>
+                <input formControlName="optionFive" type="text" class="form-control">
+              </div>
+
+
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" (click)="addSurvey()">Create</button>
+          </div>
+        </div>
+      </div>
+      <!-- end survey modal -->
+    </div>
+  </div>
+  <notifier-container></notifier-container>
 </div>
