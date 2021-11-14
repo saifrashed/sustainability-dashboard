@@ -36,6 +36,7 @@ export class AdminComponent implements OnInit {
         optionThree: new FormControl('Average'),
         optionFour: new FormControl('Above average'),
         optionFive: new FormControl('Good'),
+        optionSix: new FormControl('Excellent'),
     });
 
 
@@ -146,7 +147,8 @@ export class AdminComponent implements OnInit {
                 this.newSurveyForm.controls["optionTwo"].value,
                 this.newSurveyForm.controls["optionThree"].value,
                 this.newSurveyForm.controls["optionFour"].value,
-                this.newSurveyForm.controls["optionFive"].value
+                this.newSurveyForm.controls["optionFive"].value,
+                this.newSurveyForm.controls["optionSix"].value
             ]
         };
 
@@ -159,6 +161,7 @@ export class AdminComponent implements OnInit {
             this.newSurveyForm.controls["optionThree"].setValue("Average");
             this.newSurveyForm.controls["optionFour"].setValue("Above average");
             this.newSurveyForm.controls["optionFive"].setValue("Good");
+            this.newSurveyForm.controls["optionSix"].setValue("Excellent");
         });
     }
 

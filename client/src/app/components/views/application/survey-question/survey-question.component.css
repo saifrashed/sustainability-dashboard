@@ -108,15 +108,15 @@ form #question-answering {
 }
 
 :host form #question-answering input:checked:nth-child(1) ~ #question-answering-pos {
-    left: 10%;
+    left: 8.5%;
 }
 
 :host form #question-answering input:checked:nth-child(3) ~ #question-answering-pos {
-    left: 30%;
+    left: 25.5%;
 }
 
 :host form #question-answering input:checked:nth-child(5) ~ #question-answering-pos {
-    left: 50%;
+    left: 42.5%;
 }
 
 :host form #question-answering input:checked:nth-child(7) ~ #question-answering-pos {
@@ -125,6 +125,10 @@ form #question-answering {
 
 :host form #question-answering input:checked:nth-child(9) ~ #question-answering-pos {
     left: 90%;
+}
+
+:host form #question-answering input:checked:nth-child(11) ~ #question-answering-pos {
+    left: 100%;
 }
 
 :host form #question-answering #question-answering-pos {
