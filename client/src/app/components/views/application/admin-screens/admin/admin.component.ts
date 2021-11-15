@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
-import {AuthenticationService, SurveyResponseService, SurveyService} from "../../../../_services";
-import {Survey} from "../../../../_models/survey";
+import {AuthenticationService, SurveyResponseService, SurveyService} from "../../../../../_services";
+import {Survey} from "../../../../../_models/survey";
 import {NotifierService} from "angular-notifier";
 import {EChartsOption} from 'echarts';
 
@@ -21,24 +21,48 @@ export class AdminComponent implements OnInit {
   public facultyList: any;
 
 
-  public newUserForm = new FormGroup({
-    username: new FormControl(''),
-    email: new FormControl(''),
-    faculty: new FormControl(''),
-    password: new FormControl(''),
-    role: new FormControl(['ROLE_FACULTY']),
-  });
+    public newUserForm = new FormGroup({
+        username: new FormControl(''),
+        email: new FormControl(''),
+        faculty: new FormControl(''),
+        password: new FormControl(''),
+        role: new FormControl(['ROLE_FACULTY']),
+    });
 
-  public newSurveyForm = new FormGroup({
-    title: new FormControl(''),
-    pillar: new FormControl(''),
-    optionOne: new FormControl('Bad'),
-    optionTwo: new FormControl('Below average'),
-    optionThree: new FormControl('Average'),
-    optionFour: new FormControl('Above average'),
-    optionFive: new FormControl('Good'),
-  });
+    public newSurveyForm = new FormGroup({
+        title: new FormControl(''),
+        pillar: new FormControl(''),
+        optionZero: new FormControl('Bad'),
+        optionOne: new FormControl('Below average'),
+        optionTwo: new FormControl('Average'),
+        optionThree: new FormControl('Above average'),
+        optionFour: new FormControl('Good'),
+        optionFive: new FormControl('Excellent'),
+    });
 
+
+    public newQuestionForm = new FormGroup({
+        description: new FormControl(''),
+        weight: new FormControl(1),
+    });
+
+
+    // statistics
+
+    public globalStatistics: any;
+    public facultyStatistics: any;
+
+    constructor(
+        private surveyService: SurveyService,
+        private authenticationService: AuthenticationService,
+        private surveyResponse: SurveyResponseService,
+        private notifierService: NotifierService
+    ) {
+
+        this.surveyService.findAll().subscribe(surveyList => {
+            this.surveyList = surveyList;
+            this.getCompletedSurveys();
+        });
 
   public newQuestionForm = new FormGroup({
     description: new FormControl(''),
@@ -46,7 +70,43 @@ export class AdminComponent implements OnInit {
   });
 
 
-  // statistics
+        this.surveyResponse.getSurveyResponseStatisticsGlobals().subscribe(statistics => {
+            this.globalStatistics = statistics;
+        });
+    }
+
+    ngOnInit(): void {
+
+    }
+
+    getUsers() {
+        this.authenticationService.findAll().subscribe(userList => {
+            this.userList = userList;
+        })
+    }
+
+    deleteUser(id: string) {
+        if (confirm("Are you sure?")) {
+            this.authenticationService.deleteById(id).subscribe(message => {
+                this.getUsers();
+                this.notifierService.notify("success", "User successfully deleted. ", "SUCCESS_USERDELETE")
+            })
+        } else {
+            this.notifierService.notify("error", "User not deleted. ", "FAIL_USERDELETE")
+        }
+    }
+
+    addUser() {
+        this.authenticationService.create(this.newUserForm.getRawValue()).subscribe(message => {
+            this.getUsers();
+            this.newUserForm.reset();
+        }, error => {
+            for (let i = 0; i < error.error.errors.length; i++) {
+                this.notifierService.notify('error', error.error.errors[i].field + ": " + error.error.errors[i].defaultMessage, 'LOGIN_ERROR');
+            }
+        })
+    }
+
 
   public globalStatistics: any;
   public facultyStatistics: any;
@@ -58,9 +118,25 @@ export class AdminComponent implements OnInit {
     private notifierService: NotifierService
   ) {
 
-    this.surveyService.findAll().subscribe(surveyList => {
-      this.surveyList = surveyList;
-      this.getCompletedSurveys();
+    reopenSurvey() {
+        this.notifierService.notify("warning", "Do you want to reopen te survey?", 'SURVEY_RESPONSE_ERROR')
+    }
+
+    // Survey CRUD
+    getSurveys() {
+        this.surveyService.findAll().subscribe(surveyList => {
+            this.surveyList = surveyList;
+            this.getCompletedSurveys();
+        });
+    }
+
+    getCompletedSurveys() {
+        for (let index in this.surveyList) {
+            this.surveyResponse.getCompletedSurveys(this.surveyList[index].id).subscribe(result => {
+                this.surveyList[index].completed = result;
+            });
+        }
+    }
 
       //
       this.notifierService.notify("success", "All surveys have been loaded", "GET_SURVEY_SUCCESS")
@@ -74,29 +150,33 @@ export class AdminComponent implements OnInit {
       this.facultyList = faculties;
     });
 
-    this.surveyResponse.getSurveyResponseStatisticsGlobals().subscribe(statistics => {
-      this.globalStatistics = statistics;
-    });
-  }
+    addSurvey() {
 
-  ngOnInit(): void {
-    this.notifierService.notify("success", "Welcome to the Dashboard " + this.authenticationService.currentUserValue.username, "WELCOME_MESSAGE")
-  }
+        let surveyObject: Survey = {
+            id: null,
+            title: this.newSurveyForm.controls["title"].value,
+            pillar: this.newSurveyForm.controls["pillar"].value,
+            scoringDescription: [
+                this.newSurveyForm.controls["optionZero"].value,
+                this.newSurveyForm.controls["optionOne"].value,
+                this.newSurveyForm.controls["optionTwo"].value,
+                this.newSurveyForm.controls["optionThree"].value,
+                this.newSurveyForm.controls["optionFour"].value,
+                this.newSurveyForm.controls["optionFive"].value
+            ]
+        };
 
-  getUsers() {
-    this.authenticationService.findAll().subscribe(userList => {
-      this.userList = userList;
-    })
-  }
 
-  deleteUser(id: string) {
-    if (confirm("Are you sure?")) {
-      this.authenticationService.deleteById(id).subscribe(message => {
-        this.getUsers();
-        this.notifierService.notify("success", "User successfully deleted. ", "SUCCESS_USERDELETE")
-      })
-    } else {
-      this.notifierService.notify("error", "User not deleted. ", "FAIL_USERDELETE")
+        this.surveyService.create(surveyObject).subscribe(message => {
+            this.getSurveys();
+            this.newSurveyForm.reset();
+            this.newSurveyForm.controls["optionZero"].setValue("Bad");
+            this.newSurveyForm.controls["optionOne"].setValue("Below average");
+            this.newSurveyForm.controls["optionTwo"].setValue("Average");
+            this.newSurveyForm.controls["optionThree"].setValue("Above average");
+            this.newSurveyForm.controls["optionFour"].setValue("Good");
+            this.newSurveyForm.controls["optionFive"].setValue("Excellent");
+        });
     }
   }
 

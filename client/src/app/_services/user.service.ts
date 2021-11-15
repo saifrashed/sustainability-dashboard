@@ -7,6 +7,10 @@ export class UserService {
     constructor(private http: HttpClient) {
     }
 
+    getCurrentFaculty(){
+      return this.http.get<User[]>('http://localhost:8080/users/faculty/id' )
+    }
+
     getAll() {
         return this.http.get<User[]>(`http://localhost:8080/users`);
     }

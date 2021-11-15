@@ -7,7 +7,10 @@ import {AuthenticationComponent} from './components/views/authentication/authent
 import {HomeComponent} from './components/views/main/home/home.component';
 import {LoginComponent} from './components/views/authentication/login/login.component';
 import {RegisterComponent} from './components/views/authentication/register/register.component';
-import {AdminComponent} from "./components/views/application/admin/admin.component";
+import {AdminComponent} from "./components/views/application/admin-screens/admin/admin.component";
+import {AdminProfileComponent} from "./components/views/application/admin-screens/admin-profile/admin-profile.component";
+import {AdminStatisticComponent} from './components/views/application/admin-screens/admin-statistic/admin-statistic.component';
+import {AdminSurveyComponent} from './components/views/application/admin-screens/admin-survey/admin-survey.component';
 import {ContactComponent} from './components/views/main/contact/contact.component';
 import {ApplicationComponent} from "./components/views/application/application-layout/application.component";
 import {FacultyComponent} from './components/views/application/faculty/faculty.component';
@@ -39,7 +42,12 @@ const routes: Routes = [
         component: ApplicationComponent,
         children: [
             {path: '', redirectTo: "faculty", pathMatch: 'full'},
-            {path: 'admin', component: AdminComponent, canActivate: [AuthGuard]},
+            {path: 'admin', component: AdminComponent, canActivate: [AuthGuard], children: [
+                    {path: '', component: AdminSurveyComponent, canActivate: [AuthGuard]},
+                    {path: 'surveys', component: AdminSurveyComponent, canActivate: [AuthGuard]},
+                    {path: 'profiles', component: AdminProfileComponent, canActivate: [AuthGuard]},
+                    {path: 'statistics', component: AdminStatisticComponent, canActivate: [AuthGuard]},
+                ]},
             {path: 'faculty', component: FacultyComponent, canActivate: [AuthGuard]},
             {path: 'faculty/survey/:id', component: SurveyComponent, canActivate: [AuthGuard]},
         ]

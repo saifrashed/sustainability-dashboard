@@ -10,13 +10,13 @@ public class Survey {
     private String id;
     private String title;
     private String pillar;
-    private String [] scoringDescription;
-
+    private String[] scoringDescription;
+    private boolean isActive = true;
 
     public Survey() {
     }
 
-    public Survey(String id, String title, String pillar, String [] scoringDescription) {
+    public Survey(String id, String title, String pillar, String[] scoringDescription) {
         this.id = id;
         this.title = title;
         this.pillar = pillar;
@@ -47,12 +47,15 @@ public class Survey {
         this.pillar = pillar;
     }
 
+    public void setActive(boolean active) {
+        isActive = active;
+    }
 
-    public String [] getScoringDescription() {
+    public String[] getScoringDescription() {
         return scoringDescription;
     }
 
-    public void setScoringDescription(String [] scoringDescription) {
+    public void setScoringDescription(String[] scoringDescription) {
         this.scoringDescription = scoringDescription;
     }
 }
