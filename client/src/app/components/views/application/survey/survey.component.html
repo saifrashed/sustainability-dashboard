@@ -13,15 +13,28 @@
 
                 <!-- Tab content -->
                 <div class="tab-content p-4" id="pills-tabContent-custom-content">
-                    <div aria-labelledby="pills-custom-content-design-tab" class="tab-pane tab-example-design fade show active"
+                    <div aria-labelledby="pills-custom-content-design-tab"
+                         class="tab-pane tab-example-design fade show active"
                          id="pills-custom-content-design"
                          role="tabpanel">
 
 
-                        <div *ngIf="questions?.length != 0; else noquestions" class="list-group">
-                            <app-survey-question (newScoringValue)="addOrUpdateScoringArray($event)" *ngFor="let question of questions"
-                                                 [question]="question"
-                                                 [scoringDescription]="scoringDescription"></app-survey-question>
+                        <!--<span class="badge rounded-pill bg-success w-100">Success</span>-->
+                        <!--<span class="badge rounded-pill bg-danger w-100">Danger</span>-->
+                        <!--<span class="badge rounded-pill bg-warning w-100">Warning</span>-->
+
+                        <div *ngIf="questions?.length != 0; else noquestions">
+
+                            <div *ngFor="let question of questions">
+                                <app-survey-question
+                                        (newScoringValue)="addOrUpdateScoringArray($event)"
+                                        [question]="question"
+                                        [scoringDescription]="scoringDescription">
+                                </app-survey-question>
+
+                                <hr>
+
+                            </div>
 
                             <button (click)="onSubmit()" *ngIf="questions?.length == scoringResponse.length">Submit
                             </button>
