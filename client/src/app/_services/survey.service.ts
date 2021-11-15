@@ -3,6 +3,9 @@ import {Survey} from "../_models/survey";
 import {HttpClient} from '@angular/common/http';
 import {SurveyQuestion} from "../_models/surveyQuestion";
 
+import {environment} from '../../environments/environment'
+
+
 @Injectable({
     providedIn: 'root'
 })
@@ -12,23 +15,23 @@ export class SurveyService {
     }
 
     findAll() {
-        return this.http.get('http://localhost:8080/api/public/survey')
+        return this.http.get(`${environment.apiUrl}/api/public/survey`)
     }
 
     findById(id: string) {
-        return this.http.get('http://localhost:8080/api/public/survey/' + id);
+        return this.http.get(`${environment.apiUrl}/api/public/survey/` + id);
     }
 
     findAllQuestions(id: string) {
-        return this.http.get('http://localhost:8080/api/public/survey/questions/' + id);
+        return this.http.get(`${environment.apiUrl}/api/public/survey/questions/` + id);
     }
 
     create(survey: Survey) {
-        return this.http.post('http://localhost:8080/api/public/survey', survey);
+        return this.http.post(`${environment.apiUrl}/api/public/survey`, survey);
     }
 
     createQuestion(surveyQuestion: SurveyQuestion) {
-        return this.http.post('http://localhost:8080/api/public/survey-question', surveyQuestion);
+        return this.http.post(`${environment.apiUrl}/api/public/survey-question`, surveyQuestion);
     }
 
 

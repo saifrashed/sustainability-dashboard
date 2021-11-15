@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {User} from '../_models';
+import {environment} from '../../environments/environment'
 
 @Injectable({providedIn: 'root'})
 export class UserService {
@@ -8,10 +9,10 @@ export class UserService {
     }
 
     getCurrentFaculty() {
-        return this.http.get<User[]>('http://localhost:8080/users/faculty/id')
+        return this.http.get<User[]>(`${environment.apiUrl}/users/faculty/id`)
     }
 
     getAll() {
-        return this.http.get<User[]>(`http://localhost:8080/users`);
+        return this.http.get<User[]>(`${environment.apiUrl}/users`);
     }
 }

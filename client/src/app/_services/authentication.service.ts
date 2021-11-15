@@ -4,6 +4,8 @@ import {BehaviorSubject, Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 import {User} from '../_models';
 
+import {environment} from '../../environments/environment'
+
 @Injectable({providedIn: 'root'})
 export class AuthenticationService {
     public currentUser: Observable<User>;
@@ -23,7 +25,7 @@ export class AuthenticationService {
     }
 
     login(username: string, password: string) {
-        return this.http.post<any>(`http://localhost:8080/api/auth/signin`, {username, password})
+        return this.http.post<any>(`${environment.apiUrl}/api/auth/signin`, {username, password})
             .pipe(map(user => {
                 // store user details and jwt token in local storage to keep user logged in between page refreshes
                 localStorage.setItem('currentUser', JSON.stringify(user));
@@ -39,15 +41,15 @@ export class AuthenticationService {
     }
 
     findAll() {
-        return this.http.get('http://localhost:8080/api/auth/users')
+        return this.http.get(`${environment.apiUrl}/api/auth/users`)
     }
 
     deleteById(id: any) {
-        return this.http.delete('http://localhost:8080/api/auth/users/' + id);
+        return this.http.delete(`${environment.apiUrl}/api/auth/users/` + id);
     }
 
     create(user: User) {
-        return this.http.post('http://localhost:8080/api/auth/signup', user);
+        return this.http.post(`${environment.apiUrl}/api/auth/signup`, user);
     }
 
 }
