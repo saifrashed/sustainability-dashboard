@@ -28,8 +28,7 @@ deploy_fe:
         changes:
           - "client/**/*"  
     script:
-        - git branch -D splitting-client || true        
         - git remote rm heroku-client-app || true
         - git remote add heroku-client-app https://heroku:7407c96c-7584-471d-8690-66905f00176a@git.heroku.com/sustainability-client.git || true
-        - git subtree split --prefix client -b splitting-client
-        - git push --force heroku-client-app splitting-client:main
+        - git fetch --all --unshallow
+        - git subtree push --prefix client heroku-client-app master
