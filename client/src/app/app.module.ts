@@ -3,7 +3,8 @@ import {BrowserModule} from '@angular/platform-browser';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {AppRoutingModule} from './app-routing.module'; // CLI imports AppRoutingModule
 import {HttpClientModule} from '@angular/common/http';
-import { NotifierModule, NotifierOptions } from 'angular-notifier';
+import {NotifierModule, NotifierOptions} from 'angular-notifier';
+import {NgxEchartsModule} from 'ngx-echarts';
 
 // layouts
 import {MainComponent} from './components/views/main/main-layout/main.component';
@@ -96,7 +97,10 @@ const customNotifierOptions: NotifierOptions = {
         AppRoutingModule,
         HttpClientModule,
         ReactiveFormsModule,
-        NotifierModule.withConfig(customNotifierOptions)
+        NotifierModule.withConfig(customNotifierOptions),
+      NgxEchartsModule.forRoot({
+        echarts: () => import('echarts')
+      })
     ],
     providers: [],
     bootstrap: [AppComponent]

@@ -3,6 +3,7 @@ import {FormControl, FormGroup} from '@angular/forms';
 import {AuthenticationService, SurveyResponseService, SurveyService} from "../../../../../_services";
 import {Survey} from "../../../../../_models/survey";
 import {NotifierService} from "angular-notifier";
+import {EChartsOption} from 'echarts';
 
 @Component({
     selector: 'app-dashboard-admin',
@@ -231,4 +232,38 @@ export class AdminComponent implements OnInit {
         }
     }
 
+  chartOption: EChartsOption = {
+    xAxis: {
+      type: 'category',
+      data: ['Januari','Februari','March','April','May','June', 'July', 'August', 'September', 'October', 'November', 'December'],
+    },
+    yAxis: {
+      type: 'value',
+      name: 'Survey Averages',
+      min: 0,
+      max: 100,
+      position: 'left'
+    },
+    series: [
+      {
+        name: 'X-1',
+        type: 'line',
+        data: [2, 5, 12, 23, 25, 29, 45]
+      },
+      {
+        name: 'X-2',
+        type: 'line',
+        data: [6, 3, 20, 44, 53, 34, 44]
+      },
+      {
+        name: 'X-3',
+        type: 'line',
+        data: [15, 15, 39, 66, 76, 82, 70]
+      },
+      {
+        name: 'X-4',
+        type: 'line',
+        data: [1, 6, 15, 32, 31, 53, 30]
+      }]
+  };
 }
