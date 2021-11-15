@@ -14,6 +14,7 @@ deploy_be:
     script:
         - git remote rm heroku-server-app || true
         - git remote add heroku-server-app https://heroku:7407c96c-7584-471d-8690-66905f00176a@git.heroku.com/sustainability-server.git || true
+        - git fetch --all --unshallow
         - git subtree push --prefix server heroku-server-app master
 
 deploy_fe:    
