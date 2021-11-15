@@ -50,6 +50,7 @@ public class Survey {
     public void setActive(boolean active) {
         isActive = active;
     }
+    
 
     public String[] getScoringDescription() {
         return scoringDescription;
