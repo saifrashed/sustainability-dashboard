@@ -15,7 +15,7 @@ deploy_be:
         - git remote rm heroku-server-app || true
         - git remote add heroku-server-app https://heroku:7407c96c-7584-471d-8690-66905f00176a@git.heroku.com/sustainability-server.git || true
         - git fetch --all --unshallow
-        - git push heroku-server-app `git subtree split --prefix server main`:master --force
+        - git subtree push --prefix server heroku-server-app master
 
 deploy_fe:    
     stage: deploy
@@ -31,4 +31,4 @@ deploy_fe:
         - git remote rm heroku-client-app || true
         - git remote add heroku-client-app https://heroku:7407c96c-7584-471d-8690-66905f00176a@git.heroku.com/sustainability-client.git || true
         - git fetch --all --unshallow
-        - git push heroku-client-app `git subtree split --prefix client main`:master --force
+        - git subtree push --prefix client heroku-client-app master
