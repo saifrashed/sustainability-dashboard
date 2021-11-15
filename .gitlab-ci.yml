@@ -1,0 +1,36 @@
+stages:
+    - deploy
+
+deploy_be:
+    stage: deploy
+    image: node:latest
+    tags:
+        - hva
+    only:
+        refs:
+            - master
+        changes:
+          - "server/**/*"  
+    script:
+        - git branch -D splitting-server || true        
+        - git remote rm heroku-server-app || true
+        - git remote add heroku-server-app https://heroku:$HEROKU_API_KEY@git.heroku.com/hbo-ict-be-app-staging1.git || true
+        - git subtree split --prefix server -b splitting-server
+        - git push --force heroku-be-app splitting-server:master
+
+deploy_fe:    
+    stage: deploy
+    image: node:latest
+    tags:
+        - hva
+    only:
+        refs:
+            - master
+        changes:
+          - "client/**/*"  
+    script:
+        - git branch -D splitting-client || true        
+        - git remote rm heroku-client-app || true
+        - git remote add heroku-client-app https://heroku:$HEROKU_API_KEY@git.heroku.com/hbo-ict-fe-app-staging1.git || true
+        - git subtree split --prefix client -b splitting-client
+        - git push --force heroku-client-app splitting-client:master
