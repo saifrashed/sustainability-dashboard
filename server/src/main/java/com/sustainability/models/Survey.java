@@ -14,6 +14,7 @@ public class Survey {
     private boolean isActive = true;
 
     public Survey() {
+        // empty constructor
     }
 
     public Survey(String id, String title, String pillar, String[] scoringDescription) {
