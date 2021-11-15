@@ -19,8 +19,7 @@ export class AdminComponent implements OnInit {
     public selectedSurveyId: any;
 
     public facultyList: any;
-
-
+    
     public newUserForm = new FormGroup({
         username: new FormControl(''),
         email: new FormControl(''),
