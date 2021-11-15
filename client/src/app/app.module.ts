@@ -3,8 +3,9 @@ import {BrowserModule} from '@angular/platform-browser';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {AppRoutingModule} from './app-routing.module'; // CLI imports AppRoutingModule
 import {HttpClientModule} from '@angular/common/http';
-import {NotifierModule, NotifierOptions} from 'angular-notifier';
+import { NotifierModule, NotifierOptions } from 'angular-notifier';
 import {NgxEchartsModule} from 'ngx-echarts';
+
 // layouts
 import {MainComponent} from './components/views/main/main-layout/main.component';
 import {AuthenticationComponent} from './components/views/authentication/authentication-layout/authentication.component';
@@ -15,10 +16,15 @@ import {HomeComponent} from './components/views/main/home/home.component';
 import {LoginComponent} from './components/views/authentication/login/login.component';
 import {RegisterComponent} from './components/views/authentication/register/register.component';
 import {AdminComponent} from './components/views/application/admin-screens/admin/admin.component';
+import {AdminSurveyComponent} from './components/views/application/admin-screens/admin-survey/admin-survey.component';
+import {AdminProfileComponent} from './components/views/application/admin-screens/admin-profile/admin-profile.component';
+import {AdminStatisticComponent} from './components/views/application/admin-screens/admin-statistic/admin-statistic.component';
 import {ContactComponent} from './components/views/main/contact/contact.component';
 import {FacultyComponent} from './components/views/application/faculty/faculty.component';
 import {SurveyComponent} from "./components/views/application/survey/survey.component";
 import {SurveyQuestionComponent} from './components/views/application/survey-question/survey-question.component';
+
+
 
 /**
  * Custom angular notifier options
@@ -77,6 +83,9 @@ const customNotifierOptions: NotifierOptions = {
     LoginComponent,
     RegisterComponent,
     AdminComponent,
+    AdminSurveyComponent,
+    AdminProfileComponent,
+    AdminStatisticComponent,
     ContactComponent,
     FacultyComponent,
     SurveyComponent,
@@ -92,7 +101,9 @@ const customNotifierOptions: NotifierOptions = {
     NgxEchartsModule.forRoot({
       echarts: () => import('echarts')
     })
-  ]
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
-
-export class AppModule {}
+export class AppModule {
+}
