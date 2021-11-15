@@ -10,5 +10,4 @@ import {AdminComponent} from "../admin/admin.component";
 
 export class AdminSurveyComponent extends AdminComponent implements OnInit {
 
-
 }

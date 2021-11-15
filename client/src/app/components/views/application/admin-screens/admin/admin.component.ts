@@ -31,12 +31,12 @@ export class AdminComponent implements OnInit {
     public newSurveyForm = new FormGroup({
         title: new FormControl(''),
         pillar: new FormControl(''),
-        optionOne: new FormControl('Bad'),
-        optionTwo: new FormControl('Below average'),
-        optionThree: new FormControl('Average'),
-        optionFour: new FormControl('Above average'),
-        optionFive: new FormControl('Good'),
-        optionSix: new FormControl('Excellent'),
+        optionZero: new FormControl('Bad'),
+        optionOne: new FormControl('Below average'),
+        optionTwo: new FormControl('Average'),
+        optionThree: new FormControl('Above average'),
+        optionFour: new FormControl('Good'),
+        optionFive: new FormControl('Excellent'),
     });
 
 
@@ -116,6 +116,7 @@ export class AdminComponent implements OnInit {
     getSurveys() {
         this.surveyService.findAll().subscribe(surveyList => {
             this.surveyList = surveyList;
+            this.getCompletedSurveys();
         });
     }
 
@@ -143,12 +144,12 @@ export class AdminComponent implements OnInit {
             title: this.newSurveyForm.controls["title"].value,
             pillar: this.newSurveyForm.controls["pillar"].value,
             scoringDescription: [
+                this.newSurveyForm.controls["optionZero"].value,
                 this.newSurveyForm.controls["optionOne"].value,
                 this.newSurveyForm.controls["optionTwo"].value,
                 this.newSurveyForm.controls["optionThree"].value,
                 this.newSurveyForm.controls["optionFour"].value,
-                this.newSurveyForm.controls["optionFive"].value,
-                this.newSurveyForm.controls["optionSix"].value
+                this.newSurveyForm.controls["optionFive"].value
             ]
         };
 
@@ -156,12 +157,12 @@ export class AdminComponent implements OnInit {
         this.surveyService.create(surveyObject).subscribe(message => {
             this.getSurveys();
             this.newSurveyForm.reset();
-            this.newSurveyForm.controls["optionOne"].setValue("Bad");
-            this.newSurveyForm.controls["optionTwo"].setValue("Below average");
-            this.newSurveyForm.controls["optionThree"].setValue("Average");
-            this.newSurveyForm.controls["optionFour"].setValue("Above average");
-            this.newSurveyForm.controls["optionFive"].setValue("Good");
-            this.newSurveyForm.controls["optionSix"].setValue("Excellent");
+            this.newSurveyForm.controls["optionZero"].setValue("Bad");
+            this.newSurveyForm.controls["optionOne"].setValue("Below average");
+            this.newSurveyForm.controls["optionTwo"].setValue("Average");
+            this.newSurveyForm.controls["optionThree"].setValue("Above average");
+            this.newSurveyForm.controls["optionFour"].setValue("Good");
+            this.newSurveyForm.controls["optionFive"].setValue("Excellent");
         });
     }
 

@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 
-
 import {AdminComponent} from "../admin/admin.component";
 
 @Component({

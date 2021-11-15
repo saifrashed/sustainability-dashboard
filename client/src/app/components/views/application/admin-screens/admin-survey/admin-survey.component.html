@@ -142,3 +142,74 @@
     <!-- row  -->
 
 </div>
+
+
+<!-- Add survey modal -->
+<div class="modal fade" id="addSurveyModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Create Survey</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="newSurveyForm">
+                    <div class="form-group mb-3">
+                        <label>Title</label>
+                        <input formControlName="title" type="text" class="form-control">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label>Associated pillar</label>
+                        <select formControlName="pillar" class="form-control">
+                            <option></option>
+                            <option value="Education">Education</option>
+                            <option value="Research">Research</option>
+                            <option value="Business operations/Facilities">Business operations/Facilities
+                            </option>
+                            <option value="Organisation">Organisation</option>
+                        </select>
+                    </div>
+
+                    <label>Scoring descriptions (lowest to highest grading)</label>
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Option 0</span>
+                        <input formControlName="optionZero" type="text" class="form-control">
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Option 1</span>
+                        <input formControlName="optionOne" type="text" class="form-control">
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Option 2</span>
+                        <input formControlName="optionTwo" type="text" class="form-control">
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Option 3</span>
+                        <input formControlName="optionThree" type="text" class="form-control">
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Option 4</span>
+                        <input formControlName="optionFour" type="text" class="form-control">
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Option 5</span>
+                        <input formControlName="optionFive" type="text" class="form-control">
+                    </div>
+
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" (click)="addSurvey()">Create</button>
+            </div>
+        </div>
+    </div>
+    <!-- end survey modal -->
+</div>
