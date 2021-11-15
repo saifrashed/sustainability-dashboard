@@ -5,7 +5,6 @@ import {AppRoutingModule} from './app-routing.module'; // CLI imports AppRouting
 import {HttpClientModule} from '@angular/common/http';
 import {NotifierModule, NotifierOptions} from 'angular-notifier';
 import {NgxEchartsModule} from 'ngx-echarts';
-
 // layouts
 import {MainComponent} from './components/views/main/main-layout/main.component';
 import {AuthenticationComponent} from './components/views/authentication/authentication-layout/authentication.component';
@@ -23,7 +22,6 @@ import {ContactComponent} from './components/views/main/contact/contact.componen
 import {FacultyComponent} from './components/views/application/faculty/faculty.component';
 import {SurveyComponent} from "./components/views/application/survey/survey.component";
 import {SurveyQuestionComponent} from './components/views/application/survey-question/survey-question.component';
-
 
 
 /**
@@ -98,9 +96,9 @@ const customNotifierOptions: NotifierOptions = {
         HttpClientModule,
         ReactiveFormsModule,
         NotifierModule.withConfig(customNotifierOptions),
-      NgxEchartsModule.forRoot({
-        echarts: () => import('echarts')
-      })
+        NgxEchartsModule.forRoot({
+            echarts: () => import('echarts')
+        })
     ],
     providers: [],
     bootstrap: [AppComponent]

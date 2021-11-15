@@ -51,6 +51,40 @@ export class AdminComponent implements OnInit {
 
     public globalStatistics: any;
     public facultyStatistics: any;
+    chartOption: EChartsOption = {
+        xAxis: {
+            type: 'category',
+            data: ['Januari', 'Februari', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+        },
+        yAxis: {
+            type: 'value',
+            name: 'Survey Averages',
+            min: 0,
+            max: 100,
+            position: 'left'
+        },
+        series: [
+            {
+                name: 'X-1',
+                type: 'line',
+                data: [2, 5, 12, 23, 25, 29, 45]
+            },
+            {
+                name: 'X-2',
+                type: 'line',
+                data: [6, 3, 20, 44, 53, 34, 44]
+            },
+            {
+                name: 'X-3',
+                type: 'line',
+                data: [15, 15, 39, 66, 76, 82, 70]
+            },
+            {
+                name: 'X-4',
+                type: 'line',
+                data: [1, 6, 15, 32, 31, 53, 30]
+            }]
+    };
 
     constructor(
         private surveyService: SurveyService,
@@ -129,14 +163,12 @@ export class AdminComponent implements OnInit {
         }
     }
 
-
     getSurveyQuestions(id: string) {
         this.surveyService.findAllQuestions(id).subscribe(surveyQuestions => {
             this.selectedSurveyQuestions = surveyQuestions;
             this.selectedSurveyId = id;
         })
     }
-
 
     addSurvey() {
 
@@ -167,6 +199,7 @@ export class AdminComponent implements OnInit {
         });
     }
 
+    // SurveyResponse model
 
     addSurveyQuestion() {
 
@@ -189,8 +222,6 @@ export class AdminComponent implements OnInit {
             this.notifierService.notify("success", "Question has been added to the survey", "ADD_SURVEY_QUESTION")
         })
     }
-
-    // SurveyResponse model
 
     getFaculties() {
         this.surveyResponse.findAllFaculties().subscribe(faculties => {
@@ -231,39 +262,4 @@ export class AdminComponent implements OnInit {
             return 0;
         }
     }
-
-  chartOption: EChartsOption = {
-    xAxis: {
-      type: 'category',
-      data: ['Januari','Februari','March','April','May','June', 'July', 'August', 'September', 'October', 'November', 'December'],
-    },
-    yAxis: {
-      type: 'value',
-      name: 'Survey Averages',
-      min: 0,
-      max: 100,
-      position: 'left'
-    },
-    series: [
-      {
-        name: 'X-1',
-        type: 'line',
-        data: [2, 5, 12, 23, 25, 29, 45]
-      },
-      {
-        name: 'X-2',
-        type: 'line',
-        data: [6, 3, 20, 44, 53, 34, 44]
-      },
-      {
-        name: 'X-3',
-        type: 'line',
-        data: [15, 15, 39, 66, 76, 82, 70]
-      },
-      {
-        name: 'X-4',
-        type: 'line',
-        data: [1, 6, 15, 32, 31, 53, 30]
-      }]
-  };
 }

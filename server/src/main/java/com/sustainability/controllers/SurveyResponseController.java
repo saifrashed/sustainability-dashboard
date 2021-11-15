@@ -54,7 +54,8 @@ public class SurveyResponseController {
         Aggregation aggregation = Aggregation.newAggregation(lookupUserOperation, lookupSurveyOperation, Aggregation.unwind("scoring"), Aggregation.unwind("user"), Aggregation.unwind("survey"));
 
 
-        AggregationResults<Document> surveyResponse = mongoTemplate.aggregate(aggregation, "surveyResponse", Document.class);;
+        AggregationResults<Document> surveyResponse = mongoTemplate.aggregate(aggregation, "surveyResponse", Document.class);
+        ;
 
         List<Document> result = surveyResponse.getMappedResults();
 
@@ -109,7 +110,8 @@ public class SurveyResponseController {
         );
 
         // initialise aggregation
-        AggregationResults<Document> surveyResponse = mongoTemplate.aggregate(aggregation, "surveyResponse", Document.class);;
+        AggregationResults<Document> surveyResponse = mongoTemplate.aggregate(aggregation, "surveyResponse", Document.class);
+        ;
 
         // map results
         List<Document> result = surveyResponse.getMappedResults();
@@ -138,7 +140,7 @@ public class SurveyResponseController {
 
         // match the faculty
         MatchOperation matchFaculty = Aggregation.match(Criteria.where("user.faculty")
-                        .is(faculty));
+                .is(faculty));
 
         // multiply value by weight
         ArithmeticOperators.Multiply multiplyOp = ArithmeticOperators
@@ -167,7 +169,8 @@ public class SurveyResponseController {
         );
 
         // initialise aggregation
-        AggregationResults<Document> surveyResponse = mongoTemplate.aggregate(aggregation, "surveyResponse", Document.class);;
+        AggregationResults<Document> surveyResponse = mongoTemplate.aggregate(aggregation, "surveyResponse", Document.class);
+        ;
 
         // map results
         List<Document> result = surveyResponse.getMappedResults();
@@ -207,7 +210,8 @@ public class SurveyResponseController {
         );
 
         // initialise aggregation
-        AggregationResults<Document> surveyResponse = mongoTemplate.aggregate(aggregation, "surveyResponse", Document.class);;
+        AggregationResults<Document> surveyResponse = mongoTemplate.aggregate(aggregation, "surveyResponse", Document.class);
+        ;
 
         // map results
         int result = surveyResponse.getMappedResults().size();
@@ -231,7 +235,8 @@ public class SurveyResponseController {
         );
 
         // initialise aggregation
-        AggregationResults<Document> surveyResponse = mongoTemplate.aggregate(aggregation, "surveyResponse", Document.class);;
+        AggregationResults<Document> surveyResponse = mongoTemplate.aggregate(aggregation, "surveyResponse", Document.class);
+        ;
 
         // map results
         int result = surveyResponse.getMappedResults().size();
@@ -254,7 +259,8 @@ public class SurveyResponseController {
         );
 
         // initialise aggregation
-        AggregationResults<Document> faculty = mongoTemplate.aggregate(aggregation, "users", Document.class);;
+        AggregationResults<Document> faculty = mongoTemplate.aggregate(aggregation, "users", Document.class);
+        ;
 
         // map results
         List<Document> result = faculty.getMappedResults();

@@ -1,39 +1,39 @@
 <div class="list-group-item position-relative pb-10 pt-6">
-  <p class="text-center mb-3 survey-question">{{question.description}}</p>
-  <div aria-labelledby="pills-range-fourth-design-tab"
-       class="tab-pane tab-example-design fade show active"
-       role="tabpanel">
+    <p class="text-center mb-3 survey-question">{{question.description}}</p>
+    <div aria-labelledby="pills-range-fourth-design-tab"
+         class="tab-pane tab-example-design fade show active"
+         role="tabpanel">
 
-    <div id="form-wrapper">
-      <form>
-        <div id="question-answering">
-          <input (click)="addOrUpdateScoring($event)" id="{{question.id}}-1" name="debt-amount" required
-                 type="radio" value="0">
-          <label [attr.data-value]="scoringDescription[0]" for="{{question.id}}-1"></label>
+        <div id="form-wrapper">
+            <form>
+                <div id="question-answering">
+                    <input (click)="addOrUpdateScoring($event)" id="{{question.id}}-1" name="debt-amount" required
+                           type="radio" value="0">
+                    <label [attr.data-value]="scoringDescription[0]" for="{{question.id}}-1"></label>
 
-          <input (click)="addOrUpdateScoring($event)" id="{{question.id}}-2" name="debt-amount" required
-                 type="radio" value="1">
-          <label [attr.data-value]="scoringDescription[1]" for="{{question.id}}-2"></label>
+                    <input (click)="addOrUpdateScoring($event)" id="{{question.id}}-2" name="debt-amount" required
+                           type="radio" value="1">
+                    <label [attr.data-value]="scoringDescription[1]" for="{{question.id}}-2"></label>
 
-          <input (click)="addOrUpdateScoring($event)" id="{{question.id}}-3" name="debt-amount" required
-                 type="radio" value="2">
-          <label [attr.data-value]="scoringDescription[2]" for="{{question.id}}-3"></label>
+                    <input (click)="addOrUpdateScoring($event)" id="{{question.id}}-3" name="debt-amount" required
+                           type="radio" value="2">
+                    <label [attr.data-value]="scoringDescription[2]" for="{{question.id}}-3"></label>
 
-          <input (click)="addOrUpdateScoring($event)" id="{{question.id}}-4" name="debt-amount" required
-                 type="radio" value="3">
-          <label [attr.data-value]="scoringDescription[3]" for="{{question.id}}-4"></label>
+                    <input (click)="addOrUpdateScoring($event)" id="{{question.id}}-4" name="debt-amount" required
+                           type="radio" value="3">
+                    <label [attr.data-value]="scoringDescription[3]" for="{{question.id}}-4"></label>
 
-          <input (click)="addOrUpdateScoring($event)" id="{{question.id}}-5" name="debt-amount" required
-                 type="radio" value="4">
-          <label [attr.data-value]="scoringDescription[4]" for="{{question.id}}-5"></label>
+                    <input (click)="addOrUpdateScoring($event)" id="{{question.id}}-5" name="debt-amount" required
+                           type="radio" value="4">
+                    <label [attr.data-value]="scoringDescription[4]" for="{{question.id}}-5"></label>
 
-          <input (click)="addOrUpdateScoring($event)" id="{{question.id}}-6" name="debt-amount" required
-                 type="radio" value="5">
-          <label [attr.data-value]="scoringDescription[5]" for="{{question.id}}-6"></label>
+                    <input (click)="addOrUpdateScoring($event)" id="{{question.id}}-6" name="debt-amount" required
+                           type="radio" value="5">
+                    <label [attr.data-value]="scoringDescription[5]" for="{{question.id}}-6"></label>
 
-          <div id="question-answering-pos"></div>
+                    <div id="question-answering-pos"></div>
+                </div>
+            </form>
         </div>
-      </form>
     </div>
-  </div>
 </div>

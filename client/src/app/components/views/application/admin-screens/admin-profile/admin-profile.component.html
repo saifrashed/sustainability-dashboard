@@ -1,4 +1,3 @@
-
 <div class="row my-6">
     <!-- card  -->
     <div class="col-xl-12 col-lg-12 col-md-12 col-12">
@@ -22,8 +21,8 @@
                         <td class="align-middle">
                             <div class="d-flex align-items-center">
                                 <div>
-                                    <img src="assets/images/avatar/avatar-admin.png"
-                                         alt="" class="avatar-md avatar rounded-circle">
+                                    <img alt=""
+                                         class="avatar-md avatar rounded-circle" src="assets/images/avatar/avatar-admin.png">
                                 </div>
                                 <div class="ms-3 lh-1">
                                     <h5 class="fw-bold mb-1">{{user.username}}</h5>
@@ -34,15 +33,15 @@
                         <td class="align-middle">{{user.faculty}}</td>
 
                         <td class="align-middle">
-                            <a *ngIf="user.username != 'admin'" class="btn btn-light-danger"
-                               (click)="deleteUser(user.id)">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                     fill="currentColor"
-                                     class="bi bi-x-lg" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                          d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
-                                    <path fill-rule="evenodd"
-                                          d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+                            <a (click)="deleteUser(user.id)" *ngIf="user.username != 'admin'"
+                               class="btn btn-light-danger">
+                                <svg class="bi bi-x-lg" fill="currentColor" height="16"
+                                     viewBox="0 0 16 16"
+                                     width="16" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"
+                                          fill-rule="evenodd"/>
+                                    <path d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"
+                                          fill-rule="evenodd"/>
                                 </svg>
                             </a>
                         </td>
@@ -52,7 +51,7 @@
             </div>
 
             <div class="card-footer bg-white text-center">
-                <a href="#" class="btn btn-white" data-bs-toggle="modal" data-bs-target="#addUserModal">
+                <a class="btn btn-white" data-bs-target="#addUserModal" data-bs-toggle="modal" href="#">
                     Add New profile
                 </a>
             </div>
@@ -61,28 +60,28 @@
 
 
     <!-- Add user modal -->
-    <div class="modal fade" id="addUserModal" tabindex="-1" aria-hidden="true">
+    <div aria-hidden="true" class="modal fade" id="addUserModal" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Create Profile</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
                 </div>
                 <div class="modal-body">
                     <form [formGroup]="newUserForm">
                         <div class="form-group mb-3">
                             <label>Username</label>
-                            <input formControlName="username" type="text" class="form-control">
+                            <input class="form-control" formControlName="username" type="text">
                         </div>
 
                         <div class="form-group mb-3">
                             <label>Email</label>
-                            <input formControlName="email" type="email" class="form-control">
+                            <input class="form-control" formControlName="email" type="email">
                         </div>
 
                         <div class="form-group mb-3">
                             <label>Faculty</label>
-                            <select formControlName="faculty" class="form-control">
+                            <select class="form-control" formControlName="faculty">
                                 <option></option>
                                 <option value="FACULTY OF APPLIED SOCIAL SCIENCES AND LAW">
                                     FACULTY OF APPLIED SOCIAL SCIENCES AND LAW
@@ -110,18 +109,18 @@
 
                         <div class="form-group mb-3">
                             <label>Password</label>
-                            <input formControlName="password" type="password" class="form-control">
+                            <input class="form-control" formControlName="password" type="password">
                         </div>
 
                         <div class="form-group mb-3">
                             <label>Role</label>
-                            <input type="text" readonly value="ROLE_FACULTY" class="form-control">
+                            <input class="form-control" readonly type="text" value="ROLE_FACULTY">
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" (click)="addUser()">Create</button>
+                    <button class="btn btn-secondary" data-bs-dismiss="modal" type="button">Close</button>
+                    <button (click)="addUser()" class="btn btn-primary" type="button">Create</button>
                 </div>
             </div>
         </div>

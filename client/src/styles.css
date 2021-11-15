@@ -16,7 +16,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-
 /**
 Banner
  */
@@ -32,27 +31,27 @@ Banner animation
 .context {
     width: 100%;
     position: absolute;
-    top:50vh;
+    top: 50vh;
 
 }
 
-.context h1{
+.context h1 {
     text-align: center;
     color: #fff;
     font-size: 50px;
 }
 
 
-.area{
+.area {
     position: absolute;
-    top:0;
-    left:0;
-    bottom:0;
-    right:0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
     background-color: #e1e5e600;
 }
 
-.circles{
+.circles {
     position: absolute;
     top: 0;
     left: 0;
@@ -61,7 +60,7 @@ Banner animation
     overflow: hidden;
 }
 
-.circles li{
+.circles li {
     position: absolute;
     display: block;
     list-style: none;
@@ -73,7 +72,7 @@ Banner animation
 
 }
 
-.circles li:nth-child(1){
+.circles li:nth-child(1) {
     left: 25%;
     width: 80px;
     height: 80px;
@@ -81,7 +80,7 @@ Banner animation
 }
 
 
-.circles li:nth-child(2){
+.circles li:nth-child(2) {
     left: 10%;
     width: 20px;
     height: 20px;
@@ -89,14 +88,14 @@ Banner animation
     animation-duration: 12s;
 }
 
-.circles li:nth-child(3){
+.circles li:nth-child(3) {
     left: 70%;
     width: 20px;
     height: 20px;
     animation-delay: 4s;
 }
 
-.circles li:nth-child(4){
+.circles li:nth-child(4) {
     left: 40%;
     width: 60px;
     height: 60px;
@@ -104,28 +103,28 @@ Banner animation
     animation-duration: 18s;
 }
 
-.circles li:nth-child(5){
+.circles li:nth-child(5) {
     left: 65%;
     width: 20px;
     height: 20px;
     animation-delay: 0s;
 }
 
-.circles li:nth-child(6){
+.circles li:nth-child(6) {
     left: 75%;
     width: 110px;
     height: 110px;
     animation-delay: 3s;
 }
 
-.circles li:nth-child(7){
+.circles li:nth-child(7) {
     left: 35%;
     width: 150px;
     height: 150px;
     animation-delay: 7s;
 }
 
-.circles li:nth-child(8){
+.circles li:nth-child(8) {
     left: 50%;
     width: 25px;
     height: 25px;
@@ -133,7 +132,7 @@ Banner animation
     animation-duration: 45s;
 }
 
-.circles li:nth-child(9){
+.circles li:nth-child(9) {
     left: 20%;
     width: 15px;
     height: 15px;
@@ -141,7 +140,7 @@ Banner animation
     animation-duration: 35s;
 }
 
-.circles li:nth-child(10){
+.circles li:nth-child(10) {
     left: 85%;
     width: 150px;
     height: 150px;
@@ -150,16 +149,15 @@ Banner animation
 }
 
 
-
 @keyframes animate {
 
-    0%{
+    0% {
         transform: translateY(0) rotate(0deg);
         opacity: 1;
         border-radius: 0;
     }
 
-    100%{
+    100% {
         transform: translateY(-1000px) rotate(720deg);
         opacity: 0;
         border-radius: 50%;

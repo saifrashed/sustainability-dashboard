@@ -1,9 +1,9 @@
 <svg width="1312" height="382" xmlns="http://www.w3.org/2000/svg">
 
- <g>
-  <title>Layer 1</title>
-  <path id="svg_1" d="m1311.0597,111l-165.131,95l0,-190l165.131,95z" fill="#ffce60"/>
-  <path id="svg_2" d="m1062.9947,62.5l82.565,47.5l0,-95l-82.565,47.5z" fill="#05cb61"/>
-  <path id="svg_3" d="m1021.6357,87.25l41.283,23.75l0,-47.5l-41.283,23.75z" fill="#fd7549"/>
- </g>
+    <g>
+        <title>Layer 1</title>
+        <path id="svg_1" d="m1311.0597,111l-165.131,95l0,-190l165.131,95z" fill="#ffce60"/>
+        <path id="svg_2" d="m1062.9947,62.5l82.565,47.5l0,-95l-82.565,47.5z" fill="#05cb61"/>
+        <path id="svg_3" d="m1021.6357,87.25l41.283,23.75l0,-47.5l-41.283,23.75z" fill="#fd7549"/>
+    </g>
 </svg>

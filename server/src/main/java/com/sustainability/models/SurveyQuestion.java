@@ -8,7 +8,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class SurveyQuestion {
 
 
-
     @Id
     private String id;
     private ObjectId surveyId;
@@ -18,7 +17,7 @@ public class SurveyQuestion {
     public SurveyQuestion() {
     }
 
-    public SurveyQuestion(String id,ObjectId surveyId, String description,int weight) {
+    public SurveyQuestion(String id, ObjectId surveyId, String description, int weight) {
         this.id = id;
         this.surveyId = surveyId;
         this.description = description;

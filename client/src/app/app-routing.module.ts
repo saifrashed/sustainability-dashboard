@@ -42,12 +42,14 @@ const routes: Routes = [
         component: ApplicationComponent,
         children: [
             {path: '', redirectTo: "faculty", pathMatch: 'full'},
-            {path: 'admin', component: AdminComponent, canActivate: [AuthGuard], children: [
+            {
+                path: 'admin', component: AdminComponent, canActivate: [AuthGuard], children: [
                     {path: '', component: AdminSurveyComponent, canActivate: [AuthGuard]},
                     {path: 'surveys', component: AdminSurveyComponent, canActivate: [AuthGuard]},
                     {path: 'profiles', component: AdminProfileComponent, canActivate: [AuthGuard]},
                     {path: 'statistics', component: AdminStatisticComponent, canActivate: [AuthGuard]},
-                ]},
+                ]
+            },
             {path: 'faculty', component: FacultyComponent, canActivate: [AuthGuard]},
             {path: 'faculty/survey/:id', component: SurveyComponent, canActivate: [AuthGuard]},
         ]
