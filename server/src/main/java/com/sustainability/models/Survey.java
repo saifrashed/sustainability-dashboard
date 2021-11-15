@@ -15,7 +15,7 @@ public class Survey {
 
     public Survey() {
     }
-    
+
     public Survey(String id, String title, String pillar, String[] scoringDescription) {
         this.id = id;
         this.title = title;
