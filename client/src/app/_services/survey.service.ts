@@ -26,6 +26,10 @@ export class SurveyService {
         return this.http.get(`${environment.apiUrl}/api/public/survey/questions/` + id);
     }
 
+    reopenSurvey(id: string) {
+        return this.http.get(`${environment.apiUrl}/api/public/survey/reopen/` + id);
+    }
+
     create(survey: Survey) {
         return this.http.post(`${environment.apiUrl}/api/public/survey`, survey);
     }

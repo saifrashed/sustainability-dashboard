@@ -59,29 +59,29 @@ export class AdminComponent implements OnInit {
             type: 'value',
             name: 'Survey Averages',
             min: 0,
-            max: 100,
+            max: 5,
             position: 'left'
         },
         series: [
             {
                 name: 'X-1',
                 type: 'line',
-                data: [2, 5, 12, 23, 25, 29, 45]
+                data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 4.5, 0, 0]
             },
             {
                 name: 'X-2',
                 type: 'line',
-                data: [6, 3, 20, 44, 53, 34, 44]
+                data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0]
             },
             {
                 name: 'X-3',
                 type: 'line',
-                data: [15, 15, 39, 66, 76, 82, 70]
+                data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0]
             },
             {
                 name: 'X-4',
                 type: 'line',
-                data: [1, 6, 15, 32, 31, 53, 30]
+                data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 2.3, 0, 0]
             }]
     };
 
@@ -142,8 +142,12 @@ export class AdminComponent implements OnInit {
         })
     }
 
-    reopenSurvey() {
-        this.notifierService.notify("warning", "Do you want to reopen te survey?", 'SURVEY_RESPONSE_ERROR')
+    reopenSurvey(id: any) {
+        this.surveyService.reopenSurvey(id).subscribe(message => {
+            console.log(message);
+            this.notifierService.notify("warning", "Do you want to reopen te survey?", 'SURVEY_RESPONSE_ERROR')
+            this.getSurveys();
+        });
     }
 
     // Survey CRUD

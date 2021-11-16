@@ -37,10 +37,13 @@ public class SurveyController {
 
     @GetMapping("/survey")
     public ResponseEntity<List<Survey>> getSurvey() {
+        Aggregation aggregate = newAggregation(match(new Criteria("isActive").is(true)));
 
-        List<Survey> surveys = surveyRepo.findAll();
+        AggregationResults<Survey> groupResults = mongoTemplate.aggregate(aggregate, "surveys", Survey.class);
 
-        return new ResponseEntity<>(surveys, HttpStatus.OK);
+        List<Survey> result = groupResults.getMappedResults();
+
+        return new ResponseEntity<>(result, HttpStatus.OK);
     }
 
     @GetMapping("/survey/{id}")
@@ -50,6 +53,40 @@ public class SurveyController {
 
         if (surveys.isPresent()) {
             return new ResponseEntity<>(surveys.get(), HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
+
+    @GetMapping("/survey/reopen/{id}")
+    public ResponseEntity<Survey> reopenSurvey(@PathVariable("id") String id) {
+
+
+        // set current survey inactive
+        Optional<Survey> survey = surveyRepo.findById(id);
+
+        Survey object = survey.get();
+        object.setActive(false);
+        surveyRepo.save(object);
+
+        // new survey document
+        Survey newSurvey = surveyRepo.save(new Survey(null, object.getTitle(), object.getPillar(), object.getScoringDescription()));
+
+        // copy questions over to new survey document
+        Aggregation aggregate;
+        aggregate = newAggregation(match(new Criteria("surveyId").is(new ObjectId(id))));
+
+        AggregationResults<SurveyQuestion> groupResults = mongoTemplate.aggregate(aggregate, "surveyQuestions", SurveyQuestion.class);
+        List<SurveyQuestion> result = groupResults.getMappedResults();
+
+        result.forEach(surveyQuestion -> {
+            System.out.println(surveyQuestion.getDescription());
+            System.out.println(newSurvey.getId());
+            SurveyQuestion newSurveyQuestion = surveyQuestionRepo.save(new SurveyQuestion(null, new ObjectId(String.valueOf(newSurvey.getId())), surveyQuestion.getDescription(), surveyQuestion.getWeight()));
+        });
+
+        if (survey.isPresent()) {
+            return new ResponseEntity<>(survey.get(), HttpStatus.OK);
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
