@@ -41,7 +41,8 @@
 
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingOne">
-                                    <button (click)="getFacultyAverages(faculty._id)" [attr.data-bs-target]=" '#'+ faculty.username[0]"
+                                    <button (click)="getFacultyAverages(faculty._id)"
+                                            [attr.data-bs-target]=" '#'+ faculty.username[0]"
                                             class="accordion-button" data-bs-toggle="collapse"
                                             type="button">
                                         {{faculty._id}}
@@ -87,3 +88,4 @@
     </div>
     <!-- end survey modal -->
 </div>
+<notifier-container></notifier-container>

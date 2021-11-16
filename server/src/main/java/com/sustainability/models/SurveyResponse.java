@@ -1,11 +1,14 @@
 package com.sustainability.models;
 
 import org.bson.types.ObjectId;
+import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public class SurveyResponse {
 
@@ -18,13 +21,14 @@ public class SurveyResponse {
     @Indexed
     private ObjectId surveyId;
 
-    private LocalDate responseDate = LocalDate.now();
+    @CreatedDate
+    private LocalDateTime responseDate = LocalDateTime.now();
     private Object[] scoring;
 
     public SurveyResponse() {
     }
 
-    public SurveyResponse(ObjectId userId, ObjectId surveyId, LocalDate responseDate, Object[] scoring) {
+    public SurveyResponse(ObjectId userId, ObjectId surveyId, LocalDateTime responseDate, Object[] scoring) {
         this.userId = userId;
         this.surveyId = surveyId;
         this.responseDate = responseDate;
@@ -55,11 +59,11 @@ public class SurveyResponse {
         this.surveyId = surveyId;
     }
 
-    public LocalDate getResponseDate() {
+    public LocalDateTime getResponseDate() {
         return responseDate;
     }
 
-    public void setResponseDate(LocalDate responseDate) {
+    public void setResponseDate(LocalDateTime responseDate) {
         this.responseDate = responseDate;
     }
 

@@ -39,7 +39,8 @@
                             <span class="badge bg-light-primary">{{survey.pillar}}</span>
                         </td>
                         <td class="text-center">
-                            <a (click)="getSurveyQuestions(survey.id)" *ngIf="survey.completed == 0" class="btn btn-outline-dark"
+                            <a (click)="getSurveyQuestions(survey.id)" *ngIf="survey.completed == 0"
+                               class="btn btn-outline-dark"
                                data-bs-target="#addQuestionModal"
                                data-bs-toggle="modal"> Edit
                                 <svg class="bi bi-view-list" fill="currentColor" height="16"
@@ -56,6 +57,17 @@
                                     <path d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"
                                           fill-rule="evenodd"/>
                                     <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
+                                </svg>
+                            </a>
+
+                            <a (click)="deleteSurvey(survey.id)" class="btn btn-light-danger mx-1">
+                                <svg class="bi bi-x-lg" fill="currentColor" height="16"
+                                     viewBox="0 0 16 16"
+                                     width="16" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"
+                                          fill-rule="evenodd"/>
+                                    <path d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"
+                                          fill-rule="evenodd"/>
                                 </svg>
                             </a>
                         </td>
@@ -85,7 +97,6 @@
                 </div>
                 <div class="modal-body">
                     <div class="list-group">
-
                         <a *ngFor="let question of selectedSurveyQuestions"
                            class="list-group-item list-group-item-action">
                             <div class="d-flex w-100 justify-content-between">
@@ -109,9 +120,33 @@
                                                   rows="3"></textarea>
                                 </div>
 
+
+                                <div class="input-group flex-nowrap mb-3">
+                                    <span class="input-group-text" id="addon-wrapping">Cluster</span>
+                                    <select class="form-control">
+                                        <option></option>
+                                        <option value="">Visie en Strategie</option>
+                                        <option value="">Curriculum</option>
+                                        <option value="">Studenten</option>
+                                        <option value="">Personeel</option>
+                                        <option value="">Partnerships</option>
+                                        <option value="">Vastgoed</option>
+                                        <option value="">ICT</option>
+                                        <option value="">Voedsel</option>
+                                        <option value="">Afval en Inkoop</option>
+                                        <option value="">Mobiliteit</option>
+                                        <option value="">SDGs</option>
+                                        <option value="">Diversiteit en inclusie</option>
+                                        <option value="">Communicatie</option>
+                                        <option value="">Green Office</option>
+                                        <option value="">Duurzaamheids adviseurs</option>
+                                    </select>
+                                </div>
+
                                 <div class="input-group flex-nowrap mb-3">
                                     <span class="input-group-text" id="addon-wrapping">Weight</span>
-                                    <input aria-describedby="addon-wrapping" aria-label="Username" class="form-control" formControlName="weight"
+                                    <input aria-describedby="addon-wrapping" aria-label="Username" class="form-control"
+                                           formControlName="weight"
                                            type="number" value="1">
                                 </div>
 
@@ -213,3 +248,4 @@
     </div>
     <!-- end survey modal -->
 </div>
+<notifier-container></notifier-container>
