@@ -12,18 +12,19 @@ public class SurveyQuestion {
     private String id;
     private ObjectId surveyId;
     private String description;
+    private String cluster;
     private int weight = 1;
 
     public SurveyQuestion() {
     }
 
-    public SurveyQuestion(String id, ObjectId surveyId, String description, int weight) {
+    public SurveyQuestion(String id, ObjectId surveyId, String description, String cluster, int weight) {
         this.id = id;
         this.surveyId = surveyId;
         this.description = description;
+        this.cluster = cluster;
         this.weight = weight;
     }
-
 
     public String getId() {
         return id;
@@ -47,6 +48,14 @@ public class SurveyQuestion {
 
     public void setDescription(String name) {
         this.description = name;
+    }
+
+    public String getCluster() {
+        return cluster;
+    }
+
+    public void setCluster(String cluster) {
+        this.cluster = cluster;
     }
 
     public int getWeight() {

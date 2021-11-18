@@ -103,6 +103,8 @@
                                 <h5 class="mb-1">Question #{{selectedSurveyQuestions.indexOf(question)}}</h5>
                             </div>
                             <p class="mb-1">{{question.description}}</p>
+                            <small class="text-muted"><b>Cluster:</b> {{question.cluster}}</small>
+                            <br>
                             <small class="text-muted"><b>Weight:</b> {{question.weight}}</small>
                         </a>
 
@@ -123,23 +125,23 @@
 
                                 <div class="input-group flex-nowrap mb-3">
                                     <span class="input-group-text" id="addon-wrapping">Cluster</span>
-                                    <select class="form-control">
+                                    <select class="form-control" formControlName="cluster">
                                         <option></option>
-                                        <option value="">Visie en Strategie</option>
-                                        <option value="">Curriculum</option>
-                                        <option value="">Studenten</option>
-                                        <option value="">Personeel</option>
-                                        <option value="">Partnerships</option>
-                                        <option value="">Vastgoed</option>
-                                        <option value="">ICT</option>
-                                        <option value="">Voedsel</option>
-                                        <option value="">Afval en Inkoop</option>
-                                        <option value="">Mobiliteit</option>
-                                        <option value="">SDGs</option>
-                                        <option value="">Diversiteit en inclusie</option>
-                                        <option value="">Communicatie</option>
-                                        <option value="">Green Office</option>
-                                        <option value="">Duurzaamheids adviseurs</option>
+                                        <option value="Vision and Strategy">Visie en Strategie</option>
+                                        <option value="Curriculum">Curriculum</option>
+                                        <option value="Students">Studenten</option>
+                                        <option value="Staff">Personeel</option>
+                                        <option value="Partnerships">Partnerships</option>
+                                        <option value="Real estate">Vastgoed</option>
+                                        <option value="IT">ICT</option>
+                                        <option value="Food">Voedsel</option>
+                                        <option value="Waste and Purchasing">Afval en Inkoop</option>
+                                        <option value="Mobility">Mobiliteit</option>
+                                        <option value="SDGs">SDGs</option>
+                                        <option value="Diversity and Inclusion">Diversiteit en inclusie</option>
+                                        <option value="Communication">Communicatie</option>
+                                        <option value="Green Office">Green Office</option>
+                                        <option value="Sustainability advisors">Duurzaamheids adviseurs</option>
                                     </select>
                                 </div>
 

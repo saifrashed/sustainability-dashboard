@@ -120,6 +120,68 @@ public class SurveyResponseController {
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
 
+    @GetMapping("/survey-response/statistics/global/time")
+    public ResponseEntity<List<Document>> getSurveyResponseStatisticsGlobalsAcrossTime() {
+
+
+        // get user document
+        LookupOperation lookupUserOperation = LookupOperation.newLookup().
+                from("users").
+                localField("userId").
+                foreignField("_id").
+                as("user");
+
+        // get survey document
+        LookupOperation lookupSurveyOperation = LookupOperation.newLookup().
+                from("surveys").
+                localField("surveyId").
+                foreignField("_id").
+                as("survey");
+
+        // multiply value by weight
+        ArithmeticOperators.Multiply multiplyOp = ArithmeticOperators
+                .valueOf("$scoring.value").multiplyBy("$scoring.weight");
+
+        // group the documents by pillars
+        GroupOperation groupByPillar = group("survey.pillar", "month", "year")
+                .sum(multiplyOp).as("numerator")
+                .sum("scoring.weight")
+                .as("denominator");
+
+        // calculate average by dividing sum value by sum weights
+        ArithmeticOperators.Divide divideOp = ArithmeticOperators.valueOf("$numerator")
+                .divideBy("$denominator");
+
+        // project the calculation as average
+        ProjectionOperation projectAverageOperation = project().and(divideOp).as("average");
+
+        // project the year and month
+        ProjectionOperation projectOperation = project("responseDate", "survey", "scoring", "user").andExpression("month(responseDate)").as("month").andExpression("year(responseDate)").as("year").and(divideOp).as("average");
+
+        // prepare aggregation
+        Aggregation aggregation = Aggregation.newAggregation(
+                lookupUserOperation,
+                lookupSurveyOperation,
+                Aggregation.unwind("scoring"),
+                Aggregation.unwind("user"),
+                Aggregation.unwind("survey"),
+                projectOperation,
+                groupByPillar,
+                projectAverageOperation
+                );
+
+        // initialise aggregation
+        AggregationResults<Document> surveyResponse = mongoTemplate.aggregate(aggregation, "surveyResponse", Document.class);
+        ;
+
+        // map results
+        List<Document> result = surveyResponse.getMappedResults();
+
+
+        return new ResponseEntity<>(result, HttpStatus.OK);
+    }
+
+
 
     @GetMapping("/survey-response/statistics/{faculty}")
     public ResponseEntity<List<Document>> getSurveyResponseStatisticsByFaculty(@PathVariable("faculty") String faculty) {
@@ -178,6 +240,7 @@ public class SurveyResponseController {
 
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
+
 
 
     @PostMapping("/survey-response")

@@ -82,7 +82,7 @@ public class SurveyController {
         result.forEach(surveyQuestion -> {
             System.out.println(surveyQuestion.getDescription());
             System.out.println(newSurvey.getId());
-            SurveyQuestion newSurveyQuestion = surveyQuestionRepo.save(new SurveyQuestion(null, new ObjectId(String.valueOf(newSurvey.getId())), surveyQuestion.getDescription(), surveyQuestion.getWeight()));
+            SurveyQuestion newSurveyQuestion = surveyQuestionRepo.save(new SurveyQuestion(null, new ObjectId(String.valueOf(newSurvey.getId())), surveyQuestion.getDescription(), surveyQuestion.getCluster(), surveyQuestion.getWeight()));
         });
 
         if (survey.isPresent()) {

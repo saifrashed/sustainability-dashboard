@@ -27,6 +27,7 @@ export class AdminSurveyComponent extends AdminComponent implements OnInit {
 
     public newQuestionForm = new FormGroup({
         description: new FormControl(''),
+        cluster: new FormControl(''),
         weight: new FormControl(1),
     });
 
@@ -125,6 +126,7 @@ export class AdminSurveyComponent extends AdminComponent implements OnInit {
             id: null,
             surveyId: this.selectedSurveyId,
             description: this.newQuestionForm.controls["description"].value,
+            cluster: this.newQuestionForm.controls["cluster"].value,
             weight: this.newQuestionForm.controls["weight"].value,
         };
 
