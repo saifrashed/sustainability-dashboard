@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/api/public")
 public class SurveyController {
@@ -91,6 +92,18 @@ public class SurveyController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
+
+    @DeleteMapping("/survey")
+    public ResponseEntity<Survey> deleteSurvey(@RequestParam(required = true) String id) {
+
+        Optional<Survey> survey = surveyRepo.findById(id);
+        Survey object = survey.get();
+        object.setActive(false);
+        surveyRepo.save(object);
+
+        return new ResponseEntity<>(object, HttpStatus.OK);
+    };
+
 
     @PostMapping("/survey")
     @ResponseBody

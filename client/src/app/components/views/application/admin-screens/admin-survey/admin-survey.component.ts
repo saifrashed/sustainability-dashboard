@@ -102,12 +102,11 @@ export class AdminSurveyComponent extends AdminComponent implements OnInit {
 
     deleteSurvey(id: any) {
         if (confirm("Are you sure?")) {
-            // this.authenticationService.deleteById(id).subscribe(message => {
-            //     this.getUsers();
-            //     this.notifierService.notify("success", "User successfully deleted. ", "SUCCESS_USERDELETE")
-            // })
+            this.surveyService.delete(id).subscribe(message => {
+                this.getSurveys();
+                this.notifierService.notify("success", "Survey successfully deleted. ", "SUCCESS_SURVEY_DELETE")
+            });
 
-            this.notifierService.notify("success", "User successfully deleted. ", "SUCCESS_SURVEY_DELETE")
         } else {
             this.notifierService.notify("error", "Survey is not deleted.", "FAIL_SURVEY_DELETE")
         }

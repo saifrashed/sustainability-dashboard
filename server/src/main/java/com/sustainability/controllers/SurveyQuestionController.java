@@ -45,9 +45,19 @@ public class SurveyQuestionController {
     @ResponseBody
     public ResponseEntity<SurveyQuestion> createSurveyQuestion(@RequestBody SurveyQuestion surveyQuestion) {
 
-        SurveyQuestion newSurveyQuestion = surveyQuestionRepo.save(new SurveyQuestion(null, new ObjectId(String.valueOf(surveyQuestion.getSurveyId())), surveyQuestion.getDescription(), surveyQuestion.getCluster(), surveyQuestion.getWeight()));
+        SurveyQuestion newSurveyQuestion = surveyQuestionRepo.save(
+                new SurveyQuestion(
+                        null,
+                        new ObjectId(String.valueOf(surveyQuestion.getSurveyId())),
+                        surveyQuestion.getDescription(),
+                        surveyQuestion.getCluster(),
+                        surveyQuestion.getWeight()
+                )
+        );
 
         return new ResponseEntity<>(newSurveyQuestion, HttpStatus.OK);
     }
 
 }
+
+

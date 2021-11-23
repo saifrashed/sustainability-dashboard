@@ -9,10 +9,11 @@ export class UserService {
     }
 
     getCurrentFaculty() {
-        return this.http.get<User[]>(`${environment.apiUrl}/users/faculty/id`)
+        return this.http.get<User[]>(`${environment.apiUrl}/api/auth/users/faculty/id`)
     }
 
     getAll() {
-        return this.http.get<User[]>(`${environment.apiUrl}/users`);
+        return this.http.get<User[]>(`${environment.apiUrl}/api/auth/users`);
     }
+
 }

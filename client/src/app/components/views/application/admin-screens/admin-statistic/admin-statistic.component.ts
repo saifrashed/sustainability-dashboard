@@ -11,10 +11,13 @@ import {EChartsOption} from "echarts/types/dist/echarts";
 
 export class AdminStatisticComponent extends AdminComponent implements OnInit {
 
+    facultyData: any[] = [];
+
     researchData: number[] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     educationData: number[] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     businessData: number[] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     organisationData: number[] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+
 
     chartOption: EChartsOption = {
         xAxis: {
@@ -56,13 +59,97 @@ export class AdminStatisticComponent extends AdminComponent implements OnInit {
     };
 
 
+    /**
+     * Chart arrow function returning options for faculty chart
+     * @param data
+     */
+    chartOptionFaculty = (data: any): EChartsOption => {
+        return {
+            tooltip: {
+                trigger: 'item'
+            },
+            legend: {
+                top: '5%',
+                left: 'center'
+            },
+            series: [
+                {
+                    type: 'pie',
+                    radius: ['40%', '70%'],
+                    avoidLabelOverlap: false,
+                    label: {
+                        show: false,
+                        position: 'center'
+                    },
+                    emphasis: {
+                        label: {
+                            show: true,
+                            fontSize: '40',
+                            fontWeight: 'bold'
+                        }
+                    },
+                    labelLine: {
+                        show: false
+                    },
+                    data: data
+                }
+            ]
+        };
+    };
+
     ngOnInit(): void {
         super.ngOnInit();
 
+        console.log("init");
+
+        this.getFormattedFacultyData();
+        this.getGlobalsAcrossTime();
+    }
+
+
+    getFormattedFacultyData() {
+        // Get faculties and format chart data
         this.surveyResponse.findAllFaculties().subscribe(faculties => {
-            this.facultyList = faculties;
+
+            faculties.forEach(faculty => {
+
+                this.surveyResponse.getSurveyResponseStatisticsByFaculty(faculty._id).subscribe(data => {
+
+                    let formattedData: any[] = [];
+
+                    data.forEach(dataPoint => {
+                        formattedData.push({
+                            name: dataPoint._id,
+                            value: dataPoint.average
+                        })
+                    });
+
+                    if (faculty._id != undefined) {
+                        this.facultyData.push(
+                            {
+                                facultyName: faculty._id,
+                                data: formattedData
+                            })
+                    }
+
+                    // sort the array
+                    this.facultyData.sort(
+                        function (a, b) {
+                            if (a.facultyName < b.facultyName) {
+                                return -1;
+                            }
+                            if (a.facultyName > b.facultyName) {
+                                return 1;
+                            }
+                            return 0;
+                        });
+                })
+            });
         });
 
+    }
+
+    getGlobalsAcrossTime() {
         this.surveyResponse.getSurveyResponseStatisticsGlobalsAcrossTime().subscribe(result => {
             result.forEach(element => {
                 if (element?.pillar == "Education") {
@@ -83,32 +170,11 @@ export class AdminStatisticComponent extends AdminComponent implements OnInit {
             })
 
         })
-
     }
 
-    getFacultyAverage(pillar: string): number {
-        if (this.facultyStatistics) {
-            let object = this.facultyStatistics.find((x: any) => x._id == pillar);
-
-            if (object == undefined) {
-                return 0;
-            }
-
-            return object.average.toFixed(1);
-        } else {
-            return 0;
-        }
+    getFacultyChartData(faculty: string): any[] {
+        let object = this.facultyData?.find((x: any) => x.facultyName == faculty);
+        return object?.data || [];
     }
 
-    getFaculties() {
-        this.surveyResponse.findAllFaculties().subscribe(faculties => {
-            this.facultyList = faculties;
-        })
-    }
-
-    getFacultyAverages(faculty: string) {
-        this.surveyResponse.getSurveyResponseStatisticsByFaculty(faculty).subscribe(statistics => {
-            this.facultyStatistics = statistics;
-        })
-    }
 }

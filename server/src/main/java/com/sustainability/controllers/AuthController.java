@@ -12,7 +12,12 @@ import com.sustainability.repository.RoleRepository;
 import com.sustainability.repository.UserRepository;
 import com.sustainability.security.jwt.JwtUtils;
 import com.sustainability.security.services.UserDetailsImpl;
+import org.bson.Document;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.aggregation.Aggregation;
+import org.springframework.data.mongodb.core.aggregation.AggregationResults;
+import org.springframework.data.mongodb.core.aggregation.GroupOperation;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -30,6 +35,8 @@ import com.sustainability.payload.request.LoginRequest;
 import com.sustainability.payload.request.SignupRequest;
 import com.sustainability.payload.response.JwtResponse;
 import com.sustainability.payload.response.MessageResponse;
+
+import static org.springframework.data.mongodb.core.aggregation.Aggregation.group;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
@@ -49,6 +56,10 @@ public class AuthController {
 
     @Autowired
     JwtUtils jwtUtils;
+
+    @Autowired
+    MongoTemplate mongoTemplate;
+
 
     @PostMapping("/signin")
     public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
@@ -132,11 +143,7 @@ public class AuthController {
 
     @GetMapping("/authenticate")
     public ResponseEntity<?> registerUser(@RequestParam(required = true) String id) {
-
-
         String username = jwtUtils.getUserNameFromJwtToken(id);
-
-
         User user = userRepository.findByUsername(username)
                 .orElseThrow(() -> new UsernameNotFoundException("User Not Found with username: " + username));
 
@@ -157,6 +164,26 @@ public class AuthController {
         userRepository.deleteById(id);
 
         return ResponseEntity.ok(new MessageResponse("User deleted successfully!"));
+    }
+
+    @GetMapping("/users/faculties")
+    public ResponseEntity<?> getUserFaculties() {
+
+        // group the documents by pillars
+        GroupOperation groupByFaculty= group("faculty");
+
+        // prepare aggregation
+        Aggregation aggregation = Aggregation.newAggregation(groupByFaculty);
+
+        // initialise aggregation
+        AggregationResults<Document> facultyList = mongoTemplate.aggregate(aggregation, "users", Document.class);
+        ;
+
+        // map results
+        List<Document> result = facultyList.getMappedResults();
+
+
+        return new ResponseEntity<>(result, HttpStatus.OK);
     }
 
 }

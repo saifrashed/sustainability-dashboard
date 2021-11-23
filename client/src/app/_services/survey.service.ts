@@ -30,6 +30,10 @@ export class SurveyService {
         return this.http.get(`${environment.apiUrl}/api/public/survey/reopen/` + id);
     }
 
+    delete(id: string) {
+        return this.http.delete(`${environment.apiUrl}/api/public/survey?id=` + id);
+    }
+
     create(survey: Survey) {
         return this.http.post(`${environment.apiUrl}/api/public/survey`, survey);
     }

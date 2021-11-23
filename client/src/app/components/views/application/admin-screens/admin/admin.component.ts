@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
-import {AuthenticationService, SurveyResponseService, SurveyService} from "../../../../../_services";
+import {AuthenticationService, SurveyResponseService, SurveyService, UserService} from "../../../../../_services";
 import {NotifierService} from "angular-notifier";
 
 @Component({
@@ -35,6 +35,7 @@ export class AdminComponent implements OnInit {
     constructor(
         protected surveyService: SurveyService,
         protected authenticationService: AuthenticationService,
+        protected userService: UserService,
         protected surveyResponse: SurveyResponseService,
         protected notifierService: NotifierService
     ) {

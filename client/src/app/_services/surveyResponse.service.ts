@@ -17,8 +17,8 @@ export class SurveyResponseService {
         return this.http.get(`${environment.apiUrl}/api/public/survey-response`)
     }
 
-    findAllFaculties() {
-        return this.http.get(`${environment.apiUrl}/api/public/survey-response/faculties`)
+    findAllFaculties(): Observable<any[]> {
+        return this.http.get<any[]>(`${environment.apiUrl}/api/public/survey-response/faculties`)
     }
 
     getSurveyResponseStatisticsGlobals() {
@@ -29,8 +29,8 @@ export class SurveyResponseService {
         return this.http.get<any[]>(`${environment.apiUrl}/api/public/survey-response/statistics/global/time`)
     }
 
-    getSurveyResponseStatisticsByFaculty(faculty: string) {
-        return this.http.get(`${environment.apiUrl}/api/public/survey-response/statistics/` + faculty);
+    getSurveyResponseStatisticsByFaculty(faculty: string): Observable<any[]> {
+        return this.http.get<any[]>(`${environment.apiUrl}/api/public/survey-response/statistics/` + faculty);
     }
 
     getCompletedSurveys(surveyId: string) {

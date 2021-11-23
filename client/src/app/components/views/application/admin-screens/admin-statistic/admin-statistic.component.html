@@ -27,61 +27,19 @@
                     <div [options]="chartOption" class="demo-chart" echarts></div>
                 </div>
 
+
+                <div class="row">
+                        <div class="col-6" *ngFor="let faculty of facultyData">
+                            <div class="card mt-4 mb-2">
+                                <span class="badge rounded-pill bg-secondary w-50 m-auto">{{faculty.facultyName}}</span>
+                                <div [options]="chartOptionFaculty(getFacultyChartData(faculty.facultyName))" class="demo-chart" echarts></div>
+                            </div>
+                        </div>
+                </div>
+
                 <!-- chart  -->
                 <div class="mb-8">
                     <div id="perfomanceChart"></div>
-                </div>
-
-                <!-- icon with content  -->
-                <div class="accordion" id="accordionExample">
-
-                    <div *ngFor="let faculty of facultyList">
-                        <div *ngIf="faculty._id != undefined">
-
-
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingOne">
-                                    <button (click)="getFacultyAverages(faculty._id)"
-                                            [attr.data-bs-target]=" '#'+ faculty.username[0]"
-                                            class="accordion-button" data-bs-toggle="collapse"
-                                            type="button">
-                                        {{faculty._id}}
-                                    </button>
-                                </h2>
-                                <div aria-labelledby="headingOne" class="accordion-collapse collapse"
-                                     data-bs-parent="#accordionExample" id="{{faculty.username[0]}}">
-                                    <div class="accordion-body">
-                                        <div class="d-flex align-items-center justify-content-around">
-                                            <div class="text-center">
-                                                <i class="icon-sm text-success"
-                                                   data-feather="check-circle"></i>
-                                                <h1 class="mt-3 fw-bold mb-1">{{getFacultyAverage("Education")}}</h1>
-                                                <p>Education</p>
-                                            </div>
-                                            <div class="text-center">
-                                                <i class="icon-sm text-warning"
-                                                   data-feather="trending-up"></i>
-                                                <h1 class="mt-3 fw-bold mb-1">{{getFacultyAverage("Research")}}</h1>
-                                                <p>Research</p>
-                                            </div>
-                                            <div class="text-center">
-                                                <i class="icon-sm text-danger"
-                                                   data-feather="trending-down"></i>
-                                                <h1 class="mt-3 fw-bold mb-1">{{getFacultyAverage("Business operations/Facilities")}}</h1>
-                                                <p>B.O.F</p>
-                                            </div>
-                                            <div class="text-center">
-                                                <i class="icon-sm text-danger"
-                                                   data-feather="trending-down"></i>
-                                                <h1 class="mt-3 fw-bold mb-1">{{getFacultyAverage("Organisation")}}</h1>
-                                                <p>Organisation</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
