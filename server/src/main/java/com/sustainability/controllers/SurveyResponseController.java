@@ -20,6 +20,7 @@ import java.util.Optional;
 import static org.springframework.data.mongodb.core.aggregation.Aggregation.group;
 import static org.springframework.data.mongodb.core.aggregation.Aggregation.project;
 
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/api/public")
 public class SurveyResponseController {
@@ -168,7 +169,7 @@ public class SurveyResponseController {
                 projectOperation,
                 groupByPillar,
                 projectAverageOperation
-                );
+        );
 
         // initialise aggregation
         AggregationResults<Document> surveyResponse = mongoTemplate.aggregate(aggregation, "surveyResponse", Document.class);
@@ -180,7 +181,6 @@ public class SurveyResponseController {
 
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
-
 
 
     @GetMapping("/survey-response/statistics/{faculty}")
@@ -240,7 +240,6 @@ public class SurveyResponseController {
 
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
-
 
 
     @PostMapping("/survey-response")

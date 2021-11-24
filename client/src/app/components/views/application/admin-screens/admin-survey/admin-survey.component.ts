@@ -13,6 +13,8 @@ import {FormControl, FormGroup} from "@angular/forms";
 export class AdminSurveyComponent extends AdminComponent implements OnInit {
 
 
+    public selectedQuestion: any = null;
+
     public newSurveyForm = new FormGroup({
         title: new FormControl(''),
         pillar: new FormControl(''),
@@ -30,6 +32,15 @@ export class AdminSurveyComponent extends AdminComponent implements OnInit {
         cluster: new FormControl(''),
         weight: new FormControl(1),
     });
+
+    public updatedQuestionForm = new FormGroup({
+        id: new FormControl(''),
+        surveyId: new FormControl(''),
+        description: new FormControl(''),
+        cluster: new FormControl(null),
+        weight: new FormControl(1),
+    });
+
 
     ngOnInit(): void {
         super.ngOnInit();
@@ -112,7 +123,7 @@ export class AdminSurveyComponent extends AdminComponent implements OnInit {
         }
     }
 
-    // SurveyResponse model
+    // SurveyQuestion CRUD
 
     addSurveyQuestion() {
 
@@ -135,6 +146,48 @@ export class AdminSurveyComponent extends AdminComponent implements OnInit {
             this.newQuestionForm.controls["weight"].setValue(1);
             this.notifierService.notify("success", "Question has been added to the survey", "ADD_SURVEY_QUESTION")
         })
+    }
+
+
+    updateSurveyQuestion() {
+        if (!this.updatedQuestionForm.controls["description"].value || !this.updatedQuestionForm.controls["cluster"].value || !this.updatedQuestionForm.controls["weight"].value) {
+            return this.notifierService.notify("error", "Fill in all fields", 'ERROR_SURVEY_QUESTION_UPDATE');
+        }
+
+        this.surveyService.updateQuestion(this.updatedQuestionForm.getRawValue()).subscribe(data => {
+            console.log(data);
+            this.updatedQuestionForm.reset();
+            this.getSurveyQuestions(this.selectedSurveyId);
+            this.notifierService.notify("success", "Question successfully updated. ", "SUCCESS_SURVEY_QUESTION_UPDATE")
+            this.closeEditQuestion();
+        })
+    }
+
+    selectQuestion(id: any, index: any) {
+        this.selectedQuestion = this.selectedSurveyQuestions[index];
+
+        this.updatedQuestionForm.controls["id"].setValue(this.selectedQuestion.id);
+        this.updatedQuestionForm.controls["surveyId"].setValue(this.selectedQuestion.surveyId);
+        this.updatedQuestionForm.controls["description"].setValue(this.selectedQuestion.description);
+        this.updatedQuestionForm.controls["cluster"].setValue(this.selectedQuestion.cluster);
+        this.updatedQuestionForm.controls["weight"].setValue(this.selectedQuestion.weight);
+    }
+
+
+    deleteQuestion() {
+        this.surveyService.deleteQuestion(this.selectedQuestion.id).subscribe(data => {
+            console.log(data);
+            this.updatedQuestionForm.reset();
+            this.getSurveyQuestions(this.selectedSurveyId);
+            this.notifierService.notify("success", "Question successfully deleted. ", "SUCCESS_SURVEY_QUESTION_DELETE");
+            this.closeEditQuestion();
+        })
+
+    }
+
+
+    closeEditQuestion() {
+        this.selectedQuestion = null;
     }
 
 }

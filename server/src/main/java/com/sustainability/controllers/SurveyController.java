@@ -102,7 +102,9 @@ public class SurveyController {
         surveyRepo.save(object);
 
         return new ResponseEntity<>(object, HttpStatus.OK);
-    };
+    }
+
+    ;
 
 
     @PostMapping("/survey")

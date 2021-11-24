@@ -170,7 +170,7 @@ public class AuthController {
     public ResponseEntity<?> getUserFaculties() {
 
         // group the documents by pillars
-        GroupOperation groupByFaculty= group("faculty");
+        GroupOperation groupByFaculty = group("faculty");
 
         // prepare aggregation
         Aggregation aggregation = Aggregation.newAggregation(groupByFaculty);

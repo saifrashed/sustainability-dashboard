@@ -26,6 +26,7 @@ export class SurveyService {
         return this.http.get(`${environment.apiUrl}/api/public/survey/questions/` + id);
     }
 
+
     reopenSurvey(id: string) {
         return this.http.get(`${environment.apiUrl}/api/public/survey/reopen/` + id);
     }
@@ -42,5 +43,11 @@ export class SurveyService {
         return this.http.post(`${environment.apiUrl}/api/public/survey-question`, surveyQuestion);
     }
 
+    updateQuestion(surveyQuestion: SurveyQuestion) {
+        return this.http.put(`${environment.apiUrl}/api/public/survey-question`, surveyQuestion);
+    }
 
+    deleteQuestion(surveyQuestionId: String) {
+        return this.http.delete(`${environment.apiUrl}/api/public/survey-question?id=` + surveyQuestionId);
+    }
 }

@@ -93,12 +93,10 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Add Questions</h5>
-                    <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
                 </div>
                 <div class="modal-body">
                     <div class="list-group">
-                        <a *ngFor="let question of selectedSurveyQuestions"
-                           class="list-group-item list-group-item-action">
+                        <a *ngFor="let question of selectedSurveyQuestions" class="list-group-item list-group-item-action" (click)="selectQuestion(question.id, selectedSurveyQuestions.indexOf(question))">
                             <div class="d-flex w-100 justify-content-between">
                                 <h5 class="mb-1">Question #{{selectedSurveyQuestions.indexOf(question)}}</h5>
                             </div>
@@ -109,9 +107,9 @@
                         </a>
 
 
-                        <a class="list-group-item ">
+                        <a class="list-group-item" *ngIf="selectedQuestion == null">
                             <div class="d-flex w-100 justify-content-between">
-                                <h5 class="mb-1">Add question</h5>
+                                <h5 class="mb-1">Add Question</h5>
                             </div>
 
                             <form [formGroup]="newQuestionForm">
@@ -162,6 +160,78 @@
                                     </svg>
                                 </button>
                             </form>
+                        </a>
+
+
+
+                        <a class="list-group-item" *ngIf="selectedQuestion != null">
+                        <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">Edit Question #{{selectedSurveyQuestions.indexOf(selectedQuestion)}}</h5>
+                            </div>
+
+                            <form [formGroup]="updatedQuestionForm">
+                                <div class="mb-3">
+                                    <textarea class="form-control" formControlName="description" placeholder="Your question..." rows="3"></textarea>
+                                </div>
+
+
+                                <div class="input-group flex-nowrap mb-3">
+                                    <span class="input-group-text">Cluster</span>
+                                    <select class="form-control" formControlName="cluster">
+                                        <option></option>
+                                        <option value="Vision and Strategy">Visie en Strategie</option>
+                                        <option value="Curriculum">Curriculum</option>
+                                        <option value="Students">Studenten</option>
+                                        <option value="Staff">Personeel</option>
+                                        <option value="Partnerships">Partnerships</option>
+                                        <option value="Real estate">Vastgoed</option>
+                                        <option value="IT">ICT</option>
+                                        <option value="Food">Voedsel</option>
+                                        <option value="Waste and Purchasing">Afval en Inkoop</option>
+                                        <option value="Mobility">Mobiliteit</option>
+                                        <option value="SDGs">SDGs</option>
+                                        <option value="Diversity and Inclusion">Diversiteit en inclusie</option>
+                                        <option value="Communication">Communicatie</option>
+                                        <option value="Green Office">Green Office</option>
+                                        <option value="Sustainability advisors">Duurzaamheids adviseurs</option>
+                                    </select>
+                                </div>
+
+                                <div class="input-group flex-nowrap mb-3">
+                                    <span class="input-group-text">Weight</span>
+                                    <input aria-describedby="addon-wrapping" class="form-control"
+                                           type="number" formControlName="weight">
+                                </div>
+
+
+
+                                <button (click)="updateSurveyQuestion()" class="btn btn-primary float-end"
+                                        type="button">
+                                    Update
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                                    </svg>
+                                </button>
+
+                                <button (click)="deleteQuestion()" class="btn btn-outline-danger mx-1 float-end"
+                                        type="button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                        <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                                        <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+                                    </svg>
+                                </button>
+
+                                <button (click)="closeEditQuestion()" class="btn btn-outline-danger mx-1 float-end"
+                                        type="button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-slash-circle" viewBox="0 0 16 16">
+                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                        <path d="M11.354 4.646a.5.5 0 0 0-.708 0l-6 6a.5.5 0 0 0 .708.708l6-6a.5.5 0 0 0 0-.708z"/>
+                                    </svg>
+                                </button>
+
+                            </form>
+
+
                             <small class="text-muted"></small>
                         </a>
 
