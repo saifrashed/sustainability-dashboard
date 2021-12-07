@@ -20,6 +20,13 @@ describe('AuthenticationComponent', () => {
     });
 
     it('should create', () => {
+
+        // arrange
+
+        // act
+
+        // assert
+
         expect(component).toBeTruthy();
     });
 });

@@ -6,7 +6,6 @@ import {AuthenticationComponent} from './components/views/authentication/authent
 // components
 import {HomeComponent} from './components/views/main/home/home.component';
 import {LoginComponent} from './components/views/authentication/login/login.component';
-import {RegisterComponent} from './components/views/authentication/register/register.component';
 import {AdminComponent} from "./components/views/application/admin-screens/admin/admin.component";
 import {AdminProfileComponent} from "./components/views/application/admin-screens/admin-profile/admin-profile.component";
 import {AdminStatisticComponent} from './components/views/application/admin-screens/admin-statistic/admin-statistic.component';
@@ -18,7 +17,7 @@ import {AuthGuard} from "./_helpers/auth.guard";
 import {SurveyComponent} from "./components/views/application/survey/survey.component";
 
 
-const routes: Routes = [
+export const routes: Routes = [
     {
         path: '',
         component: MainComponent,
@@ -33,8 +32,6 @@ const routes: Routes = [
         children: [
             {path: '', component: LoginComponent},
             {path: 'login', component: LoginComponent},
-            {path: 'register', component: RegisterComponent}
-
         ]
     },
     {
