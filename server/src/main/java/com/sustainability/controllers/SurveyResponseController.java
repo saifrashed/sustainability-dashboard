@@ -1,6 +1,5 @@
 package com.sustainability.controllers;
 
-import com.sustainability.models.SurveyQuestion;
 import com.sustainability.models.SurveyResponse;
 import com.sustainability.repository.SurveyResponseRepository;
 import com.sustainability.repository.UserRepository;
@@ -15,7 +14,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 import static org.springframework.data.mongodb.core.aggregation.Aggregation.group;
 import static org.springframework.data.mongodb.core.aggregation.Aggregation.project;
@@ -330,5 +328,34 @@ public class SurveyResponseController {
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
 
+    @GetMapping("/survey-response/programmes/{faculty}")
+    @ResponseBody
+    public ResponseEntity<?> getProgrammes(@PathVariable("faculty") String faculty) {
+
+
+        // match the documents by faculty
+        MatchOperation matchByFaculty = Aggregation.match(Criteria.where("faculty").is(faculty));
+
+        GroupOperation groupByProgramme = group("programme");
+
+        MatchOperation checkValidValue = Aggregation.match(Criteria.where("_id").ne(null));
+
+
+        // prepare aggregation
+        Aggregation aggregation = Aggregation.newAggregation(
+                matchByFaculty,
+                groupByProgramme,
+                checkValidValue
+        );
+
+        // initialise aggregation
+        AggregationResults<Document> facultyList = mongoTemplate.aggregate(aggregation, "users", Document.class);
+
+
+        // map results
+        List<Document> result = facultyList.getMappedResults();
+
+        return new ResponseEntity<>(result, HttpStatus.OK);
+    }
 
 }

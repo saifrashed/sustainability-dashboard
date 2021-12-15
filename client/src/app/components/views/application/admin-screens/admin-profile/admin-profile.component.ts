@@ -1,6 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 
 import {AdminComponent} from "../admin/admin.component";
+import faculties from "src/assets/data/faculties.js"
+
+
 
 @Component({
     selector: 'app-admin-profile',
@@ -10,12 +13,29 @@ import {AdminComponent} from "../admin/admin.component";
 
 export class AdminProfileComponent extends AdminComponent implements OnInit {
 
+    public faculties: any[] = null;
+
     ngOnInit(): void {
         super.ngOnInit();
+        this.faculties = faculties;
 
         this.authenticationService.findAll().subscribe(userList => {
             this.userList = userList;
         });
+    }
+
+
+    selectProfile(id: string) {
+        this.authenticationService.findById(id).subscribe(user => {
+            console.log(user);
+
+            this.updateUserForm.controls["id"].setValue(user.id);
+            this.updateUserForm.controls["username"].setValue(user.username);
+            this.updateUserForm.controls["email"].setValue(user.email);
+            this.updateUserForm.controls["faculty"].setValue(user.faculty);
+            this.updateUserForm.controls["programme"].setValue(user.programme);
+            this.updateUserForm.controls["role"].setValue(user.roles);
+        })
     }
 
     getUsers() {
@@ -44,6 +64,23 @@ export class AdminProfileComponent extends AdminComponent implements OnInit {
                 this.notifierService.notify('error', error.error.errors[i].field + ": " + error.error.errors[i].defaultMessage, 'LOGIN_ERROR');
             }
         })
+    }
+
+    updateUser() {
+
+        this.authenticationService.update(this.updateUserForm.getRawValue()).subscribe(result => {
+            console.log(this.updateUserForm.getRawValue())
+            console.log(result);
+            this.notifierService.notify("success", "User successfully updated.", "SUCCESS_USER_UPDATE")
+            this.getUsers();
+        });
+    }
+
+
+    getProgrammes(faculty): any[] {
+        let foundFaculty = this.faculties.find((x: any) => x.faculty == faculty);
+
+        return foundFaculty?.programmes;
     }
 
 

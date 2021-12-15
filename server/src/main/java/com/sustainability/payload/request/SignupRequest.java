@@ -1,8 +1,9 @@
 package com.sustainability.payload.request;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 import java.util.Set;
-
-import javax.validation.constraints.*;
 
 public class SignupRequest {
     @NotBlank
@@ -16,6 +17,9 @@ public class SignupRequest {
 
     @Size(max = 50)
     private String faculty;
+
+    @Size(max = 50)
+    private String programme;
 
     private Set<String> roles;
 
@@ -45,6 +49,14 @@ public class SignupRequest {
 
     public void setFaculty(String faculty) {
         this.faculty = faculty;
+    }
+
+    public String getProgramme() {
+        return programme;
+    }
+
+    public void setProgramme(String programme) {
+        this.programme = programme;
     }
 
     public String getPassword() {

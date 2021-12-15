@@ -16,12 +16,25 @@ export class AdminComponent implements OnInit {
     public selectedSurveyQuestions: any = [];
     public selectedSurveyId: any;
 
+    public pageTitle: string;
+
     public facultyList: any;
 
     public newUserForm = new FormGroup({
         username: new FormControl(''),
         email: new FormControl(''),
         faculty: new FormControl(''),
+        programme: new FormControl(''),
+        password: new FormControl(''),
+        role: new FormControl(['ROLE_FACULTY']),
+    });
+
+    public updateUserForm = new FormGroup({
+        id: new FormControl(''),
+        username: new FormControl(''),
+        email: new FormControl(''),
+        faculty: new FormControl(''),
+        programme: new FormControl(''),
         password: new FormControl(''),
         role: new FormControl(['ROLE_FACULTY']),
     });
@@ -46,6 +59,7 @@ export class AdminComponent implements OnInit {
         this.surveyResponse.getSurveyResponseStatisticsGlobals().subscribe(statistics => {
             this.globalStatistics = statistics;
         });
+
     }
 
     getGlobalAverage(pillar: string): number {

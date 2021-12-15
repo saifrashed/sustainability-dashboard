@@ -1,13 +1,12 @@
 package com.sustainability.controllers;
 
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-import java.util.stream.Collectors;
-
-import javax.validation.Valid;
-
-import com.sustainability.models.Survey;
+import com.sustainability.models.ERole;
+import com.sustainability.models.Role;
+import com.sustainability.models.User;
+import com.sustainability.payload.request.LoginRequest;
+import com.sustainability.payload.request.SignupRequest;
+import com.sustainability.payload.response.JwtResponse;
+import com.sustainability.payload.response.MessageResponse;
 import com.sustainability.repository.RoleRepository;
 import com.sustainability.repository.UserRepository;
 import com.sustainability.security.jwt.JwtUtils;
@@ -18,6 +17,8 @@ import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.aggregation.Aggregation;
 import org.springframework.data.mongodb.core.aggregation.AggregationResults;
 import org.springframework.data.mongodb.core.aggregation.GroupOperation;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -28,19 +29,18 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
-import com.sustainability.models.ERole;
-import com.sustainability.models.Role;
-import com.sustainability.models.User;
-import com.sustainability.payload.request.LoginRequest;
-import com.sustainability.payload.request.SignupRequest;
-import com.sustainability.payload.response.JwtResponse;
-import com.sustainability.payload.response.MessageResponse;
+import javax.validation.Valid;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Optional;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 import static org.springframework.data.mongodb.core.aggregation.Aggregation.group;
 
-@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/api/auth")
+@CrossOrigin("*")
 public class AuthController {
     @Autowired
     AuthenticationManager authenticationManager;
@@ -82,12 +82,11 @@ public class AuthController {
                 userDetails.getUsername(),
                 userDetails.getEmail(),
                 userDetails.getFaculty(),
+                userDetails.getProgramme(),
                 roles));
     }
 
-    @PostMapping("/ResponseEntity\n" +
-            "                    .badRequest()\n" +
-            "                    .body(new MessageResponse(\"Error: Username is already taken!\"))signup")
+    @PostMapping("/signup")
     public ResponseEntity<?> registerUser(@Valid @RequestBody SignupRequest signUpRequest) {
 
         if (userRepository.existsByUsername(signUpRequest.getUsername())) {
@@ -104,7 +103,7 @@ public class AuthController {
 
         // Create new user's account
         User user = new User(signUpRequest.getUsername(),
-                signUpRequest.getEmail(), signUpRequest.getFaculty(),
+                signUpRequest.getEmail(), signUpRequest.getFaculty(), signUpRequest.getProgramme(),
                 encoder.encode(signUpRequest.getPassword()));
 
         Set<String> strRoles = signUpRequest.getRoles();
@@ -152,6 +151,7 @@ public class AuthController {
         return ResponseEntity.ok(user);
     }
 
+
     @GetMapping("/users")
     public ResponseEntity<List<User>> getUsers() {
 
@@ -159,6 +159,32 @@ public class AuthController {
 
         return new ResponseEntity<>(users, HttpStatus.OK);
     }
+
+    @GetMapping("/users/{id}")
+    public ResponseEntity<User> getUsers(@PathVariable("id") String id) {
+
+        Optional<User> user = userRepository.findById(id);
+
+        return new ResponseEntity<>(user.get(), HttpStatus.OK);
+    }
+
+    @PutMapping("/users")
+    @ResponseBody
+    public ResponseEntity<User> updateSurveyQuestion(@RequestBody User user) {
+        User userObject = mongoTemplate.findOne(Query.query(Criteria.where("_id").is(user.getId())), User.class);
+
+
+        userObject.setUsername(user.getUsername());
+        userObject.setEmail(user.getEmail());
+        userObject.setFaculty(user.getFaculty());
+        userObject.setProgramme(user.getProgramme());
+
+
+        mongoTemplate.save(userObject, "users");
+
+        return new ResponseEntity<>(userObject, HttpStatus.OK);
+    }
+
 
     @DeleteMapping("/users/{id}")
     public ResponseEntity<?> deleteUser(@PathVariable("id") String id) {
@@ -179,7 +205,6 @@ public class AuthController {
 
         // initialise aggregation
         AggregationResults<Document> facultyList = mongoTemplate.aggregate(aggregation, "users", Document.class);
-        ;
 
         // map results
         List<Document> result = facultyList.getMappedResults();

@@ -22,21 +22,19 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="card mt-4 mb-2">
                     <div [options]="chartOption" class="demo-chart" echarts></div>
                 </div>
-
-
                 <div class="row">
                         <div class="col-6" *ngFor="let faculty of facultyData">
                             <div class="card mt-4 mb-2">
-                                <span class="badge rounded-pill bg-secondary w-50 m-auto">{{faculty.facultyName}}</span>
-                                <div [options]="chartOptionFaculty(getFacultyChartData(faculty.facultyName))" class="demo-chart" echarts></div>
+                                <span class="statistic-badge badge rounded-pill bg-secondary m-auto"
+                                      data-bs-target="#programmeStatistics"
+                                      data-bs-toggle="modal" (click)="selectFaculty(faculty.facultyName)">{{faculty.facultyName}}</span>
+                                <div [options]="chartOptionFaculty(getFacultyChartData(faculty.facultyName))" echarts></div>
                             </div>
                         </div>
                 </div>
-
                 <!-- chart  -->
                 <div class="mb-8">
                     <div id="perfomanceChart"></div>
@@ -45,5 +43,28 @@
         </div>
     </div>
     <!-- end survey modal -->
+    <!-- Add user modal -->
+    <div aria-hidden="true" class="modal fade" id="programmeStatistics" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Programmes</h5>
+                    <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+                </div>
+                <div class="modal-body text-center" *ngIf="programmeData.length > 0">
+                    <h4 *ngFor="let programme of programmeData">{{programme._id}}</h4>
+                </div>
+                <div class="modal-body text-center" *ngIf="programmeData.length == 0">
+                    <h3 class="mb-5">No registered programmes</h3>
+                    <img class="img-fluid  w-50 me-auto"
+                         src="./assets/images/svg/no-statistic.svg">
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal" type="button">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End user modal -->
 </div>
 <notifier-container></notifier-container>

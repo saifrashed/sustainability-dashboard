@@ -1,16 +1,15 @@
 package com.sustainability.security.services;
 
-import java.util.Collection;
-import java.util.List;
-import java.util.Objects;
-import java.util.stream.Collectors;
-
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.sustainability.models.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import com.sustainability.models.User;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import java.util.Collection;
+import java.util.List;
+import java.util.Objects;
+import java.util.stream.Collectors;
 
 public class UserDetailsImpl implements UserDetails {
     private static final long serialVersionUID = 1L;
@@ -23,17 +22,21 @@ public class UserDetailsImpl implements UserDetails {
 
     private String faculty;
 
+    private String programme;
+
+
     @JsonIgnore
     private String password;
 
     private Collection<? extends GrantedAuthority> authorities;
 
-    public UserDetailsImpl(String id, String username, String email, String faculty, String password,
+    public UserDetailsImpl(String id, String username, String email, String faculty, String programme, String password,
                            Collection<? extends GrantedAuthority> authorities) {
         this.id = id;
         this.username = username;
         this.email = email;
         this.faculty = faculty;
+        this.programme = programme;
         this.password = password;
         this.authorities = authorities;
     }
@@ -48,6 +51,7 @@ public class UserDetailsImpl implements UserDetails {
                 user.getUsername(),
                 user.getEmail(),
                 user.getFaculty(),
+                user.getProgramme(),
                 user.getPassword(),
                 authorities);
     }
@@ -67,6 +71,10 @@ public class UserDetailsImpl implements UserDetails {
 
     public String getFaculty() {
         return faculty;
+    }
+
+    public String getProgramme() {
+        return programme;
     }
 
     @Override

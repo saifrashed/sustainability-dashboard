@@ -34,8 +34,19 @@
                         <td class="align-middle">{{user.faculty}}</td>
 
                         <td class="align-middle">
+
+                            <a (click)="selectProfile(user.id)"
+                               class="btn btn-outline-dark"
+                               data-bs-target="#updateUserModal"
+                               data-bs-toggle="modal">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+                                    <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
+                                    <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"/>
+                                </svg>
+                            </a>
+
                             <a (click)="deleteUser(user.id)" *ngIf="user.username != 'admin'"
-                               class="btn btn-light-danger">
+                               class="btn btn-light-danger mx-1">
                                 <svg class="bi bi-x-lg" fill="currentColor" height="16"
                                      viewBox="0 0 16 16"
                                      width="16" xmlns="http://www.w3.org/2000/svg">
@@ -58,6 +69,61 @@
             </div>
         </div>
     </div>
+
+    <!-- Add user modal -->
+    <div aria-hidden="true" class="modal fade" id="updateUserModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Update Profile</h5>
+                    <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+                </div>
+                <div class="modal-body">
+                    <form [formGroup]="updateUserForm">
+                        <div class="form-group mb-3">
+                            <label>Username</label>
+                            <input class="form-control" formControlName="username" type="text">
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label>Email</label>
+                            <input class="form-control" formControlName="email" type="email">
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label>Faculty</label>
+                            <select class="form-control" formControlName="faculty">
+                                <option></option>
+                                <option *ngFor="let item of faculties" value="{{item.faculty}}">
+                                    {{item.faculty}}
+                                </option>
+                            </select>
+                        </div>
+
+                        <div class="form-group mb-3" *ngIf="updateUserForm.controls['faculty'].value != ''">
+                            <label>Programme</label>
+                            <select class="form-control" formControlName="programme">
+                                <option></option>
+                                <option *ngFor="let programme of getProgrammes(updateUserForm.controls['faculty'].value)" value="{{programme}}">
+                                    {{programme}}
+                                </option>
+                            </select>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label>Role</label>
+                            <input class="form-control" readonly disabled type="text" value="ROLE_FACULTY">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal" type="button">Close</button>
+                    <button (click)="updateUser()" class="btn btn-primary" type="button">Edit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End user modal -->
 
 
     <!-- Add user modal -->
@@ -84,26 +150,18 @@
                             <label>Faculty</label>
                             <select class="form-control" formControlName="faculty">
                                 <option></option>
-                                <option value="FACULTY OF APPLIED SOCIAL SCIENCES AND LAW">
-                                    FACULTY OF APPLIED SOCIAL SCIENCES AND LAW
+                                <option *ngFor="let item of faculties" value="{{item.faculty}}">
+                                    {{item.faculty}}
                                 </option>
-                                <option value="FACULTY OF BUSINESS AND ECONOMICS">
-                                    FACULTY OF BUSINESS AND ECONOMICS
-                                </option>
-                                <option value="FACULTY OF DIGITAL MEDIA AND CREATIVE INDUSTRIES">
-                                    FACULTY OF DIGITAL MEDIA AND CREATIVE INDUSTRIES
-                                </option>
-                                <option value="FACULTY OF EDUCATION">
-                                    FACULTY OF EDUCATION
-                                </option>
-                                <option value="FACULTY OF HEALTH">
-                                    FACULTY OF HEALTH
-                                </option>
-                                <option value="FACULTY OF SPORTS AND NUTRITION">
-                                    FACULTY OF SPORTS AND NUTRITION
-                                </option>
-                                <option value="FACULTY OF TECHNOLOGY">
-                                    FACULTY OF TECHNOLOGY
+                            </select>
+                        </div>
+
+                        <div class="form-group mb-3" *ngIf="newUserForm.controls['faculty'].value != ''">
+                            <label>Programme</label>
+                            <select class="form-control" formControlName="programme">
+                                <option></option>
+                                <option *ngFor="let programme of getProgrammes(newUserForm.controls['faculty'].value)" value="{{programme}}">
+                                {{programme}}
                                 </option>
                             </select>
                         </div>
@@ -115,7 +173,7 @@
 
                         <div class="form-group mb-3">
                             <label>Role</label>
-                            <input class="form-control" readonly type="text" value="ROLE_FACULTY">
+                            <input class="form-control" readonly disabled type="text" value="ROLE_FACULTY">
                         </div>
                     </form>
                 </div>

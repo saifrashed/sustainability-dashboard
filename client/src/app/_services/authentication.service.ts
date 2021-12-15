@@ -44,12 +44,21 @@ export class AuthenticationService {
         return this.http.get(`${environment.apiUrl}/api/auth/users`)
     }
 
+    findById(id: any) {
+        return this.http.get<User>(`${environment.apiUrl}/api/auth/users/` + id);
+    }
+
     deleteById(id: any) {
         return this.http.delete(`${environment.apiUrl}/api/auth/users/` + id);
     }
 
     create(user: User) {
         return this.http.post(`${environment.apiUrl}/api/auth/signup`, user);
+    }
+
+    update(user: User) {
+        console.log(user);
+        return this.http.put(`${environment.apiUrl}/api/auth/users`, user);
     }
 
 }

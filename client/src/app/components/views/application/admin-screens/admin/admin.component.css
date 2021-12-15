@@ -65,5 +65,24 @@
 }
 
 
+span.statistic-badge {
+    margin: 10px;
+    font-size: 0.80em;
+    width: 75%;
+    transition: 0.1s ease-in-out;
+}
 
+
+span.statistic-badge:hover {
+    width: 100%;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+}
+
+span.statistic-badge:active {
+    width: 95%;
+    cursor: pointer;
+    /*font-size:1em;*/
+    transition: 0.1s ease-in-out;
+}
 

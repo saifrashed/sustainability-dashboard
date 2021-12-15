@@ -3,6 +3,7 @@ import {Component, OnInit} from '@angular/core';
 import {AdminComponent} from "../admin/admin.component";
 import {Survey} from "../../../../../_models/survey";
 import {FormControl, FormGroup} from "@angular/forms";
+import pillars from "src/assets/data/pillars.js"
 
 @Component({
     selector: 'app-admin-survey',
@@ -14,6 +15,9 @@ export class AdminSurveyComponent extends AdminComponent implements OnInit {
 
 
     public selectedQuestion: any = null;
+    public pillars: any[] = [];
+    public clusters: any[] = [];
+
 
     public newSurveyForm = new FormGroup({
         title: new FormControl(''),
@@ -44,6 +48,7 @@ export class AdminSurveyComponent extends AdminComponent implements OnInit {
 
     ngOnInit(): void {
         super.ngOnInit();
+        this.pillars = pillars;
 
         this.surveyService.findAll().subscribe(surveyList => {
             this.surveyList = surveyList;
@@ -59,27 +64,11 @@ export class AdminSurveyComponent extends AdminComponent implements OnInit {
         });
     }
 
-    // Survey CRUD
     getSurveys() {
         this.surveyService.findAll().subscribe(surveyList => {
             this.surveyList = surveyList;
             this.getCompletedSurveys();
         });
-    }
-
-    getCompletedSurveys() {
-        for (let index in this.surveyList) {
-            this.surveyResponse.getCompletedSurveys(this.surveyList[index].id).subscribe(result => {
-                this.surveyList[index].completed = result;
-            });
-        }
-    }
-
-    getSurveyQuestions(id: string) {
-        this.surveyService.findAllQuestions(id).subscribe(surveyQuestions => {
-            this.selectedSurveyQuestions = surveyQuestions;
-            this.selectedSurveyId = id;
-        })
     }
 
     addSurvey() {
@@ -123,6 +112,16 @@ export class AdminSurveyComponent extends AdminComponent implements OnInit {
         }
     }
 
+
+    getCompletedSurveys() {
+        for (let index in this.surveyList) {
+            this.surveyResponse.getCompletedSurveys(this.surveyList[index].id).subscribe(result => {
+                this.surveyList[index].completed = result;
+            });
+        }
+    }
+
+
     // SurveyQuestion CRUD
 
     addSurveyQuestion() {
@@ -145,6 +144,15 @@ export class AdminSurveyComponent extends AdminComponent implements OnInit {
             this.newQuestionForm.reset();
             this.newQuestionForm.controls["weight"].setValue(1);
             this.notifierService.notify("success", "Question has been added to the survey", "ADD_SURVEY_QUESTION")
+        })
+    }
+
+    getSurveyQuestions(id: string) {
+        this.surveyService.findAllQuestions(id).subscribe(surveyQuestions => {
+            this.selectedSurveyQuestions = surveyQuestions;
+            this.selectedSurveyId = id;
+
+            this.getPillarClusters(id);
         })
     }
 
@@ -183,6 +191,13 @@ export class AdminSurveyComponent extends AdminComponent implements OnInit {
             this.closeEditQuestion();
         })
 
+    }
+
+    getPillarClusters(surveyId: string) {
+        this.surveyService.findById(surveyId).subscribe(survey => {
+            let foundPillar = this.pillars.find((x: any) => x.pillar == survey.pillar);
+            this.clusters = foundPillar?.clusters;
+        });
     }
 
 

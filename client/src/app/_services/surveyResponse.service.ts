@@ -21,6 +21,10 @@ export class SurveyResponseService {
         return this.http.get<any[]>(`${environment.apiUrl}/api/public/survey-response/faculties`)
     }
 
+    findAllProgrammes(faculty: string): Observable<any[]> {
+        return this.http.get<any[]>(`${environment.apiUrl}/api/public/survey-response/programmes/` + faculty)
+    }
+
     getSurveyResponseStatisticsGlobals() {
         return this.http.get(`${environment.apiUrl}/api/public/survey-response/statistics/global`)
     }

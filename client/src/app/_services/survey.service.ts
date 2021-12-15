@@ -19,7 +19,7 @@ export class SurveyService {
     }
 
     findById(id: string) {
-        return this.http.get(`${environment.apiUrl}/api/public/survey/` + id);
+        return this.http.get<Survey>(`${environment.apiUrl}/api/public/survey/` + id);
     }
 
     findAllQuestions(id: string) {

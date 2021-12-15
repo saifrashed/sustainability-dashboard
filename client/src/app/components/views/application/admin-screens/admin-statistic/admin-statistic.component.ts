@@ -12,6 +12,7 @@ import {EChartsOption} from "echarts/types/dist/echarts";
 export class AdminStatisticComponent extends AdminComponent implements OnInit {
 
     facultyData: any[] = [];
+    programmeData: any[] = [];
 
     researchData: number[] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     educationData: number[] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
@@ -97,6 +98,48 @@ export class AdminStatisticComponent extends AdminComponent implements OnInit {
         };
     };
 
+
+    /**
+     * Chart arrow function returning options for faculty chart
+     * @param data
+     */
+    chartOptionProgramme = (): EChartsOption => {
+        return {
+            tooltip: {
+                trigger: 'item'
+            },
+            legend: {
+                top: '5%',
+                left: 'center'
+            },
+            series: [
+                {
+                    type: 'pie',
+                    radius: ['40%', '70%'],
+                    avoidLabelOverlap: false,
+                    label: {
+                        show: false,
+                        position: 'center'
+                    },
+                    emphasis: {
+                        label: {
+                            show: true,
+                            fontSize: '40',
+                            fontWeight: 'bold'
+                        }
+                    },
+                    labelLine: {
+                        show: false
+                    },
+                    data: [
+                        {name: 'Business operations/Facilities', value: 3},
+                        {name: 'Education', value: 3.392857142857143}
+                    ]
+                }
+            ]
+        };
+    };
+
     ngOnInit(): void {
         super.ngOnInit();
 
@@ -104,6 +147,7 @@ export class AdminStatisticComponent extends AdminComponent implements OnInit {
 
         this.getFormattedFacultyData();
         this.getGlobalsAcrossTime();
+
     }
 
 
@@ -175,6 +219,12 @@ export class AdminStatisticComponent extends AdminComponent implements OnInit {
     getFacultyChartData(faculty: string): any[] {
         let object = this.facultyData?.find((x: any) => x.facultyName == faculty);
         return object?.data || [];
+    }
+
+    selectFaculty(faculty: string) {
+        this.surveyResponse.findAllProgrammes(faculty).subscribe(result => {
+            this.programmeData = result;
+        })
     }
 
 }
