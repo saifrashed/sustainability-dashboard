@@ -2,7 +2,7 @@
  
 This example app shows how to create a Spring Boot API and display its data with an Angular UI.
 
-Please read [Bootiful Development with Spring Boot and Angular](https://developer.okta.com/blog/2017/04/26/bootiful-development-with-spring-boot-and-angular) to see how this app was created. You can also watch [this screencast on YouTube](https://www.youtube.com/watch?v=GhBwKT7EJsY).
+Please read the  technical documentation in the docs folder for in depth information about the workings of the sustainability dashboard.
 
 <img src="https://sustainability-client.herokuapp.com/assets/images/background/home.png" alt="sustainability-dashboard" >
 
