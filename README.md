@@ -18,7 +18,7 @@ Please read the  technical documentation in the docs folder for in depth informa
 To install this example application, run the following commands:
 
 ```bash
-git clone https://github.com/oktadeveloper/spring-boot-angular-example.git
+git clone https://gitlab.fdmci.hva.nl/se-ewa/2021-2022/stb-1.git
 cd spring-boot-angular-example
 ```
 
