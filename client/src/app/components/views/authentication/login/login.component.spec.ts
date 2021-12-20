@@ -10,6 +10,12 @@ import {NotifierModule} from 'angular-notifier';
 import { RouterTestingModule } from '@angular/router/testing';
 import {AuthenticationService} from "../../../../_services";
 
+
+/**
+ * Login tests
+ *
+ * Author: Saif Rashed
+ */
 describe('LoginComponent', () => {
     let component: LoginComponent;
     let componentHtml: HTMLElement;
@@ -128,7 +134,6 @@ describe('LoginComponent', () => {
         }, (error) => {
             console.log(error.error.message);
             expect(error.error.message).toBe("Error: Unauthorized");
-
         });
 
         expect().nothing();
