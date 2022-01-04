@@ -75,7 +75,7 @@ public class AuthController {
                 .map(item -> item.getAuthority())
                 .collect(Collectors.toList());
 
-        System.out.println(userDetails);
+        System.out.println(userDetails.getEmail());
 
         return ResponseEntity.ok(new JwtResponse(jwt,
                 userDetails.getId(),
@@ -170,7 +170,7 @@ public class AuthController {
 
     @PutMapping("/users")
     @ResponseBody
-    public ResponseEntity<User> updateSurveyQuestion(@RequestBody User user) {
+    public ResponseEntity<User> updateUser(@RequestBody User user) {
         User userObject = mongoTemplate.findOne(Query.query(Criteria.where("_id").is(user.getId())), User.class);
 
 

@@ -1,20 +1,20 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {LoginComponent} from './login.component';
-import {AppRoutingModule, routes} from "../../../../app-routing.module";
+import {AppRoutingModule} from "../../../../app-routing.module";
 import {customNotifierOptions} from "../../../../app.module";
 import {BrowserModule} from "@angular/platform-browser";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {NotifierModule} from 'angular-notifier';
-import { RouterTestingModule } from '@angular/router/testing';
+import {RouterTestingModule} from '@angular/router/testing';
 import {AuthenticationService} from "../../../../_services";
 
 
 /**
  * Login tests
  *
- * Author: Saif Rashed
+ * @author Saif Rashed
  */
 describe('LoginComponent', () => {
     let component: LoginComponent;
@@ -138,4 +138,5 @@ describe('LoginComponent', () => {
 
         expect().nothing();
     });
+
 });
