@@ -37,7 +37,7 @@ public class SurveyController {
 
 
     @GetMapping("/survey")
-    public ResponseEntity<List<Survey>> getSurvey() {
+    public ResponseEntity<List<Survey>> getSurveys() {
         Aggregation aggregate = newAggregation(match(new Criteria("isActive").is(true)));
 
         AggregationResults<Survey> groupResults = mongoTemplate.aggregate(aggregate, "surveys", Survey.class);
@@ -48,7 +48,7 @@ public class SurveyController {
     }
 
     @GetMapping("/survey/{id}")
-    public ResponseEntity<Survey> getSurveys(@PathVariable("id") String id) {
+    public ResponseEntity<Survey> getSurvey(@PathVariable("id") String id) {
 
         Optional<Survey> surveys = surveyRepo.findById(id);
 
