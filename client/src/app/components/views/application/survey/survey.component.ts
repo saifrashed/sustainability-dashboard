@@ -60,7 +60,5 @@ export class SurveyComponent implements OnInit {
 
             this.router.navigate(["dashboard"])
         })
-
     }
-
 }
