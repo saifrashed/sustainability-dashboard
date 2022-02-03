@@ -42,9 +42,6 @@ describe('AuthenticationService', () => {
 
 
 
-
-
-
         // Assert: Check if component form object is equel to input
         expect(deleteResult.message).toBe("User deleted successfully!");
 
