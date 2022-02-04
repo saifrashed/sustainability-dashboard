@@ -12,11 +12,17 @@ export class SurveyComponent implements OnInit {
     public scoringResponse: any[] = [];
     public scoringDescription: any[] = [];
     public survey: any = null;
+    public questions: any = [];
 
-    public questions: any;
-
-
-    constructor(private surveyService: SurveyService, private authenticationService: AuthenticationService, private route: ActivatedRoute, private router: Router, private surveyResponse: SurveyResponseService) {
+  /**
+   * SurveyComponent constructor
+   * @param surveyService
+   * @param authenticationService
+   * @param route
+   * @param router
+   * @param surveyResponse
+   */
+    constructor(public surveyService: SurveyService, private authenticationService: AuthenticationService, public route: ActivatedRoute, private router: Router, private surveyResponse: SurveyResponseService) {
         surveyService.findById(<string>this.route.snapshot.paramMap.get('id')).subscribe(survey => {
             this.survey = survey;
             this.scoringDescription = this.survey.scoringDescription;
@@ -24,16 +30,13 @@ export class SurveyComponent implements OnInit {
 
         surveyService.findAllQuestions(<string>this.route.snapshot.paramMap.get('id')).subscribe(questions => {
             this.questions = questions;
-            console.log(questions)
         })
     }
 
     ngOnInit(): void {
     }
 
-
-    addOrUpdateScoringArray(newItem: any) {
-
+  addOrUpdateScoringArray(newItem: any) {
         let index = this.scoringResponse.findIndex(x => x.question.id === newItem.question.id);
 
         if (index != -1) {
@@ -41,10 +44,6 @@ export class SurveyComponent implements OnInit {
         } else {
             this.scoringResponse.push(newItem);
         }
-
-
-        console.log(this.scoringResponse)
-
     }
 
     onSubmit() {
@@ -56,8 +55,6 @@ export class SurveyComponent implements OnInit {
         };
 
         this.surveyResponse.create(surveyResponseObject).subscribe(message => {
-            console.log(message);
-
             this.router.navigate(["dashboard"])
         })
     }

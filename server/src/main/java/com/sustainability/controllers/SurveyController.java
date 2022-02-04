@@ -38,20 +38,25 @@ public class SurveyController {
 
     @GetMapping("/survey")
     public ResponseEntity<List<Survey>> getSurveys() {
+        //aggregation to check if survey is active
         Aggregation aggregate = newAggregation(match(new Criteria("isActive").is(true)));
 
+        //aggregation to mongoTemplate
         AggregationResults<Survey> groupResults = mongoTemplate.aggregate(aggregate, "surveys", Survey.class);
 
+        //convert the aggregation to a List<Survey>
         List<Survey> result = groupResults.getMappedResults();
 
+        //return result
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
 
     @GetMapping("/survey/{id}")
     public ResponseEntity<Survey> getSurvey(@PathVariable("id") String id) {
-
+        //find survey by id
         Optional<Survey> surveys = surveyRepo.findById(id);
 
+        //if survey is present, get survey else return not found
         if (surveys.isPresent()) {
             return new ResponseEntity<>(surveys.get(), HttpStatus.OK);
         } else {
@@ -61,8 +66,6 @@ public class SurveyController {
 
     @GetMapping("/survey/reopen/{id}")
     public ResponseEntity<Survey> reopenSurvey(@PathVariable("id") String id) {
-
-
         // set current survey inactive
         Optional<Survey> survey = surveyRepo.findById(id);
 
@@ -86,6 +89,7 @@ public class SurveyController {
             SurveyQuestion newSurveyQuestion = surveyQuestionRepo.save(new SurveyQuestion(null, new ObjectId(String.valueOf(newSurvey.getId())), surveyQuestion.getDescription(), surveyQuestion.getCluster(), surveyQuestion.getWeight()));
         });
 
+        //if survey is present get survey, else return not found
         if (survey.isPresent()) {
             return new ResponseEntity<>(survey.get(), HttpStatus.OK);
         } else {
