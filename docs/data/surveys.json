@@ -1,0 +1,2199 @@
+[{
+  "_id": {
+    "$oid": "619ece2d0d35ff19fc9fdd7a"
+  },
+  "title": "Education",
+  "pillar": "Education",
+  "scoringDescription": [
+    "Does not apply",
+    "Incidental",
+    "Cohesive",
+    "Systematic",
+    "Partner-oriented",
+    "Impactful"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "619ecee70d35ff19fc9fdd7b"
+  },
+  "title": "Research",
+  "pillar": "Research",
+  "scoringDescription": [
+    "Does not apply",
+    "Incidental",
+    "Cohesive",
+    "Systematic",
+    "Systematic/partner-oriented",
+    "Impactful"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "619ecf1f0d35ff19fc9fdd7c"
+  },
+  "title": "Business Operations/Facilities",
+  "pillar": "Business operations/Facilities",
+  "scoringDescription": [
+    "Does not apply",
+    "Incidental",
+    "Cohesive",
+    "Systematic",
+    "Systematic/partner-oriented",
+    "Impactful"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "619ecf4a0d35ff19fc9fdd7d"
+  },
+  "title": "Organisation",
+  "pillar": "Organisation",
+  "scoringDescription": [
+    "Does not apply",
+    "Incidental",
+    "Cohesive",
+    "Systematic",
+    "Systematic/partner-oriented",
+    "Impactful"
+  ],
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "619f7ca02c66284432ffcc8d"
+  },
+  "title": "Education",
+  "pillar": "Education",
+  "scoringDescription": [
+    "Does not apply",
+    "Incidental",
+    "Cohesive",
+    "Systematic",
+    "Partner-oriented",
+    "Impactful"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61b90505835864667007d16e"
+  },
+  "title": "Business Operations/Facilities",
+  "pillar": "Business operations/Facilities",
+  "scoringDescription": [
+    "Does not apply",
+    "Incidental",
+    "Cohesive",
+    "Systematic",
+    "Systematic/partner-oriented",
+    "Impactful"
+  ],
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61b90508835864667007d171"
+  },
+  "title": "Education",
+  "pillar": "Education",
+  "scoringDescription": [
+    "Does not apply",
+    "Incidental",
+    "Cohesive",
+    "Systematic",
+    "Partner-oriented",
+    "Impactful"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61e00f54386e6342653a9df3"
+  },
+  "title": "Research",
+  "pillar": "Research",
+  "scoringDescription": [
+    "Does not apply",
+    "Incidental",
+    "Cohesive",
+    "Systematic",
+    "Systematic/partner-oriented",
+    "Impactful"
+  ],
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61e0175d386e6342653a9df7"
+  },
+  "title": "Education",
+  "pillar": "Education",
+  "scoringDescription": [
+    "Does not apply",
+    "Incidental",
+    "Cohesive",
+    "Systematic",
+    "Partner-oriented",
+    "Impactful"
+  ],
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61e017ac386e6342653a9e08"
+  },
+  "title": "newSurvey",
+  "pillar": "Organisation",
+  "scoringDescription": [
+    "Bad",
+    "Below average",
+    "Average",
+    "Above average",
+    "Good",
+    "Excellent"
+  ],
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fbfbf39f3a76796dd09e38"
+  },
+  "title": "testTitle",
+  "pillar": "testPillar",
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fbfbf39f3a76796dd09e39"
+  },
+  "title": "testTitle",
+  "pillar": "testPillar",
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fbfbf39f3a76796dd09e3a"
+  },
+  "title": "testTitle",
+  "pillar": "testPillar",
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fbfbf39f3a76796dd09e3b"
+  },
+  "title": "testTitle",
+  "pillar": "testPillar",
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fbfbf39f3a76796dd09e3c"
+  },
+  "title": "testTitle",
+  "pillar": "testPillar",
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fbfc102e8bf755129a79e9"
+  },
+  "title": "testTitle",
+  "pillar": "testPillar",
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fbfc102e8bf755129a79ea"
+  },
+  "title": "testTitle",
+  "pillar": "testPillar",
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fbfc102e8bf755129a79eb"
+  },
+  "title": "testTitle",
+  "pillar": "testPillar",
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fbfc102e8bf755129a79ec"
+  },
+  "title": "testTitle",
+  "pillar": "testPillar",
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fbfc102e8bf755129a79ed"
+  },
+  "title": "testTitle",
+  "pillar": "testPillar",
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fbfe387503676552615980"
+  },
+  "title": "testTitle",
+  "pillar": "testPillar",
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fbfe397503676552615981"
+  },
+  "title": "",
+  "pillar": "",
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fbfe3a7503676552615982"
+  },
+  "title": "testTitle",
+  "pillar": "testPillar",
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fbfe3a7503676552615983"
+  },
+  "title": "",
+  "pillar": "",
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fbfe3a7503676552615984"
+  },
+  "title": "testTitle",
+  "pillar": "testPillar",
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fbfe3a7503676552615985"
+  },
+  "title": "",
+  "pillar": "",
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fbfe3a7503676552615986"
+  },
+  "title": "testTitle",
+  "pillar": "testPillar",
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fbfe3a7503676552615987"
+  },
+  "title": "",
+  "pillar": "",
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fbfe3a7503676552615988"
+  },
+  "title": "testTitle",
+  "pillar": "testPillar",
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fbfe3a7503676552615989"
+  },
+  "title": "",
+  "pillar": "",
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fbffb7b33f940f303ebd99"
+  },
+  "title": "testTitle",
+  "pillar": "testPillar",
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fbffb8b33f940f303ebd9a"
+  },
+  "title": "",
+  "pillar": "",
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fbffb8b33f940f303ebd9b"
+  },
+  "title": "testTitle",
+  "pillar": "testPillar",
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fbffb8b33f940f303ebd9c"
+  },
+  "title": "",
+  "pillar": "",
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fbffb8b33f940f303ebd9d"
+  },
+  "title": "testTitle",
+  "pillar": "testPillar",
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fbffb8b33f940f303ebd9e"
+  },
+  "title": "",
+  "pillar": "",
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fbffb8b33f940f303ebd9f"
+  },
+  "title": "testTitle",
+  "pillar": "testPillar",
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fbffb8b33f940f303ebda0"
+  },
+  "title": "",
+  "pillar": "",
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fbffb8b33f940f303ebda1"
+  },
+  "title": "testTitle",
+  "pillar": "testPillar",
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fbffb8b33f940f303ebda2"
+  },
+  "title": "",
+  "pillar": "",
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc394a6bfd430cd73bbaef"
+  },
+  "title": "testTitle",
+  "pillar": "testPillar",
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc394a6bfd430cd73bbaf0"
+  },
+  "title": "",
+  "pillar": "",
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc394b6bfd430cd73bbaf1"
+  },
+  "title": "testTitle",
+  "pillar": "testPillar",
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc394b6bfd430cd73bbaf2"
+  },
+  "title": "",
+  "pillar": "",
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc394b6bfd430cd73bbaf3"
+  },
+  "title": "testTitle",
+  "pillar": "testPillar",
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc394b6bfd430cd73bbaf4"
+  },
+  "title": "",
+  "pillar": "",
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc394b6bfd430cd73bbaf5"
+  },
+  "title": "testTitle",
+  "pillar": "testPillar",
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc394b6bfd430cd73bbaf6"
+  },
+  "title": "",
+  "pillar": "",
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc394b6bfd430cd73bbaf7"
+  },
+  "title": "testTitle",
+  "pillar": "testPillar",
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc394b6bfd430cd73bbaf8"
+  },
+  "title": "",
+  "pillar": "",
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc399efe367832408f4981"
+  },
+  "title": "testTitle",
+  "pillar": "testPillar",
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc399ffe367832408f4982"
+  },
+  "title": "",
+  "pillar": "",
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc399ffe367832408f4983"
+  },
+  "title": "testTitle",
+  "pillar": "testPillar",
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc399ffe367832408f4984"
+  },
+  "title": "",
+  "pillar": "",
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc399ffe367832408f4985"
+  },
+  "title": "testTitle",
+  "pillar": "testPillar",
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc399ffe367832408f4986"
+  },
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc399ffe367832408f4987"
+  },
+  "title": "",
+  "pillar": "",
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc399ffe367832408f4988"
+  },
+  "title": "testTitle",
+  "pillar": "testPillar",
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc399ffe367832408f4989"
+  },
+  "title": "",
+  "pillar": "",
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc399ffe367832408f498a"
+  },
+  "title": "testTitle",
+  "pillar": "testPillar",
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc399ffe367832408f498b"
+  },
+  "title": "",
+  "pillar": "",
+  "isActive": true,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc6ecebd46bc6a96018573"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc6ecfbd46bc6a96018574"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc6ecfbd46bc6a96018575"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc6ecfbd46bc6a96018576"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc6ecfbd46bc6a96018577"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc6ed60d8af9616ba3b48b"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc6ed60d8af9616ba3b48c"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc6ed60d8af9616ba3b48d"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc6ed60d8af9616ba3b48e"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc6ed70d8af9616ba3b48f"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc6f46d73a6f2765b93dbd"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc6f47d73a6f2765b93dbe"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc6f47d73a6f2765b93dbf"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc6f47d73a6f2765b93dc0"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc6f47d73a6f2765b93dc1"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc6f51a3392942bcb57e91"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc6f52a3392942bcb57e92"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc6f52a3392942bcb57e93"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc6f52a3392942bcb57e94"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc6f52a3392942bcb57e95"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc72cc51ce6b465c9f466c"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc72cd51ce6b465c9f4676"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc72cd51ce6b465c9f4680"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc72cd51ce6b465c9f468a"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc72d5dffbf97fd1a9bb7b"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc72d5dffbf97fd1a9bb85"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc72d5dffbf97fd1a9bb8f"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc72d5dffbf97fd1a9bb99"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc737fd19ea41642831d36"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc7380d19ea41642831d41"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc7380d19ea41642831d4b"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc7380d19ea41642831d55"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc73e5355f8a76193ad36a"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc73e5355f8a76193ad375"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc73e6355f8a76193ad37f"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc73e6355f8a76193ad3c8"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc74179a1967253a1a04ee"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc74179a1967253a1a04f9"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc74179a1967253a1a0503"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc74189a1967253a1a0510"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc7420281bd377fcf99040"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc7420281bd377fcf9904b"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc7420281bd377fcf99055"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fc7421281bd377fcf99062"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fcf8017a7af214f0fed163"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fcf8027a7af214f0fed16e"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fcf8027a7af214f0fed178"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fcf8027a7af214f0fed185"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fcfec25907a602dbc1b7fa"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fcfec35907a602dbc1b805"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fcfec35907a602dbc1b80f"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fcfec35907a602dbc1b81c"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fd05825f0c624e37ffd20f"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fd05835f0c624e37ffd21a"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fd05835f0c624e37ffd224"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fd05845f0c624e37ffd22e"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fd05855f0c624e37ffd23b"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fd05b54537f91122b49b0e"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fd05b64537f91122b49b19"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fd05b74537f91122b49b23"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fd05b74537f91122b49b2d"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fd05b84537f91122b49b3a"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fd05cdea90231c14184276"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fd05ceea90231c14184281"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fd05cfea90231c1418428b"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fd05d0ea90231c14184295"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fd05d0ea90231c141842a2"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fd05d8766a7429c571176c"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fd05da766a7429c5711777"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fd05da766a7429c5711781"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fd05db766a7429c571178b"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fd05dc766a7429c5711798"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fd08792571dc65461d719e"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fd087a2571dc65461d71a9"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fd087a2571dc65461d71b3"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fd087a2571dc65461d71bd"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fd087a2571dc65461d71ca"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fd08957e2ca90b50a67190"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fd08957e2ca90b50a6719b"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fd08957e2ca90b50a671a5"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fd08957e2ca90b50a671af"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fd08967e2ca90b50a671bc"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fd0fc2cf15562921d29eeb"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fd0fc3cf15562921d29ef6"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fd0fc3cf15562921d29f00"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fd0fc3cf15562921d29f0a"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fd0fc3cf15562921d29f17"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fd1699a1ea8122574178b8"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fd1699a1ea8122574178c3"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fd169aa1ea8122574178cd"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fd169aa1ea8122574178d7"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fd169aa1ea8122574178e4"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fd200bfb96bc4ffa97db82"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fd200bfb96bc4ffa97db8d"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fd200cfb96bc4ffa97db97"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fd200cfb96bc4ffa97dba1"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fd200cfb96bc4ffa97dbae"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fd2da15d99416286ba60f8"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fd2da25d99416286ba6103"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fd2da25d99416286ba610d"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fd2da25d99416286ba6117"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+},{
+  "_id": {
+    "$oid": "61fd2da35d99416286ba6124"
+  },
+  "title": "testSurvey",
+  "pillar": "Education",
+  "scoringDescription": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth",
+    "sixth"
+  ],
+  "isActive": false,
+  "_class": "com.sustainability.models.Survey"
+}]

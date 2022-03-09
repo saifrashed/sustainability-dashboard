@@ -1,0 +1,163 @@
+[{
+  "_id": {
+    "$oid": "61790deb19d7650b532c6388"
+  },
+  "username": "facultyTwo",
+  "email": "facultyTwo@gmail.com",
+  "faculty": "FACULTY OF BUSINESS AND ECONOMICS",
+  "programme": "AMSIB - INTERNATIONAL BUSINESS",
+  "password": "$2a$10$AUemmiqdOA6jRg4zwsfIlelLEIoHyIIIEuh.861XWTqiOWlNpvm.i",
+  "roles": [
+    {
+      "$ref": "roles",
+      "$id": {
+        "$oid": "616981d3d528d4b901c49d4c"
+      }
+    }
+  ],
+  "_class": "com.sustainability.models.User"
+},{
+  "_id": {
+    "$oid": "61790df719d7650b532c6389"
+  },
+  "username": "facultyThree",
+  "email": "facultyThree@gmail.com",
+  "faculty": "FACULTY OF DIGITAL MEDIA AND CREATIVE INDUSTRIES",
+  "programme": "Communication and Multimedia Design",
+  "password": "$2a$10$fCg.Uaht03KOZ800.NFSqeeCA9uxcl0yq61a1kt7okbhC9mosxal.",
+  "roles": [
+    {
+      "$ref": "roles",
+      "$id": {
+        "$oid": "616981d3d528d4b901c49d4c"
+      }
+    }
+  ],
+  "_class": "com.sustainability.models.User"
+},{
+  "_id": {
+    "$oid": "61790e5a19d7650b532c638a"
+  },
+  "username": "facultyFour",
+  "email": "facultyFour@gmail.com",
+  "faculty": "FACULTY OF EDUCATION",
+  "programme": "Biology teacher",
+  "password": "$2a$10$dsQLksCsXmgUqOgAPNwyoeeh35pzCvRsSm0xGAQ1bkXu6qYXZ8xcO",
+  "roles": [
+    {
+      "$ref": "roles",
+      "$id": {
+        "$oid": "616981d3d528d4b901c49d4c"
+      }
+    }
+  ],
+  "_class": "com.sustainability.models.User"
+},{
+  "_id": {
+    "$oid": "61790e6619d7650b532c638b"
+  },
+  "username": "facultyFive",
+  "email": "facultyFive@gmail.com",
+  "faculty": "FACULTY OF HEALTH",
+  "programme": "European School of Physiotherapy",
+  "password": "$2a$10$brlF6OjTdNGMOjiqeFd90OHpJC6RzYbxOLW/ClarKH8UmrjNFDl8O",
+  "roles": [
+    {
+      "$ref": "roles",
+      "$id": {
+        "$oid": "616981d3d528d4b901c49d4c"
+      }
+    }
+  ],
+  "_class": "com.sustainability.models.User"
+},{
+  "_id": {
+    "$oid": "61790e7519d7650b532c638c"
+  },
+  "username": "facultySix",
+  "email": "facultySix@gmail.com",
+  "faculty": "FACULTY OF SPORTS AND NUTRITION",
+  "programme": "Sport Studies",
+  "password": "$2a$10$qeTgMw9x6YdqFJX9.WpqX.UXdR7TTi1I3ItZl7kp296yn4vggA1iO",
+  "roles": [
+    {
+      "$ref": "roles",
+      "$id": {
+        "$oid": "616981d3d528d4b901c49d4c"
+      }
+    }
+  ],
+  "_class": "com.sustainability.models.User"
+},{
+  "_id": {
+    "$oid": "6179104519d7650b532c638d"
+  },
+  "username": "facultySeven",
+  "email": "facultySeven@gmail",
+  "faculty": "FACULTY OF TECHNOLOGY",
+  "programme": "HBO-ICT",
+  "password": "$2a$10$JBU8zhma2B8IKJ4XBTV.fuzEtvwqxQINlAWoydCfZuMHauJsJ2ujC",
+  "roles": [
+    {
+      "$ref": "roles",
+      "$id": {
+        "$oid": "616981d3d528d4b901c49d4c"
+      }
+    }
+  ],
+  "_class": "com.sustainability.models.User"
+},{
+  "_id": {
+    "$oid": "6179667d3ddb7055eefa4511"
+  },
+  "username": "admin",
+  "email": "admin@gmail.com",
+  "faculty": "",
+  "programme": "",
+  "password": "$2a$10$dlkkP.vnxSeu4EHzskwfaO02jynQa.qC0FDW5khvaJXdh5sgUG116",
+  "roles": [
+    {
+      "$ref": "roles",
+      "$id": {
+        "$oid": "616981e1d528d4b901c49d4d"
+      }
+    }
+  ],
+  "_class": "com.sustainability.models.User"
+},{
+  "_id": {
+    "$oid": "617968653ddb7055eefa4513"
+  },
+  "username": "facultyOne",
+  "email": "facultyOne@gmail.com",
+  "faculty": "FACULTY OF APPLIED SOCIAL SCIENCES AND LAW",
+  "programme": "Social Educational Care Work",
+  "password": "$2a$10$e.fN67Cp2D7I9jpXnLJTdeJWprNt1Zsi0y4QasEyy1b12AtDsrhj2",
+  "roles": [
+    {
+      "$ref": "roles",
+      "$id": {
+        "$oid": "616981d3d528d4b901c49d4c"
+      }
+    }
+  ],
+  "_class": "com.sustainability.models.User"
+},{
+  "_id": {
+    "$oid": "61fbc285a499874335c1d5ee"
+  },
+  "username": "testRegister",
+  "email": "testRegister@gmail.com",
+  "faculty": "FACULTY OF BUSINESS AND ECONOMICS",
+  "programme": "AMSIB - INTERNATIONAL BUSINESS",
+  "password": "$2a$10$YDhnYChU4m5tb3Ua8XO02.mYtgjdSQtVa20z1Hz7R/daUuCJ/QYqi",
+  "roles": [
+    {
+      "$ref": "roles",
+      "$id": {
+        "$oid": "616981d3d528d4b901c49d4c"
+      }
+    }
+  ],
+  "_class": "com.sustainability.models.User"
+}]

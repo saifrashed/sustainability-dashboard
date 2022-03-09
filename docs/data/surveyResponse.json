@@ -1,0 +1,955 @@
+[{
+  "_id": {
+    "$oid": "619f7c3a2c66284432ffcc8c"
+  },
+  "userId": {
+    "$oid": "617968653ddb7055eefa4513"
+  },
+  "surveyId": {
+    "$oid": "619ece2d0d35ff19fc9fdd7a"
+  },
+  "responseDate": {
+    "$date": "2021-11-25T12:06:18.087Z"
+  },
+  "scoring": [
+    {
+      "question": {
+        "id": "619ecf8b0d35ff19fc9fdd7e",
+        "surveyId": {
+          "timestamp": 1637797421,
+          "counter": 10476922,
+          "time": 1637797421000,
+          "date": 1637797421000,
+          "machineIdentifier": 865791,
+          "processIdentifier": 6652,
+          "timeSecond": 1637797421
+        },
+        "description": "To what extent is sustainability included in the vision and strategy (eg in the A3) of the programme?",
+        "cluster": "Vision and Strategy",
+        "weight": 1
+      },
+      "value": 2,
+      "weight": 1
+    },
+    {
+      "question": {
+        "id": "619ecfa20d35ff19fc9fdd7f",
+        "surveyId": {
+          "timestamp": 1637797421,
+          "counter": 10476922,
+          "time": 1637797421000,
+          "date": 1637797421000,
+          "machineIdentifier": 865791,
+          "processIdentifier": 6652,
+          "timeSecond": 1637797421
+        },
+        "description": "To what extent does the program translate its vision and strategy on sustainability into concrete goals?",
+        "cluster": "Vision and Strategy",
+        "weight": 1
+      },
+      "value": 4,
+      "weight": 1
+    },
+    {
+      "question": {
+        "id": "619ecfb80d35ff19fc9fdd80",
+        "surveyId": {
+          "timestamp": 1637797421,
+          "counter": 10476922,
+          "time": 1637797421000,
+          "date": 1637797421000,
+          "machineIdentifier": 865791,
+          "processIdentifier": 6652,
+          "timeSecond": 1637797421
+        },
+        "description": "To what extent is sustainability part of the competences and learning outcomes of the training?",
+        "cluster": "Curriculum",
+        "weight": 1
+      },
+      "value": 2,
+      "weight": 1
+    },
+    {
+      "question": {
+        "id": "619ecfc50d35ff19fc9fdd81",
+        "surveyId": {
+          "timestamp": 1637797421,
+          "counter": 10476922,
+          "time": 1637797421000,
+          "date": 1637797421000,
+          "machineIdentifier": 865791,
+          "processIdentifier": 6652,
+          "timeSecond": 1637797421
+        },
+        "description": "To what extent is sustainability part of the 'Body of Knowledge and Skills' (BOKS) of the programme?",
+        "cluster": "Curriculum",
+        "weight": 1
+      },
+      "value": 4,
+      "weight": 1
+    },
+    {
+      "question": {
+        "id": "619ecfd10d35ff19fc9fdd82",
+        "surveyId": {
+          "timestamp": 1637797421,
+          "counter": 10476922,
+          "time": 1637797421000,
+          "date": 1637797421000,
+          "machineIdentifier": 865791,
+          "processIdentifier": 6652,
+          "timeSecond": 1637797421
+        },
+        "description": "To what extent does the didactic approach promote a proactive attitude towards sustainability?\n",
+        "cluster": "Curriculum",
+        "weight": 1
+      },
+      "value": 4,
+      "weight": 1
+    },
+    {
+      "question": {
+        "id": "619ecfe20d35ff19fc9fdd83",
+        "surveyId": {
+          "timestamp": 1637797421,
+          "counter": 10476922,
+          "time": 1637797421000,
+          "date": 1637797421000,
+          "machineIdentifier": 865791,
+          "processIdentifier": 6652,
+          "timeSecond": 1637797421
+        },
+        "description": "To what extent is there a programme-specific introduction (eg a subject) in the field of sustainability in year 1?",
+        "cluster": "Curriculum",
+        "weight": 1
+      },
+      "value": 4,
+      "weight": 1
+    },
+    {
+      "question": {
+        "id": "619ecff30d35ff19fc9fdd84",
+        "surveyId": {
+          "timestamp": 1637797421,
+          "counter": 10476922,
+          "time": 1637797421000,
+          "date": 1637797421000,
+          "machineIdentifier": 865791,
+          "processIdentifier": 6652,
+          "timeSecond": 1637797421
+        },
+        "description": "To what extent are practical partners in the field of sustainability involved in the training (eg in (graduation) projects)?\n",
+        "cluster": "Curriculum",
+        "weight": 1
+      },
+      "value": 4,
+      "weight": 1
+    },
+    {
+      "question": {
+        "id": "619ecfff0d35ff19fc9fdd85",
+        "surveyId": {
+          "timestamp": 1637797421,
+          "counter": 10476922,
+          "time": 1637797421000,
+          "date": 1637797421000,
+          "machineIdentifier": 865791,
+          "processIdentifier": 6652,
+          "timeSecond": 1637797421
+        },
+        "description": "To what extent is sustainability represented in the range of electives or minors in the programme\n",
+        "cluster": "Curriculum",
+        "weight": 1
+      },
+      "value": 5,
+      "weight": 1
+    },
+    {
+      "question": {
+        "id": "619ed00b0d35ff19fc9fdd86",
+        "surveyId": {
+          "timestamp": 1637797421,
+          "counter": 10476922,
+          "time": 1637797421000,
+          "date": 1637797421000,
+          "machineIdentifier": 865791,
+          "processIdentifier": 6652,
+          "timeSecond": 1637797421
+        },
+        "description": "To what extent is attention paid to sustainability in extracurricular activities (eg summer schools)?\n",
+        "cluster": "Curriculum",
+        "weight": 1
+      },
+      "value": 5,
+      "weight": 1
+    },
+    {
+      "question": {
+        "id": "619ed0230d35ff19fc9fdd87",
+        "surveyId": {
+          "timestamp": 1637797421,
+          "counter": 10476922,
+          "time": 1637797421000,
+          "date": 1637797421000,
+          "machineIdentifier": 865791,
+          "processIdentifier": 6652,
+          "timeSecond": 1637797421
+        },
+        "description": "to what extent do students contribute to embedding sustainability in the curriculum\n",
+        "cluster": "Students",
+        "weight": 1
+      },
+      "value": 4,
+      "weight": 1
+    },
+    {
+      "question": {
+        "id": "619ed0310d35ff19fc9fdd88",
+        "surveyId": {
+          "timestamp": 1637797421,
+          "counter": 10476922,
+          "time": 1637797421000,
+          "date": 1637797421000,
+          "machineIdentifier": 865791,
+          "processIdentifier": 6652,
+          "timeSecond": 1637797421
+        },
+        "description": "To what extent does student research contribute to solutions for sustainable issues?\n",
+        "cluster": "Students",
+        "weight": 1
+      },
+      "value": 1,
+      "weight": 1
+    },
+    {
+      "question": {
+        "id": "619ed0420d35ff19fc9fdd89",
+        "surveyId": {
+          "timestamp": 1637797421,
+          "counter": 10476922,
+          "time": 1637797421000,
+          "date": 1637797421000,
+          "machineIdentifier": 865791,
+          "processIdentifier": 6652,
+          "timeSecond": 1637797421
+        },
+        "description": "To what extent are students and alumni capable of making a demonstrable contribution to sustainability in the professional field?\n",
+        "cluster": "Students",
+        "weight": 1
+      },
+      "value": 2,
+      "weight": 1
+    },
+    {
+      "question": {
+        "id": "619ed0550d35ff19fc9fdd8a",
+        "surveyId": {
+          "timestamp": 1637797421,
+          "counter": 10476922,
+          "time": 1637797421000,
+          "date": 1637797421000,
+          "machineIdentifier": 865791,
+          "processIdentifier": 6652,
+          "timeSecond": 1637797421
+        },
+        "description": "To what extent are employees of the program trained in the field of sustainability? (eg SDG framework, Donut economy)",
+        "cluster": "Staff",
+        "weight": 1
+      },
+      "value": 4,
+      "weight": 1
+    },
+    {
+      "question": {
+        "id": "619ed0770d35ff19fc9fdd8c",
+        "surveyId": {
+          "timestamp": 1637797421,
+          "counter": 10476922,
+          "time": 1637797421000,
+          "date": 1637797421000,
+          "machineIdentifier": 865791,
+          "processIdentifier": 6652,
+          "timeSecond": 1637797421
+        },
+        "description": "To what extent are training employees supported to integrate sustainability into education?",
+        "cluster": "Staff",
+        "weight": 1
+      },
+      "value": 4,
+      "weight": 1
+    }
+  ],
+  "_class": "com.sustainability.models.SurveyResponse"
+},{
+  "_id": {
+    "$oid": "619f7d602c66284432ffcca0"
+  },
+  "userId": {
+    "$oid": "617968653ddb7055eefa4513"
+  },
+  "surveyId": {
+    "$oid": "619ecf1f0d35ff19fc9fdd7c"
+  },
+  "responseDate": {
+    "$date": "2021-11-25T12:11:12.250Z"
+  },
+  "scoring": [
+    {
+      "question": {
+        "id": "619f7cb92c66284432ffcc9c",
+        "surveyId": {
+          "timestamp": 1637797663,
+          "counter": 10476924,
+          "time": 1637797663000,
+          "date": 1637797663000,
+          "machineIdentifier": 865791,
+          "processIdentifier": 6652,
+          "timeSecond": 1637797663
+        },
+        "description": "nieuwe vraag bewerken nieuw",
+        "cluster": "Waste and Purchasing",
+        "weight": 1
+      },
+      "value": 2,
+      "weight": 1
+    },
+    {
+      "question": {
+        "id": "619f7cf12c66284432ffcc9f",
+        "surveyId": {
+          "timestamp": 1637797663,
+          "counter": 10476924,
+          "time": 1637797663000,
+          "date": 1637797663000,
+          "machineIdentifier": 865791,
+          "processIdentifier": 6652,
+          "timeSecond": 1637797663
+        },
+        "description": "nieuwe vraag",
+        "cluster": null,
+        "weight": 1
+      },
+      "value": 4,
+      "weight": 1
+    }
+  ],
+  "_class": "com.sustainability.models.SurveyResponse"
+},{
+  "_id": {
+    "$oid": "61b206e55040a3744b322584"
+  },
+  "userId": {
+    "$oid": "617968653ddb7055eefa4513"
+  },
+  "surveyId": {
+    "$oid": "619f7ca02c66284432ffcc8d"
+  },
+  "responseDate": {
+    "$date": "2021-12-09T13:38:45.480Z"
+  },
+  "scoring": [
+    {
+      "question": {
+        "id": "619f7ca02c66284432ffcc8e",
+        "surveyId": {
+          "timestamp": 1637842080,
+          "counter": 16764045,
+          "time": 1637842080000,
+          "date": 1637842080000,
+          "machineIdentifier": 2909736,
+          "processIdentifier": 17458,
+          "timeSecond": 1637842080
+        },
+        "description": "To what extent is sustainability included in the vision and strategy (eg in the A3) of the programme?",
+        "cluster": "Vision and Strategy",
+        "weight": 1
+      },
+      "value": 4,
+      "weight": 1
+    },
+    {
+      "question": {
+        "id": "619f7ca02c66284432ffcc8f",
+        "surveyId": {
+          "timestamp": 1637842080,
+          "counter": 16764045,
+          "time": 1637842080000,
+          "date": 1637842080000,
+          "machineIdentifier": 2909736,
+          "processIdentifier": 17458,
+          "timeSecond": 1637842080
+        },
+        "description": "To what extent does the program translate its vision and strategy on sustainability into concrete goals?",
+        "cluster": "Vision and Strategy",
+        "weight": 1
+      },
+      "value": 2,
+      "weight": 1
+    },
+    {
+      "question": {
+        "id": "619f7ca02c66284432ffcc90",
+        "surveyId": {
+          "timestamp": 1637842080,
+          "counter": 16764045,
+          "time": 1637842080000,
+          "date": 1637842080000,
+          "machineIdentifier": 2909736,
+          "processIdentifier": 17458,
+          "timeSecond": 1637842080
+        },
+        "description": "To what extent is sustainability part of the competences and learning outcomes of the training?",
+        "cluster": "Curriculum",
+        "weight": 1
+      },
+      "value": 4,
+      "weight": 1
+    },
+    {
+      "question": {
+        "id": "619f7ca02c66284432ffcc91",
+        "surveyId": {
+          "timestamp": 1637842080,
+          "counter": 16764045,
+          "time": 1637842080000,
+          "date": 1637842080000,
+          "machineIdentifier": 2909736,
+          "processIdentifier": 17458,
+          "timeSecond": 1637842080
+        },
+        "description": "To what extent is sustainability part of the 'Body of Knowledge and Skills' (BOKS) of the programme?",
+        "cluster": "Curriculum",
+        "weight": 1
+      },
+      "value": 3,
+      "weight": 1
+    },
+    {
+      "question": {
+        "id": "619f7ca02c66284432ffcc93",
+        "surveyId": {
+          "timestamp": 1637842080,
+          "counter": 16764045,
+          "time": 1637842080000,
+          "date": 1637842080000,
+          "machineIdentifier": 2909736,
+          "processIdentifier": 17458,
+          "timeSecond": 1637842080
+        },
+        "description": "To what extent is there a programme-specific introduction (eg a subject) in the field of sustainability in year 1?",
+        "cluster": "Curriculum",
+        "weight": 1
+      },
+      "value": 5,
+      "weight": 1
+    },
+    {
+      "question": {
+        "id": "619f7ca02c66284432ffcc94",
+        "surveyId": {
+          "timestamp": 1637842080,
+          "counter": 16764045,
+          "time": 1637842080000,
+          "date": 1637842080000,
+          "machineIdentifier": 2909736,
+          "processIdentifier": 17458,
+          "timeSecond": 1637842080
+        },
+        "description": "To what extent are practical partners in the field of sustainability involved in the training (eg in (graduation) projects)?\n",
+        "cluster": "Curriculum",
+        "weight": 1
+      },
+      "value": 1,
+      "weight": 1
+    },
+    {
+      "question": {
+        "id": "619f7ca02c66284432ffcc96",
+        "surveyId": {
+          "timestamp": 1637842080,
+          "counter": 16764045,
+          "time": 1637842080000,
+          "date": 1637842080000,
+          "machineIdentifier": 2909736,
+          "processIdentifier": 17458,
+          "timeSecond": 1637842080
+        },
+        "description": "To what extent is attention paid to sustainability in extracurricular activities (eg summer schools)?\n",
+        "cluster": "Curriculum",
+        "weight": 1
+      },
+      "value": 4,
+      "weight": 1
+    },
+    {
+      "question": {
+        "id": "619f7ca02c66284432ffcc95",
+        "surveyId": {
+          "timestamp": 1637842080,
+          "counter": 16764045,
+          "time": 1637842080000,
+          "date": 1637842080000,
+          "machineIdentifier": 2909736,
+          "processIdentifier": 17458,
+          "timeSecond": 1637842080
+        },
+        "description": "To what extent is sustainability represented in the range of electives or minors in the programme\n",
+        "cluster": "Curriculum",
+        "weight": 1
+      },
+      "value": 4,
+      "weight": 1
+    },
+    {
+      "question": {
+        "id": "619f7ca02c66284432ffcc97",
+        "surveyId": {
+          "timestamp": 1637842080,
+          "counter": 16764045,
+          "time": 1637842080000,
+          "date": 1637842080000,
+          "machineIdentifier": 2909736,
+          "processIdentifier": 17458,
+          "timeSecond": 1637842080
+        },
+        "description": "to what extent do students contribute to embedding sustainability in the curriculum\n",
+        "cluster": "Students",
+        "weight": 1
+      },
+      "value": 2,
+      "weight": 1
+    },
+    {
+      "question": {
+        "id": "619f7ca02c66284432ffcc98",
+        "surveyId": {
+          "timestamp": 1637842080,
+          "counter": 16764045,
+          "time": 1637842080000,
+          "date": 1637842080000,
+          "machineIdentifier": 2909736,
+          "processIdentifier": 17458,
+          "timeSecond": 1637842080
+        },
+        "description": "To what extent does student research contribute to solutions for sustainable issues?\n",
+        "cluster": "Students",
+        "weight": 1
+      },
+      "value": 4,
+      "weight": 1
+    },
+    {
+      "question": {
+        "id": "619f7ca02c66284432ffcc99",
+        "surveyId": {
+          "timestamp": 1637842080,
+          "counter": 16764045,
+          "time": 1637842080000,
+          "date": 1637842080000,
+          "machineIdentifier": 2909736,
+          "processIdentifier": 17458,
+          "timeSecond": 1637842080
+        },
+        "description": "To what extent are students and alumni capable of making a demonstrable contribution to sustainability in the professional field?\n",
+        "cluster": "Students",
+        "weight": 1
+      },
+      "value": 5,
+      "weight": 1
+    },
+    {
+      "question": {
+        "id": "619f7ca02c66284432ffcc9a",
+        "surveyId": {
+          "timestamp": 1637842080,
+          "counter": 16764045,
+          "time": 1637842080000,
+          "date": 1637842080000,
+          "machineIdentifier": 2909736,
+          "processIdentifier": 17458,
+          "timeSecond": 1637842080
+        },
+        "description": "To what extent are employees of the program trained in the field of sustainability? (eg SDG framework, Donut economy)",
+        "cluster": "Staff",
+        "weight": 1
+      },
+      "value": 3,
+      "weight": 1
+    },
+    {
+      "question": {
+        "id": "619f7ca02c66284432ffcc9b",
+        "surveyId": {
+          "timestamp": 1637842080,
+          "counter": 16764045,
+          "time": 1637842080000,
+          "date": 1637842080000,
+          "machineIdentifier": 2909736,
+          "processIdentifier": 17458,
+          "timeSecond": 1637842080
+        },
+        "description": "To what extent are training employees supported to integrate sustainability into education?",
+        "cluster": "Staff",
+        "weight": 1
+      },
+      "value": 2,
+      "weight": 1
+    },
+    {
+      "question": {
+        "id": "619f7ca02c66284432ffcc92",
+        "surveyId": {
+          "timestamp": 1637842080,
+          "counter": 16764045,
+          "time": 1637842080000,
+          "date": 1637842080000,
+          "machineIdentifier": 2909736,
+          "processIdentifier": 17458,
+          "timeSecond": 1637842080
+        },
+        "description": "To what extent does the didactic approach promote a proactive attitude towards sustainability?\n",
+        "cluster": "Curriculum",
+        "weight": 1
+      },
+      "value": 3,
+      "weight": 1
+    }
+  ],
+  "_class": "com.sustainability.models.SurveyResponse"
+},{
+  "_id": {
+    "$oid": "61b9a02833587d4535234735"
+  },
+  "userId": {
+    "$oid": "617968653ddb7055eefa4513"
+  },
+  "surveyId": {
+    "$oid": "619ecee70d35ff19fc9fdd7b"
+  },
+  "responseDate": {
+    "$date": "2021-12-15T07:58:32.222Z"
+  },
+  "scoring": [
+    {
+      "question": {
+        "id": "61b949389212bd13f90ea96e",
+        "surveyId": {
+          "timestamp": 1637797607,
+          "counter": 10476923,
+          "time": 1637797607000,
+          "date": 1637797607000,
+          "processIdentifier": 6652,
+          "machineIdentifier": 865791,
+          "timeSecond": 1637797607
+        },
+        "description": "nm",
+        "cluster": "Staff",
+        "weight": 4
+      },
+      "value": 2,
+      "weight": 4
+    },
+    {
+      "question": {
+        "id": "61b94a749212bd13f90ea96f",
+        "surveyId": {
+          "timestamp": 1637797607,
+          "counter": 10476923,
+          "time": 1637797607000,
+          "date": 1637797607000,
+          "processIdentifier": 6652,
+          "machineIdentifier": 865791,
+          "timeSecond": 1637797607
+        },
+        "description": "Testestes",
+        "cluster": "Vision and Strategy",
+        "weight": 1
+      },
+      "value": 3,
+      "weight": 1
+    }
+  ],
+  "_class": "com.sustainability.models.SurveyResponse"
+},{
+  "_id": {
+    "$oid": "61e0170f386e6342653a9df6"
+  },
+  "userId": {
+    "$oid": "61790df719d7650b532c6389"
+  },
+  "surveyId": {
+    "$oid": "61b90508835864667007d171"
+  },
+  "responseDate": {
+    "$date": "2022-01-13T12:11:59.309Z"
+  },
+  "scoring": [
+    {
+      "question": {
+        "id": "61b90508835864667007d172",
+        "surveyId": {
+          "timestamp": 1639515400,
+          "counter": 512369,
+          "time": 1639515400000,
+          "date": 1639515400000,
+          "machineIdentifier": 8607844,
+          "processIdentifier": 26224,
+          "timeSecond": 1639515400
+        },
+        "description": "To what extent is sustainability included in the vision and strategy (eg in the A3) of the programme?",
+        "cluster": "Vision and Strategy",
+        "weight": 1
+      },
+      "value": 4,
+      "weight": 1
+    },
+    {
+      "question": {
+        "id": "61b90508835864667007d173",
+        "surveyId": {
+          "timestamp": 1639515400,
+          "counter": 512369,
+          "time": 1639515400000,
+          "date": 1639515400000,
+          "machineIdentifier": 8607844,
+          "processIdentifier": 26224,
+          "timeSecond": 1639515400
+        },
+        "description": "To what extent does the program translate its vision and strategy on sustainability into concrete goals?",
+        "cluster": "Vision and Strategy",
+        "weight": 1
+      },
+      "value": 2,
+      "weight": 1
+    },
+    {
+      "question": {
+        "id": "61b90509835864667007d174",
+        "surveyId": {
+          "timestamp": 1639515400,
+          "counter": 512369,
+          "time": 1639515400000,
+          "date": 1639515400000,
+          "machineIdentifier": 8607844,
+          "processIdentifier": 26224,
+          "timeSecond": 1639515400
+        },
+        "description": "To what extent is sustainability part of the competences and learning outcomes of the training?",
+        "cluster": "Curriculum",
+        "weight": 1
+      },
+      "value": 2,
+      "weight": 1
+    },
+    {
+      "question": {
+        "id": "61b90509835864667007d175",
+        "surveyId": {
+          "timestamp": 1639515400,
+          "counter": 512369,
+          "time": 1639515400000,
+          "date": 1639515400000,
+          "machineIdentifier": 8607844,
+          "processIdentifier": 26224,
+          "timeSecond": 1639515400
+        },
+        "description": "To what extent is sustainability part of the 'Body of Knowledge and Skills' (BOKS) of the programme?",
+        "cluster": "Curriculum",
+        "weight": 1
+      },
+      "value": 5,
+      "weight": 1
+    },
+    {
+      "question": {
+        "id": "61b90509835864667007d176",
+        "surveyId": {
+          "timestamp": 1639515400,
+          "counter": 512369,
+          "time": 1639515400000,
+          "date": 1639515400000,
+          "machineIdentifier": 8607844,
+          "processIdentifier": 26224,
+          "timeSecond": 1639515400
+        },
+        "description": "To what extent does the didactic approach promote a proactive attitude towards sustainability?\n",
+        "cluster": "Curriculum",
+        "weight": 1
+      },
+      "value": 2,
+      "weight": 1
+    },
+    {
+      "question": {
+        "id": "61b90509835864667007d177",
+        "surveyId": {
+          "timestamp": 1639515400,
+          "counter": 512369,
+          "time": 1639515400000,
+          "date": 1639515400000,
+          "machineIdentifier": 8607844,
+          "processIdentifier": 26224,
+          "timeSecond": 1639515400
+        },
+        "description": "To what extent is there a programme-specific introduction (eg a subject) in the field of sustainability in year 1?",
+        "cluster": "Curriculum",
+        "weight": 1
+      },
+      "value": 4,
+      "weight": 1
+    },
+    {
+      "question": {
+        "id": "61b90509835864667007d178",
+        "surveyId": {
+          "timestamp": 1639515400,
+          "counter": 512369,
+          "time": 1639515400000,
+          "date": 1639515400000,
+          "machineIdentifier": 8607844,
+          "processIdentifier": 26224,
+          "timeSecond": 1639515400
+        },
+        "description": "To what extent are practical partners in the field of sustainability involved in the training (eg in (graduation) projects)?\n",
+        "cluster": "Curriculum",
+        "weight": 1
+      },
+      "value": 4,
+      "weight": 1
+    },
+    {
+      "question": {
+        "id": "61b90509835864667007d179",
+        "surveyId": {
+          "timestamp": 1639515400,
+          "counter": 512369,
+          "time": 1639515400000,
+          "date": 1639515400000,
+          "machineIdentifier": 8607844,
+          "processIdentifier": 26224,
+          "timeSecond": 1639515400
+        },
+        "description": "To what extent is sustainability represented in the range of electives or minors in the programme\n",
+        "cluster": "Curriculum",
+        "weight": 1
+      },
+      "value": 1,
+      "weight": 1
+    },
+    {
+      "question": {
+        "id": "61b90509835864667007d17a",
+        "surveyId": {
+          "timestamp": 1639515400,
+          "counter": 512369,
+          "time": 1639515400000,
+          "date": 1639515400000,
+          "machineIdentifier": 8607844,
+          "processIdentifier": 26224,
+          "timeSecond": 1639515400
+        },
+        "description": "To what extent is attention paid to sustainability in extracurricular activities (eg summer schools)?\n",
+        "cluster": "Curriculum",
+        "weight": 1
+      },
+      "value": 4,
+      "weight": 1
+    },
+    {
+      "question": {
+        "id": "61b90509835864667007d17b",
+        "surveyId": {
+          "timestamp": 1639515400,
+          "counter": 512369,
+          "time": 1639515400000,
+          "date": 1639515400000,
+          "machineIdentifier": 8607844,
+          "processIdentifier": 26224,
+          "timeSecond": 1639515400
+        },
+        "description": "to what extent do students contribute to embedding sustainability in the curriculum\n",
+        "cluster": "Students",
+        "weight": 1
+      },
+      "value": 2,
+      "weight": 1
+    },
+    {
+      "question": {
+        "id": "61b90509835864667007d17c",
+        "surveyId": {
+          "timestamp": 1639515400,
+          "counter": 512369,
+          "time": 1639515400000,
+          "date": 1639515400000,
+          "machineIdentifier": 8607844,
+          "processIdentifier": 26224,
+          "timeSecond": 1639515400
+        },
+        "description": "To what extent does student research contribute to solutions for sustainable issues?\n",
+        "cluster": "Students",
+        "weight": 1
+      },
+      "value": 4,
+      "weight": 1
+    },
+    {
+      "question": {
+        "id": "61b90509835864667007d17d",
+        "surveyId": {
+          "timestamp": 1639515400,
+          "counter": 512369,
+          "time": 1639515400000,
+          "date": 1639515400000,
+          "machineIdentifier": 8607844,
+          "processIdentifier": 26224,
+          "timeSecond": 1639515400
+        },
+        "description": "To what extent are students and alumni capable of making a demonstrable contribution to sustainability in the professional field?\n",
+        "cluster": "Students",
+        "weight": 1
+      },
+      "value": 4,
+      "weight": 1
+    },
+    {
+      "question": {
+        "id": "61b90509835864667007d17e",
+        "surveyId": {
+          "timestamp": 1639515400,
+          "counter": 512369,
+          "time": 1639515400000,
+          "date": 1639515400000,
+          "machineIdentifier": 8607844,
+          "processIdentifier": 26224,
+          "timeSecond": 1639515400
+        },
+        "description": "To what extent are employees of the program trained in the field of sustainability? (eg SDG framework, Donut economy)",
+        "cluster": "Staff",
+        "weight": 1
+      },
+      "value": 5,
+      "weight": 1
+    },
+    {
+      "question": {
+        "id": "61b90509835864667007d17f",
+        "surveyId": {
+          "timestamp": 1639515400,
+          "counter": 512369,
+          "time": 1639515400000,
+          "date": 1639515400000,
+          "machineIdentifier": 8607844,
+          "processIdentifier": 26224,
+          "timeSecond": 1639515400
+        },
+        "description": "To what extent are training employees supported to integrate sustainability into education?",
+        "cluster": "Staff",
+        "weight": 1
+      },
+      "value": 5,
+      "weight": 1
+    }
+  ],
+  "_class": "com.sustainability.models.SurveyResponse"
+}]

@@ -1,0 +1,660 @@
+[{
+  "_id": {
+    "$oid": "619ecf8b0d35ff19fc9fdd7e"
+  },
+  "surveyId": {
+    "$oid": "619ece2d0d35ff19fc9fdd7a"
+  },
+  "description": "To what extent is sustainability included in the vision and strategy (eg in the A3) of the programme?",
+  "cluster": "Vision and Strategy",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "619ecfa20d35ff19fc9fdd7f"
+  },
+  "surveyId": {
+    "$oid": "619ece2d0d35ff19fc9fdd7a"
+  },
+  "description": "To what extent does the program translate its vision and strategy on sustainability into concrete goals?",
+  "cluster": "Vision and Strategy",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "619ecfb80d35ff19fc9fdd80"
+  },
+  "surveyId": {
+    "$oid": "619ece2d0d35ff19fc9fdd7a"
+  },
+  "description": "To what extent is sustainability part of the competences and learning outcomes of the training?",
+  "cluster": "Curriculum",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "619ecfc50d35ff19fc9fdd81"
+  },
+  "surveyId": {
+    "$oid": "619ece2d0d35ff19fc9fdd7a"
+  },
+  "description": "To what extent is sustainability part of the 'Body of Knowledge and Skills' (BOKS) of the programme?",
+  "cluster": "Curriculum",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "619ecfd10d35ff19fc9fdd82"
+  },
+  "surveyId": {
+    "$oid": "619ece2d0d35ff19fc9fdd7a"
+  },
+  "description": "To what extent does the didactic approach promote a proactive attitude towards sustainability?\n",
+  "cluster": "Curriculum",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "619ecfe20d35ff19fc9fdd83"
+  },
+  "surveyId": {
+    "$oid": "619ece2d0d35ff19fc9fdd7a"
+  },
+  "description": "To what extent is there a programme-specific introduction (eg a subject) in the field of sustainability in year 1?",
+  "cluster": "Curriculum",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "619ecff30d35ff19fc9fdd84"
+  },
+  "surveyId": {
+    "$oid": "619ece2d0d35ff19fc9fdd7a"
+  },
+  "description": "To what extent are practical partners in the field of sustainability involved in the training (eg in (graduation) projects)?\n",
+  "cluster": "Curriculum",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "619ecfff0d35ff19fc9fdd85"
+  },
+  "surveyId": {
+    "$oid": "619ece2d0d35ff19fc9fdd7a"
+  },
+  "description": "To what extent is sustainability represented in the range of electives or minors in the programme\n",
+  "cluster": "Curriculum",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "619ed00b0d35ff19fc9fdd86"
+  },
+  "surveyId": {
+    "$oid": "619ece2d0d35ff19fc9fdd7a"
+  },
+  "description": "To what extent is attention paid to sustainability in extracurricular activities (eg summer schools)?\n",
+  "cluster": "Curriculum",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "619ed0230d35ff19fc9fdd87"
+  },
+  "surveyId": {
+    "$oid": "619ece2d0d35ff19fc9fdd7a"
+  },
+  "description": "to what extent do students contribute to embedding sustainability in the curriculum\n",
+  "cluster": "Students",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "619ed0310d35ff19fc9fdd88"
+  },
+  "surveyId": {
+    "$oid": "619ece2d0d35ff19fc9fdd7a"
+  },
+  "description": "To what extent does student research contribute to solutions for sustainable issues?\n",
+  "cluster": "Students",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "619ed0420d35ff19fc9fdd89"
+  },
+  "surveyId": {
+    "$oid": "619ece2d0d35ff19fc9fdd7a"
+  },
+  "description": "To what extent are students and alumni capable of making a demonstrable contribution to sustainability in the professional field?\n",
+  "cluster": "Students",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "619ed0550d35ff19fc9fdd8a"
+  },
+  "surveyId": {
+    "$oid": "619ece2d0d35ff19fc9fdd7a"
+  },
+  "description": "To what extent are employees of the program trained in the field of sustainability? (eg SDG framework, Donut economy)",
+  "cluster": "Staff",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "619ed0770d35ff19fc9fdd8c"
+  },
+  "surveyId": {
+    "$oid": "619ece2d0d35ff19fc9fdd7a"
+  },
+  "description": "To what extent are training employees supported to integrate sustainability into education?",
+  "cluster": "Staff",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "619f7ca02c66284432ffcc8e"
+  },
+  "surveyId": {
+    "$oid": "619f7ca02c66284432ffcc8d"
+  },
+  "description": "To what extent is sustainability included in the vision and strategy (eg in the A3) of the programme?",
+  "cluster": "Vision and Strategy",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "619f7ca02c66284432ffcc8f"
+  },
+  "surveyId": {
+    "$oid": "619f7ca02c66284432ffcc8d"
+  },
+  "description": "To what extent does the program translate its vision and strategy on sustainability into concrete goals?",
+  "cluster": "Vision and Strategy",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "619f7ca02c66284432ffcc90"
+  },
+  "surveyId": {
+    "$oid": "619f7ca02c66284432ffcc8d"
+  },
+  "description": "To what extent is sustainability part of the competences and learning outcomes of the training?",
+  "cluster": "Curriculum",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "619f7ca02c66284432ffcc91"
+  },
+  "surveyId": {
+    "$oid": "619f7ca02c66284432ffcc8d"
+  },
+  "description": "To what extent is sustainability part of the 'Body of Knowledge and Skills' (BOKS) of the programme?",
+  "cluster": "Curriculum",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "619f7ca02c66284432ffcc92"
+  },
+  "surveyId": {
+    "$oid": "619f7ca02c66284432ffcc8d"
+  },
+  "description": "To what extent does the didactic approach promote a proactive attitude towards sustainability?\n",
+  "cluster": "Curriculum",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "619f7ca02c66284432ffcc93"
+  },
+  "surveyId": {
+    "$oid": "619f7ca02c66284432ffcc8d"
+  },
+  "description": "To what extent is there a programme-specific introduction (eg a subject) in the field of sustainability in year 1?",
+  "cluster": "Curriculum",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "619f7ca02c66284432ffcc94"
+  },
+  "surveyId": {
+    "$oid": "619f7ca02c66284432ffcc8d"
+  },
+  "description": "To what extent are practical partners in the field of sustainability involved in the training (eg in (graduation) projects)?\n",
+  "cluster": "Curriculum",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "619f7ca02c66284432ffcc95"
+  },
+  "surveyId": {
+    "$oid": "619f7ca02c66284432ffcc8d"
+  },
+  "description": "To what extent is sustainability represented in the range of electives or minors in the programme\n",
+  "cluster": "Curriculum",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "619f7ca02c66284432ffcc96"
+  },
+  "surveyId": {
+    "$oid": "619f7ca02c66284432ffcc8d"
+  },
+  "description": "To what extent is attention paid to sustainability in extracurricular activities (eg summer schools)?\n",
+  "cluster": "Curriculum",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "619f7ca02c66284432ffcc97"
+  },
+  "surveyId": {
+    "$oid": "619f7ca02c66284432ffcc8d"
+  },
+  "description": "to what extent do students contribute to embedding sustainability in the curriculum\n",
+  "cluster": "Students",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "619f7ca02c66284432ffcc98"
+  },
+  "surveyId": {
+    "$oid": "619f7ca02c66284432ffcc8d"
+  },
+  "description": "To what extent does student research contribute to solutions for sustainable issues?\n",
+  "cluster": "Students",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "619f7ca02c66284432ffcc99"
+  },
+  "surveyId": {
+    "$oid": "619f7ca02c66284432ffcc8d"
+  },
+  "description": "To what extent are students and alumni capable of making a demonstrable contribution to sustainability in the professional field?\n",
+  "cluster": "Students",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "619f7ca02c66284432ffcc9a"
+  },
+  "surveyId": {
+    "$oid": "619f7ca02c66284432ffcc8d"
+  },
+  "description": "To what extent are employees of the program trained in the field of sustainability? (eg SDG framework, Donut economy)",
+  "cluster": "Staff",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "619f7ca02c66284432ffcc9b"
+  },
+  "surveyId": {
+    "$oid": "619f7ca02c66284432ffcc8d"
+  },
+  "description": "To what extent are training employees supported to integrate sustainability into education?",
+  "cluster": "Staff",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "619f7cb92c66284432ffcc9c"
+  },
+  "surveyId": {
+    "$oid": "619ecf1f0d35ff19fc9fdd7c"
+  },
+  "description": "nieuwe vraag bewerken nieuw",
+  "cluster": "Waste and Purchasing",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "619f7cf12c66284432ffcc9f"
+  },
+  "surveyId": {
+    "$oid": "619ecf1f0d35ff19fc9fdd7c"
+  },
+  "description": "nieuwe vraag",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "61b90508835864667007d172"
+  },
+  "surveyId": {
+    "$oid": "61b90508835864667007d171"
+  },
+  "description": "To what extent is sustainability included in the vision and strategy (eg in the A3) of the programme?",
+  "cluster": "Vision and Strategy",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "61b90508835864667007d173"
+  },
+  "surveyId": {
+    "$oid": "61b90508835864667007d171"
+  },
+  "description": "To what extent does the program translate its vision and strategy on sustainability into concrete goals?",
+  "cluster": "Vision and Strategy",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "61b90509835864667007d174"
+  },
+  "surveyId": {
+    "$oid": "61b90508835864667007d171"
+  },
+  "description": "To what extent is sustainability part of the competences and learning outcomes of the training?",
+  "cluster": "Curriculum",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "61b90509835864667007d175"
+  },
+  "surveyId": {
+    "$oid": "61b90508835864667007d171"
+  },
+  "description": "To what extent is sustainability part of the 'Body of Knowledge and Skills' (BOKS) of the programme?",
+  "cluster": "Curriculum",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "61b90509835864667007d176"
+  },
+  "surveyId": {
+    "$oid": "61b90508835864667007d171"
+  },
+  "description": "To what extent does the didactic approach promote a proactive attitude towards sustainability?\n",
+  "cluster": "Curriculum",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "61b90509835864667007d177"
+  },
+  "surveyId": {
+    "$oid": "61b90508835864667007d171"
+  },
+  "description": "To what extent is there a programme-specific introduction (eg a subject) in the field of sustainability in year 1?",
+  "cluster": "Curriculum",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "61b90509835864667007d178"
+  },
+  "surveyId": {
+    "$oid": "61b90508835864667007d171"
+  },
+  "description": "To what extent are practical partners in the field of sustainability involved in the training (eg in (graduation) projects)?\n",
+  "cluster": "Curriculum",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "61b90509835864667007d179"
+  },
+  "surveyId": {
+    "$oid": "61b90508835864667007d171"
+  },
+  "description": "To what extent is sustainability represented in the range of electives or minors in the programme\n",
+  "cluster": "Curriculum",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "61b90509835864667007d17a"
+  },
+  "surveyId": {
+    "$oid": "61b90508835864667007d171"
+  },
+  "description": "To what extent is attention paid to sustainability in extracurricular activities (eg summer schools)?\n",
+  "cluster": "Curriculum",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "61b90509835864667007d17b"
+  },
+  "surveyId": {
+    "$oid": "61b90508835864667007d171"
+  },
+  "description": "to what extent do students contribute to embedding sustainability in the curriculum\n",
+  "cluster": "Students",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "61b90509835864667007d17c"
+  },
+  "surveyId": {
+    "$oid": "61b90508835864667007d171"
+  },
+  "description": "To what extent does student research contribute to solutions for sustainable issues?\n",
+  "cluster": "Students",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "61b90509835864667007d17d"
+  },
+  "surveyId": {
+    "$oid": "61b90508835864667007d171"
+  },
+  "description": "To what extent are students and alumni capable of making a demonstrable contribution to sustainability in the professional field?\n",
+  "cluster": "Students",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "61b90509835864667007d17e"
+  },
+  "surveyId": {
+    "$oid": "61b90508835864667007d171"
+  },
+  "description": "To what extent are employees of the program trained in the field of sustainability? (eg SDG framework, Donut economy)",
+  "cluster": "Staff",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "61b90509835864667007d17f"
+  },
+  "surveyId": {
+    "$oid": "61b90508835864667007d171"
+  },
+  "description": "To what extent are training employees supported to integrate sustainability into education?",
+  "cluster": "Staff",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "61b949389212bd13f90ea96e"
+  },
+  "surveyId": {
+    "$oid": "619ecee70d35ff19fc9fdd7b"
+  },
+  "description": "nm",
+  "cluster": "Staff",
+  "weight": 4,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "61b94a749212bd13f90ea96f"
+  },
+  "surveyId": {
+    "$oid": "619ecee70d35ff19fc9fdd7b"
+  },
+  "description": "Testestes",
+  "cluster": "Vision and Strategy",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "61e0175d386e6342653a9df8"
+  },
+  "surveyId": {
+    "$oid": "61e0175d386e6342653a9df7"
+  },
+  "description": "To what extent is sustainability included in the vision and strategy (eg in the A3) of the programme?",
+  "cluster": "Vision and Strategy",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "61e0175d386e6342653a9df9"
+  },
+  "surveyId": {
+    "$oid": "61e0175d386e6342653a9df7"
+  },
+  "description": "To what extent does the program translate its vision and strategy on sustainability into concrete goals?",
+  "cluster": "Vision and Strategy",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "61e0175d386e6342653a9dfa"
+  },
+  "surveyId": {
+    "$oid": "61e0175d386e6342653a9df7"
+  },
+  "description": "To what extent is sustainability part of the competences and learning outcomes of the training?",
+  "cluster": "Curriculum",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "61e0175d386e6342653a9dfb"
+  },
+  "surveyId": {
+    "$oid": "61e0175d386e6342653a9df7"
+  },
+  "description": "To what extent is sustainability part of the 'Body of Knowledge and Skills' (BOKS) of the programme?",
+  "cluster": "Curriculum",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "61e0175d386e6342653a9dfc"
+  },
+  "surveyId": {
+    "$oid": "61e0175d386e6342653a9df7"
+  },
+  "description": "To what extent does the didactic approach promote a proactive attitude towards sustainability?\n",
+  "cluster": "Curriculum",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "61e0175d386e6342653a9dfd"
+  },
+  "surveyId": {
+    "$oid": "61e0175d386e6342653a9df7"
+  },
+  "description": "To what extent is there a programme-specific introduction (eg a subject) in the field of sustainability in year 1?",
+  "cluster": "Curriculum",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "61e0175d386e6342653a9dfe"
+  },
+  "surveyId": {
+    "$oid": "61e0175d386e6342653a9df7"
+  },
+  "description": "To what extent are practical partners in the field of sustainability involved in the training (eg in (graduation) projects)?\n",
+  "cluster": "Curriculum",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "61e0175d386e6342653a9dff"
+  },
+  "surveyId": {
+    "$oid": "61e0175d386e6342653a9df7"
+  },
+  "description": "To what extent is sustainability represented in the range of electives or minors in the programme\n",
+  "cluster": "Curriculum",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "61e0175d386e6342653a9e00"
+  },
+  "surveyId": {
+    "$oid": "61e0175d386e6342653a9df7"
+  },
+  "description": "To what extent is attention paid to sustainability in extracurricular activities (eg summer schools)?\n",
+  "cluster": "Curriculum",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "61e0175d386e6342653a9e01"
+  },
+  "surveyId": {
+    "$oid": "61e0175d386e6342653a9df7"
+  },
+  "description": "to what extent do students contribute to embedding sustainability in the curriculum\n",
+  "cluster": "Students",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "61e0175d386e6342653a9e02"
+  },
+  "surveyId": {
+    "$oid": "61e0175d386e6342653a9df7"
+  },
+  "description": "To what extent does student research contribute to solutions for sustainable issues?\n",
+  "cluster": "Students",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "61e0175d386e6342653a9e03"
+  },
+  "surveyId": {
+    "$oid": "61e0175d386e6342653a9df7"
+  },
+  "description": "To what extent are students and alumni capable of making a demonstrable contribution to sustainability in the professional field?\n",
+  "cluster": "Students",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "61e0175d386e6342653a9e04"
+  },
+  "surveyId": {
+    "$oid": "61e0175d386e6342653a9df7"
+  },
+  "description": "To what extent are employees of the program trained in the field of sustainability? (eg SDG framework, Donut economy)",
+  "cluster": "Staff",
+  "weight": 1,
+  "_class": "com.sustainability.models.SurveyQuestion"
+},{
+  "_id": {
+    "$oid": "61e0175e386e6342653a9e05"
+  },
+  "surveyId": {
+    "$oid": "61e0175d386e6342653a9df7"
+  },
+  "description": "To what extent are employees supported to integrate sustainability into education?",
+  "cluster": "Students",
+  "weight": 2,
+  "_class": "com.sustainability.models.SurveyQuestion"
+}]
